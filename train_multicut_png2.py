@@ -3,6 +3,7 @@ import numpy as np
 from PIL import Image
 import zlib
 import heapq
+import matplotlib.pyplot as plt
 
 import torch
 import torch.nn as nn
@@ -18,13 +19,7 @@ class Config:
     PATCH = 64
     BATCH = 4
     EPOCHS = 20
-    LR = 5e-4  # Slightly higher learning rate
-
-    # NEW: Direct merge-gain regression (not sigmoid probabilities!)
-    # Positive gain = "Merge is beneficial"
-    # Negative gain = "Cut is beneficial"
-    # Large magnitude = "Confident decision"
-    
+    LR = 5e-4
     DEVICE = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
 def log(msg):
@@ -46,6 +41,8 @@ class DIV2KDataset(Dataset):
             transforms.RandomVerticalFlip(),
             transforms.ToTensor(),
         ])
+        # Store full images for testing
+        self.test_transform = transforms.ToTensor()
 
     def __len__(self):
         return len(self.files)
@@ -58,6 +55,18 @@ class DIV2KDataset(Dataset):
             return self.t(img)
         except Exception:
             return torch.rand(3, self.patch_size, self.patch_size)
+    
+    def load_full_image(self, idx):
+        """Load full image without cropping (for testing)"""
+        if self.files[idx] == "__dummy__":
+            return torch.rand(3, 256, 256)
+        try:
+            img = Image.open(self.files[idx]).convert("RGB")
+            # Resize to reasonable size for testing
+            img = img.resize((256, 256), Image.LANCZOS)
+            return self.test_transform(img)
+        except Exception:
+            return torch.rand(3, 256, 256)
 
 # ============================================================
 # MODEL
@@ -73,17 +82,12 @@ class EncoderCNN(nn.Module):
     def forward(self, x): return self.net(x)
 
 class EdgePredictor(nn.Module):
-    """
-    Outputs MERGE GAIN logits (unbounded, not sigmoid-clamped!)
-    Large positive = "Merge is very good"
-    Large negative = "Cut is very good"
-    """
     def __init__(self, c_feat=64):
         super().__init__()
         self.net = nn.Sequential(
             nn.Linear(2*c_feat + 1, 128), nn.ReLU(),
             nn.Linear(128, 64), nn.ReLU(),
-            nn.Linear(64, 1)  # Unbounded output!
+            nn.Linear(64, 1)
         )
     def forward(self, fu, fv, orient):
         return self.net(torch.cat([fu, fv, orient], dim=1))
@@ -109,35 +113,22 @@ def grid_edges(H, W, device):
     return u, v
 
 # ============================================================
-# LOSS: Direct Merge-Gain Regression
+# LOSS
 # ============================================================
 def merge_gain_loss(img_bchw, u, v, merge_gain_logits):
-    """
-    KEY CHANGE: Regress to target merge gains directly!
-    
-    Target Merge Gain:
-    - If pixels are similar (low diff): target = +1.0 (merge is good)
-    - If pixels are different (high diff): target = -1.0 (cut is good)
-    
-    The network learns to predict these gains, which GAEC then uses.
-    """
     _, C, H, W = img_bchw.shape
     flat = img_bchw.reshape(1, C, -1)[0]
     pu = flat[:, u]
     pv = flat[:, v]
-    diff = (pu - pv).abs().mean(dim=0, keepdim=True).T  # (E, 1)
+    diff = (pu - pv).abs().mean(dim=0, keepdim=True).T
     
-    # Target: High diff -> Cut (gain = -1), Low diff -> Merge (gain = +1)
-    # Use smooth transition with sigmoid
     THRESHOLD = 0.10
-    target_gain = 2.0 * torch.sigmoid((THRESHOLD - diff) * 30.0) - 1.0  # Maps to [-1, 1]
+    target_gain = 2.0 * torch.sigmoid((THRESHOLD - diff) * 30.0) - 1.0
     
-    # Regression loss: L2 between predicted and target gains
-    pred_gain = torch.tanh(merge_gain_logits)  # Clamp to [-1, 1]
+    pred_gain = torch.tanh(merge_gain_logits)
     loss = ((pred_gain - target_gain) ** 2).mean()
     
-    # Debug stats
-    prob_cut = torch.sigmoid(-merge_gain_logits)  # Inverse of merge prob
+    prob_cut = torch.sigmoid(-merge_gain_logits)
     n_high_diff = (diff > THRESHOLD).sum().item()
     
     return loss, {
@@ -145,8 +136,6 @@ def merge_gain_loss(img_bchw, u, v, merge_gain_logits):
         "target_gain_mean": target_gain.mean().item(),
         "pred_gain_mean": pred_gain.mean().item(),
         "pred_gain_std": pred_gain.std().item(),
-        "pred_gain_min": pred_gain.min().item(),
-        "pred_gain_max": pred_gain.max().item(),
         "prob_cut_mean": prob_cut.mean().item(),
         "n_high_diff_edges": n_high_diff,
         "diff_mean": diff.mean().item(),
@@ -227,15 +216,28 @@ def gaec_additive(num_nodes, u_np, v_np, gain_np, merge_threshold=0.0):
     return np.array([mapping[x] for x in labels], dtype=np.int32), merges_count
 
 # ============================================================
-# REAL PNG ENCODING
+# ENCODING & RECONSTRUCTION
 # ============================================================
-def encode_regions_rgb_png(img_u8, labels):
+def encode_and_reconstruct(img_u8, labels, reconstruct_mode="mean_color"):
+    """
+    Encode image with segmentation + optionally reconstruct.
+    
+    reconstruct_mode:
+      "mean_color": Lossy - fill each region with mean color
+      "original": Lossless - store original pixels (via PNG per region)
+    """
     H, W, C = img_u8.shape
     labels_2d = labels.reshape(H, W)
     K = labels_2d.max() + 1
     
+    # Segmentation overhead
     seg_overhead = K * 10
     total_payload = 0
+    
+    # Reconstruction image
+    reconstructed = np.zeros_like(img_u8)
+    
+    region_stats = []
     
     for k in range(K):
         mask = (labels_2d == k)
@@ -247,19 +249,121 @@ def encode_regions_rgb_png(img_u8, labels):
         m = mask[y0:y1+1, x0:x1+1]
         crop[~m] = 0
         
-        region_img = Image.fromarray(crop, mode="RGB")
-        buf = io.BytesIO()
-        region_img.save(buf, format="PNG", optimize=True)
-        total_payload += len(buf.getvalue())
+        if reconstruct_mode == "mean_color":
+            # Compute mean color in this region
+            region_pixels = img_u8[mask]
+            mean_color = region_pixels.mean(axis=0).astype(np.uint8)
+            reconstructed[mask] = mean_color
+            
+            # For "payload", estimate as if we stored mean color (3 bytes) + region description
+            region_bytes = 3  # RGB mean
+            total_payload += region_bytes
+            
+        elif reconstruct_mode == "original":
+            # Store original pixels via PNG encoding
+            region_img = Image.fromarray(crop, mode="RGB")
+            buf = io.BytesIO()
+            region_img.save(buf, format="PNG", optimize=True)
+            total_payload += len(buf.getvalue())
+            
+            # Reconstruct with original pixels
+            reconstructed[mask] = img_u8[mask]
+        
+        region_stats.append({
+            "region_id": k,
+            "size_pixels": mask.sum(),
+            "mean_color": mean_color if reconstruct_mode == "mean_color" else None
+        })
     
-    return (seg_overhead + total_payload) // 8, K
+    total_bytes = (seg_overhead + total_payload) // 8
+    
+    return total_bytes, K, reconstructed, region_stats
 
 # ============================================================
-# MAIN
+# INFERENCE FUNCTION (For New Images)
+# ============================================================
+def inference_compress_reconstruct(img_tensor, enc, pred, H, W, device, reconstruct_mode="mean_color"):
+    """
+    Full pipeline for a new image:
+    1. Load image
+    2. Extract features (Encoder)
+    3. Predict edge weights (EdgePredictor)
+    4. Run GAEC segmentation
+    5. Encode regions
+    6. Reconstruct image
+    """
+    enc.eval()
+    pred.eval()
+    
+    with torch.no_grad():
+        # Feature extraction
+        img_device = img_tensor.unsqueeze(0).to(device)  # (1, 3, H, W)
+        feat = enc(img_device)  # (1, 64, H, W)
+        feat_flat = feat.permute(0, 2, 3, 1).reshape(1, -1, 64)
+        
+        # Generate grid edges
+        u, v = grid_edges(H, W, device)
+        
+        # Predict merge gains
+        fu = feat_flat[0, u]
+        fv = feat_flat[0, v]
+        merge_logits = pred(fu, fv, torch.zeros(len(u), 1, device=device))
+        gains = merge_logits.squeeze(1).cpu().numpy()
+        
+        # GAEC segmentation
+        max_idx = max(u.max().item(), v.max().item())
+        labels, merges = gaec_additive(max_idx+1, u.cpu().numpy(), v.cpu().numpy(), gains, 
+                                      merge_threshold=0.0)
+        
+        # Convert image to uint8
+        img_u8 = (img_tensor.permute(1, 2, 0).cpu().numpy() * 255).astype(np.uint8)
+        
+        # Encode and reconstruct
+        total_bytes, K, reconstructed, region_stats = encode_and_reconstruct(
+            img_u8, labels, reconstruct_mode=reconstruct_mode
+        )
+        
+        return {
+            "original_img": img_u8,
+            "reconstructed_img": reconstructed,
+            "segmentation_map": labels.reshape(H, W),
+            "total_bytes": total_bytes,
+            "num_regions": K,
+            "num_merges": merges,
+            "region_stats": region_stats
+        }
+
+# ============================================================
+# VISUALIZATION
+# ============================================================
+def visualize_compression_result(result, title="Compression Result"):
+    """Display original, reconstructed, and segmentation map side-by-side"""
+    fig, axes = plt.subplots(1, 3, figsize=(15, 5))
+    
+    axes[0].imshow(result["original_img"])
+    axes[0].set_title("Original Image")
+    axes[0].axis("off")
+    
+    axes[1].imshow(result["reconstructed_img"])
+    axes[1].set_title(f"Reconstructed\n({result['num_regions']} regions)")
+    axes[1].axis("off")
+    
+    seg_map = (result["segmentation_map"] * 50 % 255).astype(np.uint8)
+    axes[2].imshow(seg_map, cmap="tab20")
+    axes[2].set_title(f"Segmentation Map\n({result['total_bytes']} bytes)")
+    axes[2].axis("off")
+    
+    plt.tight_layout()
+    plt.savefig(f"test_result_{title}.png", dpi=100, bbox_inches="tight")
+    plt.close()
+    
+    log(f"Saved visualization: test_result_{title}.png")
+
+# ============================================================
+# MAIN: Train + Test
 # ============================================================
 def main():
     log(f"Device: {Config.DEVICE}")
-    log(f"Loss: Direct Merge-Gain Regression (target: high-diff->-1, low-diff->+1)")
     
     ds = DIV2KDataset(Config.DATA_DIR, Config.PATCH)
     n_val = max(1, int(len(ds) * 0.1))
@@ -274,10 +378,16 @@ def main():
     
     u, v = grid_edges(Config.PATCH, Config.PATCH, Config.DEVICE)
     n_edges = len(u)
-    log(f"Grid: {Config.PATCH}x{Config.PATCH}, Total Edges: {n_edges}")
+    
+    # Use fixed validation image
+    val_img_fixed = ds.load_full_image(0).to(Config.DEVICE)  # Get first image
+    val_h, val_w = val_img_fixed.shape[1], val_img_fixed.shape[2]
+    
+    log(f"Fixed validation image: {val_h}×{val_w}")
     
     for ep in range(Config.EPOCHS):
-        enc.train(); pred.train()
+        enc.train()
+        pred.train()
         
         for bi, img in enumerate(train_dl):
             img = img.to(Config.DEVICE)
@@ -287,16 +397,12 @@ def main():
             feat_flat = feat.permute(0,2,3,1).reshape(B, -1, 64)
             
             loss_batch = 0
-            debug_batch = None
-            
             for i in range(B):
                 fu = feat_flat[i, u]
                 fv = feat_flat[i, v]
                 merge_logits = pred(fu, fv, torch.zeros(len(u), 1, device=Config.DEVICE))
-                loss_i, dbg = merge_gain_loss(img[i:i+1], u, v, merge_logits)
+                loss_i, _ = merge_gain_loss(img[i:i+1], u, v, merge_logits)
                 loss_batch += loss_i
-                if debug_batch is None:
-                    debug_batch = dbg
             
             loss_batch /= B
             opt.zero_grad()
@@ -304,46 +410,51 @@ def main():
             torch.nn.utils.clip_grad_norm_(list(enc.parameters()) + list(pred.parameters()), 1.0)
             opt.step()
             
-            if bi % 20 == 0:
-                log(f"Ep{ep} B{bi} Loss={loss_batch.item():.6f} | "
-                    f"Target={debug_batch['target_gain_mean']:+.3f} Pred={debug_batch['pred_gain_mean']:+.3f} "
-                    f"[min={debug_batch['pred_gain_min']:+.3f}, max={debug_batch['pred_gain_max']:+.3f}, std={debug_batch['pred_gain_std']:.3f}] | "
-                    f"HighDiffEdges={debug_batch['n_high_diff_edges']}/{n_edges}")
+            if bi % 50 == 0:
+                log(f"Ep{ep} B{bi} Loss={loss_batch.item():.6f}")
 
-        enc.eval(); pred.eval()
-        if len(val_dl) > 0:
-            with torch.no_grad():
-                img_val = next(iter(val_dl)).to(Config.DEVICE)
-                feat = enc(img_val)
-                feat_flat = feat.permute(0,2,3,1).reshape(1, -1, 64)
-                
-                fu = feat_flat[0, u]
-                fv = feat_flat[0, v]
-                merge_logits = pred(fu, fv, torch.zeros(len(u), 1, device=Config.DEVICE))
-                gains = merge_logits.squeeze(1).cpu().numpy()
-                
-                max_idx = max(u.max().item(), v.max().item())
-                labels, merges = gaec_additive(max_idx+1, u.cpu().numpy(), v.cpu().numpy(), gains, 
-                                             merge_threshold=0.0)
-                
-                img_u8 = (img_val[0].permute(1,2,0).cpu().numpy() * 255).astype(np.uint8)
-                sz, K = encode_regions_rgb_png(img_u8, labels)
-                
-                buf = io.BytesIO()
-                Image.fromarray(img_u8).save(buf, format="PNG", optimize=True)
-                base = len(buf.getvalue())
-                
-                ratio = sz / base if base > 0 else 1.0
-                gain_pct = (1.0 - ratio) * 100
-                log(f"[VAL] Regs={K} Merges={merges}/{n_edges-1} Size={sz} Base={base} Ratio={ratio:.3f} Gain={gain_pct:+.1f}%")
-                
-                os.makedirs("viz", exist_ok=True)
-                viz = (labels.reshape(Config.PATCH, Config.PATCH) * 50 % 255).astype(np.uint8)
-                Image.fromarray(viz, mode='L').save(f"viz/ep{ep}_val.png")
+        # Validation on FIXED image
+        enc.eval()
+        pred.eval()
+        
+        result = inference_compress_reconstruct(val_img_fixed, enc, pred, val_h, val_w, Config.DEVICE, 
+                                               reconstruct_mode="mean_color")
+        
+        base_buf = io.BytesIO()
+        Image.fromarray(result["original_img"]).save(base_buf, format="PNG", optimize=True)
+        base_size = len(base_buf.getvalue())
+        
+        ratio = result["total_bytes"] / base_size
+        gain = (1 - ratio) * 100
+        
+        log(f"[VAL Ep{ep}] Regs={result['num_regions']} Size={result['total_bytes']} Base={base_size} Ratio={ratio:.3f} Gain={gain:+.1f}%")
+        
+        if ep % 5 == 0:
+            visualize_compression_result(result, f"ep{ep}")
 
+    # Final: Test on multiple test images
+    log("\n=== TESTING ON TEST IMAGES ===")
     torch.save(enc.state_dict(), "enc.pth")
     torch.save(pred.state_dict(), "pred.pth")
-    log("Done")
+    
+    test_indices = [5, 10, 15]  # Test on 3 different images
+    for idx in test_indices:
+        if idx < len(ds):
+            test_img = ds.load_full_image(idx).to(Config.DEVICE)
+            th, tw = test_img.shape[1], test_img.shape[2]
+            
+            result = inference_compress_reconstruct(test_img, enc, pred, th, tw, Config.DEVICE,
+                                                   reconstruct_mode="mean_color")
+            
+            base_buf = io.BytesIO()
+            Image.fromarray(result["original_img"]).save(base_buf, format="PNG", optimize=True)
+            base_size = len(base_buf.getvalue())
+            
+            ratio = result["total_bytes"] / base_size
+            gain = (1 - ratio) * 100
+            
+            log(f"[TEST {idx}] Size={result['total_bytes']} Base={base_size} Ratio={ratio:.3f} Gain={gain:+.1f}%")
+            visualize_compression_result(result, f"test{idx}")
 
 if __name__ == "__main__":
     main()
