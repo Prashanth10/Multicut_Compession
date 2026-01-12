@@ -74,7 +74,7 @@ class Config:
 
     VAL_EVERY = 5
 
-    TARGET_REGIONS = 100
+    TARGET_REGIONS = 200
 
 def log(msg):
 
@@ -140,7 +140,7 @@ class DIV2KDataset(Dataset):
 
             img = Image.open(self.files[idx]).convert("RGB")
 
-            img = img.resize((256, 256), Image.LANCZOS)
+            # img = img.resize((256, 256), Image.LANCZOS)
 
             return self.test_transform(img)
 
@@ -944,34 +944,49 @@ def compression_loss(img_batch, edge_costs_raw, u, v, device):
     return total_loss / B
 
 # THRESHOLD
-
 def find_optimal_threshold(edge_costs, target_regions, num_pixels):
+    if len(edge_costs) == 0 or target_regions <= 0:
+        return np.median(edge_costs)
+    merging_fraction = (num_pixels - target_regions) / num_pixels
+    merging_fraction = np.clip(merging_fraction, 0.0, 0.99)
+    min_cost = np.percentile(edge_costs, 5)
+    max_cost = np.percentile(edge_costs, 95)
+    threshold = max_cost - merging_fraction * (max_cost - min_cost)
+    return threshold
 
-    sorted_costs = np.sort(edge_costs)
 
-    best_threshold = 0.0
+# def find_optimal_threshold(edge_costs, target_regions, num_pixels):
 
-    best_diff = float('inf')
+#     sorted_costs = np.sort(edge_costs)
 
-    for percentile in np.linspace(0, 100, 50):
+#     if len(edge_costs) == 0 or target_regions <= 0:
+#         return 0.5
+    
+#     best_threshold = np.mean(edge_costs)
 
-        threshold = np.percentile(edge_costs, percentile)
+#     best_diff = float('inf')
 
-        num_merges = (edge_costs > threshold).sum()
+#     for percentile in np.linspace(0, 100, 50):
 
-        estimated_regions = num_pixels - num_merges
+#         threshold = np.percentile(edge_costs, percentile)
 
-        estimated_regions = max(1, min(num_pixels, estimated_regions))
+#         num_merges = (edge_costs > threshold).sum()
 
-        diff = abs(estimated_regions - target_regions)
+#         estimated_regions = num_pixels - num_merges
 
-        if diff < best_diff:
+#         estimated_regions = max(1, min(num_pixels, estimated_regions))
 
-            best_diff = diff
+#         diff = abs(estimated_regions - target_regions)
 
-            best_threshold = threshold
+#         if diff < best_diff:
 
-    return best_threshold
+#             best_diff = diff
+
+#             best_threshold = threshold
+
+#     print(f"[THRESHOLD] Best threshold: {best_threshold:.4f} with estimated regions: {estimated_regions}")
+
+#     return max(0.0, best_threshold)
 
 # INFERENCE
 
