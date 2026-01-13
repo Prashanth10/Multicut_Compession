@@ -1,0 +1,1257 @@
+[12:46:11] Log file created: ./logs/log_20260113_124611.txt
+[12:46:11] Device: cuda
+[12:46:11] ======================================================================
+[12:46:11] MULTICUT COMPRESSION: PNG PER-REGION + DIRECT THRESHOLD
+[12:46:11] ======================================================================
+[12:46:11] Total images: 800
+[12:46:12] Training: 64×64 patches, 8064 edges
+[12:46:12] Target regions: 200
+[12:46:12] Post-process: Merge regions < 1000 pixels
+
+[12:46:12] Ep0 B0/180 Loss=2.0569
+[12:46:35] Ep0 B50/180 Loss=0.4074
+[12:46:57] Ep0 B100/180 Loss=0.4224
+[12:47:20] Ep0 B150/180 Loss=0.4024
+[12:47:34] Ep0 DONE - Loss: 0.4972
+[12:47:34] Ep1 B0/180 Loss=0.4137
+[12:47:46] Ep1 B50/180 Loss=0.4010
+[12:47:57] Ep1 B100/180 Loss=0.4059
+[12:48:09] Ep1 B150/180 Loss=0.4456
+[12:48:16] Ep1 DONE - Loss: 0.4260
+[12:48:16] Ep2 B0/180 Loss=0.4025
+[12:48:28] Ep2 B50/180 Loss=0.4185
+[12:48:40] Ep2 B100/180 Loss=0.4026
+[12:48:52] Ep2 B150/180 Loss=0.4029
+[12:48:58] Ep2 DONE - Loss: 0.4144
+[12:48:59] Ep3 B0/180 Loss=0.4279
+[12:49:11] Ep3 B50/180 Loss=0.4051
+[12:49:22] Ep3 B100/180 Loss=0.4442
+[12:49:34] Ep3 B150/180 Loss=0.4044
+[12:49:41] Ep3 DONE - Loss: 0.4057
+[12:49:41] Ep4 B0/180 Loss=0.4056
+[12:49:52] Ep4 B50/180 Loss=0.4028
+[12:50:04] Ep4 B100/180 Loss=0.3927
+[12:50:16] Ep4 B150/180 Loss=0.4047
+[12:50:23] Ep4 DONE - Loss: 0.4051
+[12:50:23] 
+[VALIDATION Ep4 on image 4]
+[12:50:23] [INFERENCE] Image: 2040×1608, Edges: 6,556,992
+[12:50:23] [INFERENCE] Costs: Mean=0.918, Std=0.280, Min=-0.994, Max=1.000
+[12:50:23] [INFERENCE] Target regions: 200
+[12:50:23] [THRESHOLD] DIRECT AGGRESSIVE ASSIGNMENT:
+[12:50:23]   Cost distribution: min=-0.9944, mean=0.9184, median=0.9999, max=1.0000
+[12:50:23]   Network strong (max=1.0000) → standard aggressive threshold=-0.3
+[12:50:23]   FINAL THRESHOLD: -0.3000
+[12:50:23]   Edges to MERGE (cost > -0.3000): 6,469,116 (98.7%)
+[12:50:23]   Edges to KEEP (cost <= -0.3000): 87,876 (1.3%)
+[12:50:23]   Expected regions: ~150-300 (aggressive pyramid reduction)
+[12:53:23] [GAEC] Edges in heap: 6,469,116
+[12:53:23] [GAEC] Merges executed: 3,273,696
+[12:53:23] [GAEC] Final regions: 6,624
+[12:53:23] 
+[POST-PROCESS] Starting with 6,624 regions
+[12:53:23] [MERGE] Found 6525 tiny regions (< 1000 pixels)
+[12:53:23] [MERGE] Tiny regions contain: 189,192 pixels (5.8% of image)
+[12:54:04] [MERGE] Merged 6525 tiny regions
+[12:54:04] [MERGE] Final regions: 119
+[12:54:04] 
+[12:54:07] [SIZE BREAKDOWN] Total=9,619,973 bytes | Seg=76,118 | Regions=9,541,938 | Overhead=1,917
+[12:54:07] [INFERENCE] Final result: 119 regions, 9,619,973 bytes
+
+[12:54:08] [VAL] Compressed=9,619,973 bytes, PNG=5,943,950 bytes, Ratio=1.618, Gain=-61.8%
+
+[12:54:09] Saved: segmentation_ep4.png
+[12:54:11] Saved: reconstruction_ep4.png
+[12:54:11]  Original: 9,840,960 bytes
+[12:54:11]  PSNR: Lossless
+[12:54:11]  MAE: 0.000000
+[12:54:11] [BEST] New best ratio: 1.618
+
+[12:54:11] Ep5 B0/180 Loss=0.4110
+[12:54:23] Ep5 B50/180 Loss=0.3911
+[12:54:34] Ep5 B100/180 Loss=0.4004
+[12:54:46] Ep5 B150/180 Loss=0.3945
+[12:54:53] Ep5 DONE - Loss: 0.4030
+[12:54:53] Ep6 B0/180 Loss=0.4048
+[12:55:05] Ep6 B50/180 Loss=0.3994
+[12:55:17] Ep6 B100/180 Loss=0.3981
+[12:55:29] Ep6 B150/180 Loss=0.3977
+[12:55:35] Ep6 DONE - Loss: 0.4002
+[12:55:36] Ep7 B0/180 Loss=0.3992
+[12:55:47] Ep7 B50/180 Loss=0.3929
+[12:55:59] Ep7 B100/180 Loss=0.3935
+[12:56:11] Ep7 B150/180 Loss=0.4072
+[12:56:18] Ep7 DONE - Loss: 0.4006
+[12:56:18] Ep8 B0/180 Loss=0.4026
+[12:56:29] Ep8 B50/180 Loss=0.4007
+[12:56:41] Ep8 B100/180 Loss=0.4030
+[12:56:53] Ep8 B150/180 Loss=0.4044
+[12:57:00] Ep8 DONE - Loss: 0.3979
+[12:57:00] Ep9 B0/180 Loss=0.3863
+[12:57:12] Ep9 B50/180 Loss=0.3923
+[12:57:24] Ep9 B100/180 Loss=0.4030
+[12:57:36] Ep9 B150/180 Loss=0.3920
+[12:57:42] Ep9 DONE - Loss: 0.3975
+[12:57:42] 
+[VALIDATION Ep9 on image 4]
+[12:57:43] [INFERENCE] Image: 2040×1608, Edges: 6,556,992
+[12:57:43] [INFERENCE] Costs: Mean=0.922, Std=0.275, Min=-1.000, Max=1.000
+[12:57:43] [INFERENCE] Target regions: 200
+[12:57:43] [THRESHOLD] DIRECT AGGRESSIVE ASSIGNMENT:
+[12:57:43]   Cost distribution: min=-0.9997, mean=0.9223, median=1.0000, max=1.0000
+[12:57:43]   Network strong (max=1.0000) → standard aggressive threshold=-0.3
+[12:57:43]   FINAL THRESHOLD: -0.3000
+[12:57:43]   Edges to MERGE (cost > -0.3000): 6,503,405 (99.2%)
+[12:57:43]   Edges to KEEP (cost <= -0.3000): 53,587 (0.8%)
+[12:57:43]   Expected regions: ~150-300 (aggressive pyramid reduction)
+[13:00:37] [GAEC] Edges in heap: 6,503,405
+[13:00:37] [GAEC] Merges executed: 3,275,313
+[13:00:37] [GAEC] Final regions: 5,007
+[13:00:37] 
+[POST-PROCESS] Starting with 5,007 regions
+[13:00:38] [MERGE] Found 4911 tiny regions (< 1000 pixels)
+[13:00:38] [MERGE] Tiny regions contain: 140,815 pixels (4.3% of image)
+[13:01:09] [MERGE] Merged 4911 tiny regions
+[13:01:09] [MERGE] Final regions: 109
+[13:01:09] 
+[13:01:11] [SIZE BREAKDOWN] Total=8,746,170 bytes | Seg=70,534 | Regions=8,673,879 | Overhead=1,757
+[13:01:11] [INFERENCE] Final result: 109 regions, 8,746,170 bytes
+
+[13:01:13] [VAL] Compressed=8,746,170 bytes, PNG=5,943,950 bytes, Ratio=1.471, Gain=-47.1%
+
+[13:01:13] Saved: segmentation_ep9.png
+[13:01:14] Saved: reconstruction_ep9.png
+[13:01:14]  Original: 9,840,960 bytes
+[13:01:14]  PSNR: Lossless
+[13:01:14]  MAE: 0.000000
+[13:01:14] [BEST] New best ratio: 1.471
+
+[13:01:14] Ep10 B0/180 Loss=0.3939
+[13:01:26] Ep10 B50/180 Loss=0.4110
+[13:01:38] Ep10 B100/180 Loss=0.4008
+[13:01:49] Ep10 B150/180 Loss=0.3907
+[13:01:56] Ep10 DONE - Loss: 0.3971
+[13:01:56] Ep11 B0/180 Loss=0.4083
+[13:02:08] Ep11 B50/180 Loss=0.3930
+[13:02:19] Ep11 B100/180 Loss=0.4006
+[13:02:31] Ep11 B150/180 Loss=0.3929
+[13:02:38] Ep11 DONE - Loss: 0.3963
+[13:02:38] Ep12 B0/180 Loss=0.3869
+[13:02:50] Ep12 B50/180 Loss=0.3975
+[13:03:01] Ep12 B100/180 Loss=0.3834
+[13:03:13] Ep12 B150/180 Loss=0.3880
+[13:03:20] Ep12 DONE - Loss: 0.3946
+[13:03:20] Ep13 B0/180 Loss=0.4015
+[13:03:32] Ep13 B50/180 Loss=0.3854
+[13:03:43] Ep13 B100/180 Loss=0.3915
+[13:03:55] Ep13 B150/180 Loss=0.3973
+[13:04:02] Ep13 DONE - Loss: 0.3934
+[13:04:02] Ep14 B0/180 Loss=0.3985
+[13:04:13] Ep14 B50/180 Loss=0.3898
+[13:04:25] Ep14 B100/180 Loss=0.3880
+[13:04:37] Ep14 B150/180 Loss=0.4028
+[13:04:43] Ep14 DONE - Loss: 0.3933
+[13:04:43] 
+[VALIDATION Ep14 on image 4]
+[13:04:43] [INFERENCE] Image: 2040×1608, Edges: 6,556,992
+[13:04:44] [INFERENCE] Costs: Mean=0.925, Std=0.268, Min=-1.000, Max=1.000
+[13:04:44] [INFERENCE] Target regions: 200
+[13:04:44] [THRESHOLD] DIRECT AGGRESSIVE ASSIGNMENT:
+[13:04:44]   Cost distribution: min=-1.0000, mean=0.9254, median=1.0000, max=1.0000
+[13:04:44]   Network strong (max=1.0000) → standard aggressive threshold=-0.3
+[13:04:44]   FINAL THRESHOLD: -0.3000
+[13:04:44]   Edges to MERGE (cost > -0.3000): 6,509,728 (99.3%)
+[13:04:44]   Edges to KEEP (cost <= -0.3000): 47,264 (0.7%)
+[13:04:44]   Expected regions: ~150-300 (aggressive pyramid reduction)
+[13:07:07] [GAEC] Edges in heap: 6,509,728
+[13:07:07] [GAEC] Merges executed: 3,276,463
+[13:07:07] [GAEC] Final regions: 3,857
+[13:07:07] 
+[POST-PROCESS] Starting with 3,857 regions
+[13:07:08] [MERGE] Found 3800 tiny regions (< 1000 pixels)
+[13:07:08] [MERGE] Tiny regions contain: 102,378 pixels (3.1% of image)
+[13:07:31] [MERGE] Merged 3800 tiny regions
+[13:07:31] [MERGE] Final regions: 64
+[13:07:31] 
+[13:07:34] [SIZE BREAKDOWN] Total=8,087,324 bytes | Seg=55,916 | Regions=8,030,371 | Overhead=1,037
+[13:07:34] [INFERENCE] Final result: 64 regions, 8,087,324 bytes
+
+[13:07:35] [VAL] Compressed=8,087,324 bytes, PNG=5,943,950 bytes, Ratio=1.361, Gain=-36.1%
+
+[13:07:36] Saved: segmentation_ep14.png
+[13:07:37] Saved: reconstruction_ep14.png
+[13:07:37]  Original: 9,840,960 bytes
+[13:07:37]  PSNR: Lossless
+[13:07:37]  MAE: 0.000000
+[13:07:37] [BEST] New best ratio: 1.361
+
+[13:07:37] Ep15 B0/180 Loss=0.4063
+[13:07:48] Ep15 B50/180 Loss=0.4013
+[13:08:00] Ep15 B100/180 Loss=0.3998
+[13:08:12] Ep15 B150/180 Loss=0.3908
+[13:08:18] Ep15 DONE - Loss: 0.3921
+[13:08:19] Ep16 B0/180 Loss=0.3945
+[13:08:30] Ep16 B50/180 Loss=0.3964
+[13:08:42] Ep16 B100/180 Loss=0.3957
+[13:08:53] Ep16 B150/180 Loss=0.4014
+[13:09:00] Ep16 DONE - Loss: 0.3928
+[13:09:00] Ep17 B0/180 Loss=0.3842
+[13:09:12] Ep17 B50/180 Loss=0.3824
+[13:09:23] Ep17 B100/180 Loss=0.3977
+[13:09:35] Ep17 B150/180 Loss=0.3964
+[13:09:42] Ep17 DONE - Loss: 0.3893
+[13:09:42] Ep18 B0/180 Loss=0.3874
+[13:09:54] Ep18 B50/180 Loss=0.3943
+[13:10:05] Ep18 B100/180 Loss=0.3973
+[13:10:17] Ep18 B150/180 Loss=0.3949
+[13:10:23] Ep18 DONE - Loss: 0.3888
+[13:10:24] Ep19 B0/180 Loss=0.3958
+[13:10:35] Ep19 B50/180 Loss=0.3901
+[13:10:47] Ep19 B100/180 Loss=0.3818
+[13:10:59] Ep19 B150/180 Loss=0.3842
+[13:11:05] Ep19 DONE - Loss: 0.3887
+[13:11:05] 
+[VALIDATION Ep19 on image 4]
+[13:11:05] [INFERENCE] Image: 2040×1608, Edges: 6,556,992
+[13:11:05] [INFERENCE] Costs: Mean=0.908, Std=0.294, Min=-1.000, Max=1.000
+[13:11:05] [INFERENCE] Target regions: 200
+[13:11:05] [THRESHOLD] DIRECT AGGRESSIVE ASSIGNMENT:
+[13:11:05]   Cost distribution: min=-1.0000, mean=0.9076, median=0.9991, max=1.0000
+[13:11:05]   Network strong (max=1.0000) → standard aggressive threshold=-0.3
+[13:11:05]   FINAL THRESHOLD: -0.3000
+[13:11:05]   Edges to MERGE (cost > -0.3000): 6,513,836 (99.3%)
+[13:11:05]   Edges to KEEP (cost <= -0.3000): 43,156 (0.7%)
+[13:11:05]   Expected regions: ~150-300 (aggressive pyramid reduction)
+[13:13:32] [GAEC] Edges in heap: 6,513,836
+[13:13:32] [GAEC] Merges executed: 3,275,950
+[13:13:32] [GAEC] Final regions: 4,370
+[13:13:32] 
+[POST-PROCESS] Starting with 4,370 regions
+[13:13:32] [MERGE] Found 4287 tiny regions (< 1000 pixels)
+[13:13:32] [MERGE] Tiny regions contain: 199,834 pixels (6.1% of image)
+[13:13:59] [MERGE] Merged 4287 tiny regions
+[13:13:59] [MERGE] Final regions: 97
+[13:13:59] 
+[13:14:02] [SIZE BREAKDOWN] Total=9,909,617 bytes | Seg=74,416 | Regions=9,833,636 | Overhead=1,565
+[13:14:02] [INFERENCE] Final result: 97 regions, 9,909,617 bytes
+
+[13:14:03] [VAL] Compressed=9,909,617 bytes, PNG=5,943,950 bytes, Ratio=1.667, Gain=-66.7%
+
+[13:14:03] Saved: segmentation_ep19.png
+[13:14:05] Saved: reconstruction_ep19.png
+[13:14:05]  Original: 9,840,960 bytes
+[13:14:05]  PSNR: Lossless
+[13:14:05]  MAE: 0.000000
+[13:14:05] Ep20 B0/180 Loss=0.4096
+[13:14:16] Ep20 B50/180 Loss=0.3882
+[13:14:28] Ep20 B100/180 Loss=0.3880
+[13:14:40] Ep20 B150/180 Loss=0.3891
+[13:14:46] Ep20 DONE - Loss: 0.3884
+[13:14:47] Ep21 B0/180 Loss=0.3969
+[13:14:58] Ep21 B50/180 Loss=0.3781
+[13:15:10] Ep21 B100/180 Loss=0.3938
+[13:15:21] Ep21 B150/180 Loss=0.3630
+[13:15:28] Ep21 DONE - Loss: 0.3888
+[13:15:28] Ep22 B0/180 Loss=0.3935
+[13:15:40] Ep22 B50/180 Loss=0.3737
+[13:15:52] Ep22 B100/180 Loss=0.3766
+[13:16:03] Ep22 B150/180 Loss=0.3740
+[13:16:10] Ep22 DONE - Loss: 0.3875
+[13:16:10] Ep23 B0/180 Loss=0.3944
+[13:16:22] Ep23 B50/180 Loss=0.3749
+[13:16:33] Ep23 B100/180 Loss=0.3781
+[13:16:45] Ep23 B150/180 Loss=0.3768
+[13:16:52] Ep23 DONE - Loss: 0.3875
+[13:16:52] Ep24 B0/180 Loss=0.3826
+[13:17:04] Ep24 B50/180 Loss=0.3858
+[13:17:15] Ep24 B100/180 Loss=0.3800
+[13:17:27] Ep24 B150/180 Loss=0.3977
+[13:17:33] Ep24 DONE - Loss: 0.3860
+[13:17:33] 
+[VALIDATION Ep24 on image 4]
+[13:17:34] [INFERENCE] Image: 2040×1608, Edges: 6,556,992
+[13:17:34] [INFERENCE] Costs: Mean=0.909, Std=0.296, Min=-1.000, Max=1.000
+[13:17:34] [INFERENCE] Target regions: 200
+[13:17:34] [THRESHOLD] DIRECT AGGRESSIVE ASSIGNMENT:
+[13:17:34]   Cost distribution: min=-1.0000, mean=0.9094, median=0.9999, max=1.0000
+[13:17:34]   Network strong (max=1.0000) → standard aggressive threshold=-0.3
+[13:17:34]   FINAL THRESHOLD: -0.3000
+[13:17:34]   Edges to MERGE (cost > -0.3000): 6,517,660 (99.4%)
+[13:17:34]   Edges to KEEP (cost <= -0.3000): 39,332 (0.6%)
+[13:17:34]   Expected regions: ~150-300 (aggressive pyramid reduction)
+[13:22:37] [GAEC] Edges in heap: 6,517,660
+[13:22:37] [GAEC] Merges executed: 3,276,311
+[13:22:37] [GAEC] Final regions: 4,009
+[13:22:37] 
+[POST-PROCESS] Starting with 4,009 regions
+[13:22:37] [MERGE] Found 3942 tiny regions (< 1000 pixels)
+[13:22:37] [MERGE] Tiny regions contain: 204,163 pixels (6.2% of image)
+[13:23:02] [MERGE] Merged 3942 tiny regions
+[13:23:02] [MERGE] Final regions: 76
+[13:23:02] 
+[13:23:05] [SIZE BREAKDOWN] Total=9,492,354 bytes | Seg=66,454 | Regions=9,424,671 | Overhead=1,229
+[13:23:05] [INFERENCE] Final result: 76 regions, 9,492,354 bytes
+
+[13:23:06] [VAL] Compressed=9,492,354 bytes, PNG=5,943,950 bytes, Ratio=1.597, Gain=-59.7%
+
+[13:23:07] Saved: segmentation_ep24.png
+[13:23:08] Saved: reconstruction_ep24.png
+[13:23:08]  Original: 9,840,960 bytes
+[13:23:08]  PSNR: Lossless
+[13:23:08]  MAE: 0.000000
+[13:23:08] Ep25 B0/180 Loss=0.3970
+[13:23:20] Ep25 B50/180 Loss=0.3730
+[13:23:31] Ep25 B100/180 Loss=0.3761
+[13:23:43] Ep25 B150/180 Loss=0.4004
+[13:23:50] Ep25 DONE - Loss: 0.3859
+[13:23:50] Ep26 B0/180 Loss=0.3780
+[13:24:02] Ep26 B50/180 Loss=0.3956
+[13:24:14] Ep26 B100/180 Loss=0.3919
+[13:24:25] Ep26 B150/180 Loss=0.3803
+[13:24:32] Ep26 DONE - Loss: 0.3851
+[13:24:32] Ep27 B0/180 Loss=0.3933
+[13:24:44] Ep27 B50/180 Loss=0.3908
+[13:24:55] Ep27 B100/180 Loss=0.3976
+[13:25:07] Ep27 B150/180 Loss=0.3601
+[13:25:14] Ep27 DONE - Loss: 0.3853
+[13:25:14] Ep28 B0/180 Loss=0.3885
+[13:25:26] Ep28 B50/180 Loss=0.3983
+[13:25:38] Ep28 B100/180 Loss=0.3816
+[13:25:49] Ep28 B150/180 Loss=0.3582
+[13:25:56] Ep28 DONE - Loss: 0.3840
+[13:25:56] Ep29 B0/180 Loss=0.3860
+[13:26:08] Ep29 B50/180 Loss=0.3771
+[13:26:20] Ep29 B100/180 Loss=0.3873
+[13:26:31] Ep29 B150/180 Loss=0.3749
+[13:26:38] Ep29 DONE - Loss: 0.3847
+[13:26:38] 
+[VALIDATION Ep29 on image 4]
+[13:26:38] [INFERENCE] Image: 2040×1608, Edges: 6,556,992
+[13:26:38] [INFERENCE] Costs: Mean=0.910, Std=0.296, Min=-1.000, Max=1.000
+[13:26:38] [INFERENCE] Target regions: 200
+[13:26:38] [THRESHOLD] DIRECT AGGRESSIVE ASSIGNMENT:
+[13:26:38]   Cost distribution: min=-1.0000, mean=0.9098, median=1.0000, max=1.0000
+[13:26:38]   Network strong (max=1.0000) → standard aggressive threshold=-0.3
+[13:26:38]   FINAL THRESHOLD: -0.3000
+[13:26:38]   Edges to MERGE (cost > -0.3000): 6,523,874 (99.5%)
+[13:26:38]   Edges to KEEP (cost <= -0.3000): 33,118 (0.5%)
+[13:26:38]   Expected regions: ~150-300 (aggressive pyramid reduction)
+[13:29:04] [GAEC] Edges in heap: 6,523,874
+[13:29:04] [GAEC] Merges executed: 3,276,692
+[13:29:04] [GAEC] Final regions: 3,628
+[13:29:05] 
+[POST-PROCESS] Starting with 3,628 regions
+[13:29:05] [MERGE] Found 3561 tiny regions (< 1000 pixels)
+[13:29:05] [MERGE] Tiny regions contain: 215,376 pixels (6.6% of image)
+[13:29:27] [MERGE] Merged 3561 tiny regions
+[13:29:27] [MERGE] Final regions: 74
+[13:29:27] 
+[13:29:30] [SIZE BREAKDOWN] Total=8,926,744 bytes | Seg=65,218 | Regions=8,860,329 | Overhead=1,197
+[13:29:30] [INFERENCE] Final result: 74 regions, 8,926,744 bytes
+
+[13:29:31] [VAL] Compressed=8,926,744 bytes, PNG=5,943,950 bytes, Ratio=1.502, Gain=-50.2%
+
+[13:29:32] Saved: segmentation_ep29.png
+[13:29:33] Saved: reconstruction_ep29.png
+[13:29:33]  Original: 9,840,960 bytes
+[13:29:33]  PSNR: Lossless
+[13:29:33]  MAE: 0.000000
+[13:29:33] Ep30 B0/180 Loss=0.3849
+[13:29:45] Ep30 B50/180 Loss=0.3713
+[13:29:56] Ep30 B100/180 Loss=0.3916
+[13:30:08] Ep30 B150/180 Loss=0.3870
+[13:30:15] Ep30 DONE - Loss: 0.3835
+[13:30:15] Ep31 B0/180 Loss=0.3829
+[13:30:27] Ep31 B50/180 Loss=0.3585
+[13:30:39] Ep31 B100/180 Loss=0.3806
+[13:30:50] Ep31 B150/180 Loss=0.3909
+[13:30:57] Ep31 DONE - Loss: 0.3841
+[13:30:57] Ep32 B0/180 Loss=0.3885
+[13:31:09] Ep32 B50/180 Loss=0.3743
+[13:31:21] Ep32 B100/180 Loss=0.3947
+[13:31:32] Ep32 B150/180 Loss=0.3989
+[13:31:39] Ep32 DONE - Loss: 0.3853
+[13:31:40] Ep33 B0/180 Loss=0.3895
+[13:31:51] Ep33 B50/180 Loss=0.3968
+[13:32:03] Ep33 B100/180 Loss=0.3878
+[13:32:15] Ep33 B150/180 Loss=0.3998
+[13:32:22] Ep33 DONE - Loss: 0.3837
+[13:32:22] Ep34 B0/180 Loss=0.3804
+[13:32:34] Ep34 B50/180 Loss=0.3721
+[13:32:46] Ep34 B100/180 Loss=0.3865
+[13:32:57] Ep34 B150/180 Loss=0.3905
+[13:33:04] Ep34 DONE - Loss: 0.3836
+[13:33:04] 
+[VALIDATION Ep34 on image 4]
+[13:33:05] [INFERENCE] Image: 2040×1608, Edges: 6,556,992
+[13:33:05] [INFERENCE] Costs: Mean=0.908, Std=0.301, Min=-1.000, Max=1.000
+[13:33:05] [INFERENCE] Target regions: 200
+[13:33:05] [THRESHOLD] DIRECT AGGRESSIVE ASSIGNMENT:
+[13:33:05]   Cost distribution: min=-1.0000, mean=0.9080, median=0.9999, max=1.0000
+[13:33:05]   Network strong (max=1.0000) → standard aggressive threshold=-0.3
+[13:33:05]   FINAL THRESHOLD: -0.3000
+[13:33:05]   Edges to MERGE (cost > -0.3000): 6,520,378 (99.4%)
+[13:33:05]   Edges to KEEP (cost <= -0.3000): 36,614 (0.6%)
+[13:33:05]   Expected regions: ~150-300 (aggressive pyramid reduction)
+[13:36:14] [GAEC] Edges in heap: 6,520,378
+[13:36:14] [GAEC] Merges executed: 3,276,560
+[13:36:14] [GAEC] Final regions: 3,760
+[13:36:14] 
+[POST-PROCESS] Starting with 3,760 regions
+[13:36:14] [MERGE] Found 3683 tiny regions (< 1000 pixels)
+[13:36:14] [MERGE] Tiny regions contain: 227,915 pixels (6.9% of image)
+[13:36:37] [MERGE] Merged 3683 tiny regions
+[13:36:37] [MERGE] Final regions: 83
+[13:36:37] 
+[13:36:40] [SIZE BREAKDOWN] Total=9,671,251 bytes | Seg=71,056 | Regions=9,598,854 | Overhead=1,341
+[13:36:40] [INFERENCE] Final result: 83 regions, 9,671,251 bytes
+
+[13:36:41] [VAL] Compressed=9,671,251 bytes, PNG=5,943,950 bytes, Ratio=1.627, Gain=-62.7%
+
+[13:36:42] Saved: segmentation_ep34.png
+[13:36:43] Saved: reconstruction_ep34.png
+[13:36:43]  Original: 9,840,960 bytes
+[13:36:43]  PSNR: Lossless
+[13:36:43]  MAE: 0.000000
+[13:36:43] Ep35 B0/180 Loss=0.3835
+[13:36:55] Ep35 B50/180 Loss=0.3769
+[13:37:06] Ep35 B100/180 Loss=0.3794
+[13:37:18] Ep35 B150/180 Loss=0.3993
+[13:37:25] Ep35 DONE - Loss: 0.3830
+[13:37:25] Ep36 B0/180 Loss=0.3824
+[13:37:37] Ep36 B50/180 Loss=0.3687
+[13:37:48] Ep36 B100/180 Loss=0.3899
+[13:38:00] Ep36 B150/180 Loss=0.3691
+[13:38:07] Ep36 DONE - Loss: 0.3845
+[13:38:07] Ep37 B0/180 Loss=0.3757
+[13:38:19] Ep37 B50/180 Loss=0.3897
+[13:38:31] Ep37 B100/180 Loss=0.3913
+[13:38:42] Ep37 B150/180 Loss=0.3878
+[13:38:49] Ep37 DONE - Loss: 0.3840
+[13:38:49] Ep38 B0/180 Loss=0.3903
+[13:39:01] Ep38 B50/180 Loss=0.3942
+[13:39:13] Ep38 B100/180 Loss=0.3751
+[13:39:24] Ep38 B150/180 Loss=0.3680
+[13:39:31] Ep38 DONE - Loss: 0.3832
+[13:39:31] Ep39 B0/180 Loss=0.3991
+[13:39:43] Ep39 B50/180 Loss=0.3970
+[13:39:55] Ep39 B100/180 Loss=0.3814
+[13:40:06] Ep39 B150/180 Loss=0.3674
+[13:40:13] Ep39 DONE - Loss: 0.3832
+[13:40:13] 
+[VALIDATION Ep39 on image 4]
+[13:40:13] [INFERENCE] Image: 2040×1608, Edges: 6,556,992
+[13:40:13] [INFERENCE] Costs: Mean=0.913, Std=0.291, Min=-1.000, Max=1.000
+[13:40:13] [INFERENCE] Target regions: 200
+[13:40:13] [THRESHOLD] DIRECT AGGRESSIVE ASSIGNMENT:
+[13:40:13]   Cost distribution: min=-1.0000, mean=0.9126, median=1.0000, max=1.0000
+[13:40:13]   Network strong (max=1.0000) → standard aggressive threshold=-0.3
+[13:40:13]   FINAL THRESHOLD: -0.3000
+[13:40:13]   Edges to MERGE (cost > -0.3000): 6,528,393 (99.6%)
+[13:40:13]   Edges to KEEP (cost <= -0.3000): 28,599 (0.4%)
+[13:40:13]   Expected regions: ~150-300 (aggressive pyramid reduction)
+[13:42:57] [GAEC] Edges in heap: 6,528,393
+[13:42:57] [GAEC] Merges executed: 3,277,449
+[13:42:57] [GAEC] Final regions: 2,871
+[13:42:58] 
+[POST-PROCESS] Starting with 2,871 regions
+[13:42:58] [MERGE] Found 2816 tiny regions (< 1000 pixels)
+[13:42:58] [MERGE] Tiny regions contain: 94,525 pixels (2.9% of image)
+[13:43:16] [MERGE] Merged 2816 tiny regions
+[13:43:16] [MERGE] Final regions: 58
+[13:43:16] 
+[13:43:18] [SIZE BREAKDOWN] Total=9,401,082 bytes | Seg=60,976 | Regions=9,339,165 | Overhead=941
+[13:43:18] [INFERENCE] Final result: 58 regions, 9,401,082 bytes
+
+[13:43:19] [VAL] Compressed=9,401,082 bytes, PNG=5,943,950 bytes, Ratio=1.582, Gain=-58.2%
+
+[13:43:20] Saved: segmentation_ep39.png
+[13:43:21] Saved: reconstruction_ep39.png
+[13:43:21]  Original: 9,840,960 bytes
+[13:43:21]  PSNR: Lossless
+[13:43:21]  MAE: 0.000000
+[13:43:21] Ep40 B0/180 Loss=0.3989
+[13:43:33] Ep40 B50/180 Loss=0.3656
+[13:43:44] Ep40 B100/180 Loss=0.3994
+[13:43:56] Ep40 B150/180 Loss=0.3984
+[13:44:03] Ep40 DONE - Loss: 0.3830
+[13:44:03] Ep41 B0/180 Loss=0.3976
+[13:44:15] Ep41 B50/180 Loss=0.3817
+[13:44:27] Ep41 B100/180 Loss=0.3868
+[13:44:38] Ep41 B150/180 Loss=0.3804
+[13:44:45] Ep41 DONE - Loss: 0.3811
+[13:44:45] Ep42 B0/180 Loss=0.3951
+[13:44:57] Ep42 B50/180 Loss=0.3948
+[13:45:09] Ep42 B100/180 Loss=0.3752
+[13:45:20] Ep42 B150/180 Loss=0.3915
+[13:45:27] Ep42 DONE - Loss: 0.3829
+[13:45:27] Ep43 B0/180 Loss=0.3654
+[13:45:39] Ep43 B50/180 Loss=0.3964
+[13:45:51] Ep43 B100/180 Loss=0.3863
+[13:46:02] Ep43 B150/180 Loss=0.3873
+[13:46:09] Ep43 DONE - Loss: 0.3804
+[13:46:09] Ep44 B0/180 Loss=0.3795
+[13:46:21] Ep44 B50/180 Loss=0.3813
+[13:46:32] Ep44 B100/180 Loss=0.3974
+[13:46:44] Ep44 B150/180 Loss=0.3848
+[13:46:51] Ep44 DONE - Loss: 0.3822
+[13:46:51] 
+[VALIDATION Ep44 on image 4]
+[13:46:51] [INFERENCE] Image: 2040×1608, Edges: 6,556,992
+[13:46:51] [INFERENCE] Costs: Mean=0.909, Std=0.299, Min=-1.000, Max=1.000
+[13:46:51] [INFERENCE] Target regions: 200
+[13:46:51] [THRESHOLD] DIRECT AGGRESSIVE ASSIGNMENT:
+[13:46:51]   Cost distribution: min=-1.0000, mean=0.9091, median=0.9999, max=1.0000
+[13:46:51]   Network strong (max=1.0000) → standard aggressive threshold=-0.3
+[13:46:51]   FINAL THRESHOLD: -0.3000
+[13:46:51]   Edges to MERGE (cost > -0.3000): 6,525,191 (99.5%)
+[13:46:51]   Edges to KEEP (cost <= -0.3000): 31,801 (0.5%)
+[13:46:51]   Expected regions: ~150-300 (aggressive pyramid reduction)
+[13:49:58] [GAEC] Edges in heap: 6,525,191
+[13:49:58] [GAEC] Merges executed: 3,276,950
+[13:49:58] [GAEC] Final regions: 3,370
+[13:49:58] 
+[POST-PROCESS] Starting with 3,370 regions
+[13:49:58] [MERGE] Found 3283 tiny regions (< 1000 pixels)
+[13:49:58] [MERGE] Tiny regions contain: 150,993 pixels (4.6% of image)
+[13:50:19] [MERGE] Merged 3283 tiny regions
+[13:50:19] [MERGE] Final regions: 90
+[13:50:19] 
+[13:50:22] [SIZE BREAKDOWN] Total=9,556,294 bytes | Seg=68,276 | Regions=9,486,565 | Overhead=1,453
+[13:50:22] [INFERENCE] Final result: 90 regions, 9,556,294 bytes
+
+[13:50:23] [VAL] Compressed=9,556,294 bytes, PNG=5,943,950 bytes, Ratio=1.608, Gain=-60.8%
+
+[13:50:23] Saved: segmentation_ep44.png
+[13:50:25] Saved: reconstruction_ep44.png
+[13:50:25]  Original: 9,840,960 bytes
+[13:50:25]  PSNR: Lossless
+[13:50:25]  MAE: 0.000000
+[13:50:25] Ep45 B0/180 Loss=0.3958
+[13:50:36] Ep45 B50/180 Loss=0.3934
+[13:50:48] Ep45 B100/180 Loss=0.3777
+[13:51:00] Ep45 B150/180 Loss=0.3757
+[13:51:07] Ep45 DONE - Loss: 0.3832
+[13:51:07] Ep46 B0/180 Loss=0.3818
+[13:51:19] Ep46 B50/180 Loss=0.3563
+[13:51:30] Ep46 B100/180 Loss=0.3808
+[13:51:42] Ep46 B150/180 Loss=0.3949
+[13:51:49] Ep46 DONE - Loss: 0.3818
+[13:51:49] Ep47 B0/180 Loss=0.3609
+[13:52:01] Ep47 B50/180 Loss=0.3698
+[13:52:12] Ep47 B100/180 Loss=0.3753
+[13:52:24] Ep47 B150/180 Loss=0.3889
+[13:52:31] Ep47 DONE - Loss: 0.3827
+[13:52:31] Ep48 B0/180 Loss=0.3882
+[13:52:43] Ep48 B50/180 Loss=0.3993
+[13:52:55] Ep48 B100/180 Loss=0.3745
+[13:53:06] Ep48 B150/180 Loss=0.3767
+[13:53:13] Ep48 DONE - Loss: 0.3819
+[13:53:13] Ep49 B0/180 Loss=0.3820
+[13:53:25] Ep49 B50/180 Loss=0.3839
+[13:53:37] Ep49 B100/180 Loss=0.3826
+[13:53:48] Ep49 B150/180 Loss=0.3833
+[13:53:55] Ep49 DONE - Loss: 0.3805
+[13:53:55] 
+[VALIDATION Ep49 on image 4]
+[13:53:55] [INFERENCE] Image: 2040×1608, Edges: 6,556,992
+[13:53:55] [INFERENCE] Costs: Mean=0.910, Std=0.297, Min=-1.000, Max=1.000
+[13:53:55] [INFERENCE] Target regions: 200
+[13:53:55] [THRESHOLD] DIRECT AGGRESSIVE ASSIGNMENT:
+[13:53:55]   Cost distribution: min=-1.0000, mean=0.9097, median=1.0000, max=1.0000
+[13:53:55]   Network strong (max=1.0000) → standard aggressive threshold=-0.3
+[13:53:55]   FINAL THRESHOLD: -0.3000
+[13:53:55]   Edges to MERGE (cost > -0.3000): 6,528,037 (99.6%)
+[13:53:55]   Edges to KEEP (cost <= -0.3000): 28,955 (0.4%)
+[13:53:55]   Expected regions: ~150-300 (aggressive pyramid reduction)
+[13:57:07] [GAEC] Edges in heap: 6,528,037
+[13:57:07] [GAEC] Merges executed: 3,277,090
+[13:57:07] [GAEC] Final regions: 3,230
+[13:57:07] 
+[POST-PROCESS] Starting with 3,230 regions
+[13:57:08] [MERGE] Found 3175 tiny regions (< 1000 pixels)
+[13:57:08] [MERGE] Tiny regions contain: 124,421 pixels (3.8% of image)
+[13:57:28] [MERGE] Merged 3175 tiny regions
+[13:57:28] [MERGE] Final regions: 62
+[13:57:28] 
+[13:57:31] [SIZE BREAKDOWN] Total=9,409,750 bytes | Seg=55,888 | Regions=9,352,857 | Overhead=1,005
+[13:57:31] [INFERENCE] Final result: 62 regions, 9,409,750 bytes
+
+[13:57:32] [VAL] Compressed=9,409,750 bytes, PNG=5,943,950 bytes, Ratio=1.583, Gain=-58.3%
+
+[13:57:32] Saved: segmentation_ep49.png
+[13:57:33] Saved: reconstruction_ep49.png
+[13:57:33]  Original: 9,840,960 bytes
+[13:57:33]  PSNR: Lossless
+[13:57:33]  MAE: 0.000000
+[13:57:33] Ep50 B0/180 Loss=0.3818
+[13:57:45] Ep50 B50/180 Loss=0.3948
+[13:57:57] Ep50 B100/180 Loss=0.3826
+[13:58:09] Ep50 B150/180 Loss=0.3773
+[13:58:15] Ep50 DONE - Loss: 0.3815
+[13:58:15] Ep51 B0/180 Loss=0.3726
+[13:58:27] Ep51 B50/180 Loss=0.3843
+[13:58:39] Ep51 B100/180 Loss=0.3797
+[13:58:51] Ep51 B150/180 Loss=0.3654
+[13:58:58] Ep51 DONE - Loss: 0.3809
+[13:58:58] Ep52 B0/180 Loss=0.3826
+[13:59:09] Ep52 B50/180 Loss=0.3698
+[13:59:21] Ep52 B100/180 Loss=0.3811
+[13:59:33] Ep52 B150/180 Loss=0.3971
+[13:59:40] Ep52 DONE - Loss: 0.3810
+[13:59:40] Ep53 B0/180 Loss=0.3917
+[13:59:52] Ep53 B50/180 Loss=0.3853
+[14:00:03] Ep53 B100/180 Loss=0.3987
+[14:00:15] Ep53 B150/180 Loss=0.3737
+[14:00:22] Ep53 DONE - Loss: 0.3816
+[14:00:22] Ep54 B0/180 Loss=0.3884
+[14:00:34] Ep54 B50/180 Loss=0.3845
+[14:00:46] Ep54 B100/180 Loss=0.3787
+[14:00:57] Ep54 B150/180 Loss=0.3942
+[14:01:04] Ep54 DONE - Loss: 0.3817
+[14:01:04] 
+[VALIDATION Ep54 on image 4]
+[14:01:04] [INFERENCE] Image: 2040×1608, Edges: 6,556,992
+[14:01:04] [INFERENCE] Costs: Mean=0.909, Std=0.297, Min=-1.000, Max=1.000
+[14:01:04] [INFERENCE] Target regions: 200
+[14:01:04] [THRESHOLD] DIRECT AGGRESSIVE ASSIGNMENT:
+[14:01:04]   Cost distribution: min=-1.0000, mean=0.9094, median=1.0000, max=1.0000
+[14:01:04]   Network strong (max=1.0000) → standard aggressive threshold=-0.3
+[14:01:04]   FINAL THRESHOLD: -0.3000
+[14:01:04]   Edges to MERGE (cost > -0.3000): 6,529,826 (99.6%)
+[14:01:04]   Edges to KEEP (cost <= -0.3000): 27,166 (0.4%)
+[14:01:04]   Expected regions: ~150-300 (aggressive pyramid reduction)
+[14:03:46] [GAEC] Edges in heap: 6,529,826
+[14:03:46] [GAEC] Merges executed: 3,277,156
+[14:03:46] [GAEC] Final regions: 3,164
+[14:03:46] 
+[POST-PROCESS] Starting with 3,164 regions
+[14:03:46] [MERGE] Found 3123 tiny regions (< 1000 pixels)
+[14:03:46] [MERGE] Tiny regions contain: 103,903 pixels (3.2% of image)
+[14:04:06] [MERGE] Merged 3123 tiny regions
+[14:04:06] [MERGE] Final regions: 49
+[14:04:06] 
+[14:04:09] [SIZE BREAKDOWN] Total=9,114,336 bytes | Seg=51,074 | Regions=9,062,465 | Overhead=797
+[14:04:09] [INFERENCE] Final result: 49 regions, 9,114,336 bytes
+
+[14:04:10] [VAL] Compressed=9,114,336 bytes, PNG=5,943,950 bytes, Ratio=1.533, Gain=-53.3%
+
+[14:04:10] Saved: segmentation_ep54.png
+[14:04:12] Saved: reconstruction_ep54.png
+[14:04:12]  Original: 9,840,960 bytes
+[14:04:12]  PSNR: Lossless
+[14:04:12]  MAE: 0.000000
+[14:04:12] Ep55 B0/180 Loss=0.3771
+[14:04:24] Ep55 B50/180 Loss=0.3844
+[14:04:35] Ep55 B100/180 Loss=0.3804
+[14:04:47] Ep55 B150/180 Loss=0.3457
+[14:04:54] Ep55 DONE - Loss: 0.3829
+[14:04:54] Ep56 B0/180 Loss=0.3807
+[14:05:06] Ep56 B50/180 Loss=0.3724
+[14:05:17] Ep56 B100/180 Loss=0.3697
+[14:05:29] Ep56 B150/180 Loss=0.3665
+[14:05:36] Ep56 DONE - Loss: 0.3798
+[14:05:36] Ep57 B0/180 Loss=0.3732
+[14:05:48] Ep57 B50/180 Loss=0.3727
+[14:06:00] Ep57 B100/180 Loss=0.3880
+[14:06:11] Ep57 B150/180 Loss=0.3877
+[14:06:18] Ep57 DONE - Loss: 0.3814
+[14:06:18] Ep58 B0/180 Loss=0.3899
+[14:06:30] Ep58 B50/180 Loss=0.3599
+[14:06:42] Ep58 B100/180 Loss=0.3834
+[14:06:54] Ep58 B150/180 Loss=0.3883
+[14:07:00] Ep58 DONE - Loss: 0.3798
+[14:07:01] Ep59 B0/180 Loss=0.3756
+[14:07:12] Ep59 B50/180 Loss=0.3795
+[14:07:24] Ep59 B100/180 Loss=0.3732
+[14:07:36] Ep59 B150/180 Loss=0.3823
+[14:07:43] Ep59 DONE - Loss: 0.3818
+[14:07:43] 
+[VALIDATION Ep59 on image 4]
+[14:07:43] [INFERENCE] Image: 2040×1608, Edges: 6,556,992
+[14:07:43] [INFERENCE] Costs: Mean=0.910, Std=0.298, Min=-1.000, Max=1.000
+[14:07:43] [INFERENCE] Target regions: 200
+[14:07:43] [THRESHOLD] DIRECT AGGRESSIVE ASSIGNMENT:
+[14:07:43]   Cost distribution: min=-1.0000, mean=0.9099, median=1.0000, max=1.0000
+[14:07:43]   Network strong (max=1.0000) → standard aggressive threshold=-0.3
+[14:07:43]   FINAL THRESHOLD: -0.3000
+[14:07:43]   Edges to MERGE (cost > -0.3000): 6,528,532 (99.6%)
+[14:07:43]   Edges to KEEP (cost <= -0.3000): 28,460 (0.4%)
+[14:07:43]   Expected regions: ~150-300 (aggressive pyramid reduction)
+[14:10:48] [GAEC] Edges in heap: 6,528,532
+[14:10:48] [GAEC] Merges executed: 3,277,179
+[14:10:48] [GAEC] Final regions: 3,141
+[14:10:48] 
+[POST-PROCESS] Starting with 3,141 regions
+[14:10:49] [MERGE] Found 3075 tiny regions (< 1000 pixels)
+[14:10:49] [MERGE] Tiny regions contain: 112,142 pixels (3.4% of image)
+[14:11:08] [MERGE] Merged 3075 tiny regions
+[14:11:08] [MERGE] Final regions: 74
+[14:11:08] 
+[14:11:11] [SIZE BREAKDOWN] Total=10,059,361 bytes | Seg=60,968 | Regions=9,997,196 | Overhead=1,197
+[14:11:11] [INFERENCE] Final result: 74 regions, 10,059,361 bytes
+
+[14:11:12] [VAL] Compressed=10,059,361 bytes, PNG=5,943,950 bytes, Ratio=1.692, Gain=-69.2%
+
+[14:11:13] Saved: segmentation_ep59.png
+[14:11:14] Saved: reconstruction_ep59.png
+[14:11:14]  Original: 9,840,960 bytes
+[14:11:14]  PSNR: Lossless
+[14:11:14]  MAE: 0.000000
+[14:11:14] Ep60 B0/180 Loss=0.3677
+[14:11:26] Ep60 B50/180 Loss=0.3650
+[14:11:38] Ep60 B100/180 Loss=0.3957
+[14:11:50] Ep60 B150/180 Loss=0.3919
+[14:11:57] Ep60 DONE - Loss: 0.3806
+[14:11:57] Ep61 B0/180 Loss=0.3781
+[14:12:09] Ep61 B50/180 Loss=0.3872
+[14:12:20] Ep61 B100/180 Loss=0.3598
+[14:12:32] Ep61 B150/180 Loss=0.3993
+[14:12:39] Ep61 DONE - Loss: 0.3810
+[14:12:39] Ep62 B0/180 Loss=0.3859
+[14:12:51] Ep62 B50/180 Loss=0.3886
+[14:13:03] Ep62 B100/180 Loss=0.3807
+[14:13:15] Ep62 B150/180 Loss=0.3880
+[14:13:22] Ep62 DONE - Loss: 0.3803
+[14:13:22] Ep63 B0/180 Loss=0.3788
+[14:13:34] Ep63 B50/180 Loss=0.3977
+[14:13:45] Ep63 B100/180 Loss=0.3770
+[14:13:57] Ep63 B150/180 Loss=0.3763
+[14:14:04] Ep63 DONE - Loss: 0.3822
+[14:14:04] Ep64 B0/180 Loss=0.3822
+[14:14:16] Ep64 B50/180 Loss=0.3526
+[14:14:28] Ep64 B100/180 Loss=0.3759
+[14:14:40] Ep64 B150/180 Loss=0.3969
+[14:14:46] Ep64 DONE - Loss: 0.3810
+[14:14:46] 
+[VALIDATION Ep64 on image 4]
+[14:14:46] [INFERENCE] Image: 2040×1608, Edges: 6,556,992
+[14:14:46] [INFERENCE] Costs: Mean=0.910, Std=0.299, Min=-1.000, Max=1.000
+[14:14:46] [INFERENCE] Target regions: 200
+[14:14:47] [THRESHOLD] DIRECT AGGRESSIVE ASSIGNMENT:
+[14:14:47]   Cost distribution: min=-1.0000, mean=0.9095, median=1.0000, max=1.0000
+[14:14:47]   Network strong (max=1.0000) → standard aggressive threshold=-0.3
+[14:14:47]   FINAL THRESHOLD: -0.3000
+[14:14:47]   Edges to MERGE (cost > -0.3000): 6,527,966 (99.6%)
+[14:14:47]   Edges to KEEP (cost <= -0.3000): 29,026 (0.4%)
+[14:14:47]   Expected regions: ~150-300 (aggressive pyramid reduction)
+[14:17:14] [GAEC] Edges in heap: 6,527,966
+[14:17:14] [GAEC] Merges executed: 3,276,987
+[14:17:14] [GAEC] Final regions: 3,333
+[14:17:14] 
+[POST-PROCESS] Starting with 3,333 regions
+[14:17:14] [MERGE] Found 3265 tiny regions (< 1000 pixels)
+[14:17:14] [MERGE] Tiny regions contain: 170,183 pixels (5.2% of image)
+[14:17:35] [MERGE] Merged 3265 tiny regions
+[14:17:35] [MERGE] Final regions: 77
+[14:17:35] 
+[14:17:37] [SIZE BREAKDOWN] Total=9,116,127 bytes | Seg=64,204 | Regions=9,050,678 | Overhead=1,245
+[14:17:37] [INFERENCE] Final result: 77 regions, 9,116,127 bytes
+
+[14:17:38] [VAL] Compressed=9,116,127 bytes, PNG=5,943,950 bytes, Ratio=1.534, Gain=-53.4%
+
+[14:17:39] Saved: segmentation_ep64.png
+[14:17:40] Saved: reconstruction_ep64.png
+[14:17:40]  Original: 9,840,960 bytes
+[14:17:40]  PSNR: Lossless
+[14:17:40]  MAE: 0.000000
+[14:17:40] Ep65 B0/180 Loss=0.3857
+[14:17:52] Ep65 B50/180 Loss=0.3893
+[14:18:04] Ep65 B100/180 Loss=0.3924
+[14:18:15] Ep65 B150/180 Loss=0.3862
+[14:18:22] Ep65 DONE - Loss: 0.3803
+[14:18:22] Ep66 B0/180 Loss=0.3787
+[14:18:34] Ep66 B50/180 Loss=0.3696
+[14:18:45] Ep66 B100/180 Loss=0.3760
+[14:18:57] Ep66 B150/180 Loss=0.3834
+[14:19:04] Ep66 DONE - Loss: 0.3821
+[14:19:04] Ep67 B0/180 Loss=0.3911
+[14:19:16] Ep67 B50/180 Loss=0.3903
+[14:19:27] Ep67 B100/180 Loss=0.3497
+[14:19:39] Ep67 B150/180 Loss=0.3740
+[14:19:46] Ep67 DONE - Loss: 0.3812
+[14:19:46] Ep68 B0/180 Loss=0.3678
+[14:19:57] Ep68 B50/180 Loss=0.3773
+[14:20:09] Ep68 B100/180 Loss=0.3885
+[14:20:20] Ep68 B150/180 Loss=0.3852
+[14:20:27] Ep68 DONE - Loss: 0.3801
+[14:20:28] Ep69 B0/180 Loss=0.3480
+[14:20:39] Ep69 B50/180 Loss=0.3503
+[14:20:51] Ep69 B100/180 Loss=0.3809
+[14:21:02] Ep69 B150/180 Loss=0.3844
+[14:21:09] Ep69 DONE - Loss: 0.3800
+[14:21:09] 
+[VALIDATION Ep69 on image 4]
+[14:21:09] [INFERENCE] Image: 2040×1608, Edges: 6,556,992
+[14:21:09] [INFERENCE] Costs: Mean=0.910, Std=0.298, Min=-1.000, Max=1.000
+[14:21:09] [INFERENCE] Target regions: 200
+[14:21:09] [THRESHOLD] DIRECT AGGRESSIVE ASSIGNMENT:
+[14:21:09]   Cost distribution: min=-1.0000, mean=0.9095, median=1.0000, max=1.0000
+[14:21:09]   Network strong (max=1.0000) → standard aggressive threshold=-0.3
+[14:21:09]   FINAL THRESHOLD: -0.3000
+[14:21:09]   Edges to MERGE (cost > -0.3000): 6,528,448 (99.6%)
+[14:21:09]   Edges to KEEP (cost <= -0.3000): 28,544 (0.4%)
+[14:21:09]   Expected regions: ~150-300 (aggressive pyramid reduction)
+[14:24:04] [GAEC] Edges in heap: 6,528,448
+[14:24:04] [GAEC] Merges executed: 3,277,111
+[14:24:04] [GAEC] Final regions: 3,209
+[14:24:04] 
+[POST-PROCESS] Starting with 3,209 regions
+[14:24:04] [MERGE] Found 3155 tiny regions (< 1000 pixels)
+[14:24:04] [MERGE] Tiny regions contain: 115,303 pixels (3.5% of image)
+[14:24:24] [MERGE] Merged 3155 tiny regions
+[14:24:24] [MERGE] Final regions: 62
+[14:24:24] 
+[14:24:27] [SIZE BREAKDOWN] Total=8,246,214 bytes | Seg=56,642 | Regions=8,188,567 | Overhead=1,005
+[14:24:27] [INFERENCE] Final result: 62 regions, 8,246,214 bytes
+
+[14:24:28] [VAL] Compressed=8,246,214 bytes, PNG=5,943,950 bytes, Ratio=1.387, Gain=-38.7%
+
+[14:24:28] Saved: segmentation_ep69.png
+[14:24:29] Saved: reconstruction_ep69.png
+[14:24:29]  Original: 9,840,960 bytes
+[14:24:29]  PSNR: Lossless
+[14:24:29]  MAE: 0.000000
+[14:24:30] Ep70 B0/180 Loss=0.3976
+[14:24:41] Ep70 B50/180 Loss=0.3768
+[14:24:53] Ep70 B100/180 Loss=0.3889
+[14:25:04] Ep70 B150/180 Loss=0.3734
+[14:25:11] Ep70 DONE - Loss: 0.3815
+[14:25:11] Ep71 B0/180 Loss=0.3793
+[14:25:23] Ep71 B50/180 Loss=0.3946
+[14:25:35] Ep71 B100/180 Loss=0.3900
+[14:25:46] Ep71 B150/180 Loss=0.3730
+[14:25:53] Ep71 DONE - Loss: 0.3801
+[14:25:53] Ep72 B0/180 Loss=0.3884
+[14:26:05] Ep72 B50/180 Loss=0.3907
+[14:26:17] Ep72 B100/180 Loss=0.3899
+[14:26:28] Ep72 B150/180 Loss=0.3978
+[14:26:35] Ep72 DONE - Loss: 0.3796
+[14:26:35] Ep73 B0/180 Loss=0.3783
+[14:26:47] Ep73 B50/180 Loss=0.3878
+[14:26:58] Ep73 B100/180 Loss=0.3808
+[14:27:10] Ep73 B150/180 Loss=0.3734
+[14:27:16] Ep73 DONE - Loss: 0.3799
+[14:27:17] Ep74 B0/180 Loss=0.3965
+[14:27:28] Ep74 B50/180 Loss=0.3777
+[14:27:40] Ep74 B100/180 Loss=0.3706
+[14:27:51] Ep74 B150/180 Loss=0.3732
+[14:27:58] Ep74 DONE - Loss: 0.3807
+[14:27:58] 
+[VALIDATION Ep74 on image 4]
+[14:27:58] [INFERENCE] Image: 2040×1608, Edges: 6,556,992
+[14:27:58] [INFERENCE] Costs: Mean=0.911, Std=0.296, Min=-1.000, Max=1.000
+[14:27:58] [INFERENCE] Target regions: 200
+[14:27:58] [THRESHOLD] DIRECT AGGRESSIVE ASSIGNMENT:
+[14:27:58]   Cost distribution: min=-1.0000, mean=0.9108, median=1.0000, max=1.0000
+[14:27:58]   Network strong (max=1.0000) → standard aggressive threshold=-0.3
+[14:27:58]   FINAL THRESHOLD: -0.3000
+[14:27:58]   Edges to MERGE (cost > -0.3000): 6,529,451 (99.6%)
+[14:27:58]   Edges to KEEP (cost <= -0.3000): 27,541 (0.4%)
+[14:27:58]   Expected regions: ~150-300 (aggressive pyramid reduction)
+[14:30:50] [GAEC] Edges in heap: 6,529,451
+[14:30:50] [GAEC] Merges executed: 3,277,285
+[14:30:50] [GAEC] Final regions: 3,035
+[14:30:50] 
+[POST-PROCESS] Starting with 3,035 regions
+[14:30:50] [MERGE] Found 2995 tiny regions (< 1000 pixels)
+[14:30:50] [MERGE] Tiny regions contain: 95,512 pixels (2.9% of image)
+[14:31:09] [MERGE] Merged 2995 tiny regions
+[14:31:09] [MERGE] Final regions: 48
+[14:31:09] 
+[14:31:12] [SIZE BREAKDOWN] Total=8,376,001 bytes | Seg=51,446 | Regions=8,323,774 | Overhead=781
+[14:31:12] [INFERENCE] Final result: 48 regions, 8,376,001 bytes
+
+[14:31:13] [VAL] Compressed=8,376,001 bytes, PNG=5,943,950 bytes, Ratio=1.409, Gain=-40.9%
+
+[14:31:13] Saved: segmentation_ep74.png
+[14:31:14] Saved: reconstruction_ep74.png
+[14:31:14]  Original: 9,840,960 bytes
+[14:31:14]  PSNR: Lossless
+[14:31:14]  MAE: 0.000000
+[14:31:15] Ep75 B0/180 Loss=0.3856
+[14:31:26] Ep75 B50/180 Loss=0.3747
+[14:31:38] Ep75 B100/180 Loss=0.3864
+[14:31:49] Ep75 B150/180 Loss=0.3770
+[14:31:56] Ep75 DONE - Loss: 0.3800
+[14:31:56] Ep76 B0/180 Loss=0.3657
+[14:32:08] Ep76 B50/180 Loss=0.3804
+[14:32:20] Ep76 B100/180 Loss=0.3725
+[14:32:31] Ep76 B150/180 Loss=0.3702
+[14:32:38] Ep76 DONE - Loss: 0.3795
+[14:32:38] Ep77 B0/180 Loss=0.3867
+[14:32:50] Ep77 B50/180 Loss=0.3661
+[14:33:02] Ep77 B100/180 Loss=0.3852
+[14:33:13] Ep77 B150/180 Loss=0.3805
+[14:33:20] Ep77 DONE - Loss: 0.3815
+[14:33:20] Ep78 B0/180 Loss=0.3871
+[14:33:32] Ep78 B50/180 Loss=0.3665
+[14:33:43] Ep78 B100/180 Loss=0.3846
+[14:33:55] Ep78 B150/180 Loss=0.3932
+[14:34:02] Ep78 DONE - Loss: 0.3808
+[14:34:02] Ep79 B0/180 Loss=0.3998
+[14:34:13] Ep79 B50/180 Loss=0.3817
+[14:34:25] Ep79 B100/180 Loss=0.3888
+[14:34:37] Ep79 B150/180 Loss=0.3797
+[14:34:43] Ep79 DONE - Loss: 0.3789
+[14:34:43] 
+[VALIDATION Ep79 on image 4]
+[14:34:44] [INFERENCE] Image: 2040×1608, Edges: 6,556,992
+[14:34:44] [INFERENCE] Costs: Mean=0.910, Std=0.297, Min=-1.000, Max=1.000
+[14:34:44] [INFERENCE] Target regions: 200
+[14:34:44] [THRESHOLD] DIRECT AGGRESSIVE ASSIGNMENT:
+[14:34:44]   Cost distribution: min=-1.0000, mean=0.9099, median=1.0000, max=1.0000
+[14:34:44]   Network strong (max=1.0000) → standard aggressive threshold=-0.3
+[14:34:44]   FINAL THRESHOLD: -0.3000
+[14:34:44]   Edges to MERGE (cost > -0.3000): 6,529,869 (99.6%)
+[14:34:44]   Edges to KEEP (cost <= -0.3000): 27,123 (0.4%)
+[14:34:44]   Expected regions: ~150-300 (aggressive pyramid reduction)
+[14:38:25] [GAEC] Edges in heap: 6,529,869
+[14:38:25] [GAEC] Merges executed: 3,277,184
+[14:38:25] [GAEC] Final regions: 3,136
+[14:38:25] 
+[POST-PROCESS] Starting with 3,136 regions
+[14:38:25] [MERGE] Found 3095 tiny regions (< 1000 pixels)
+[14:38:25] [MERGE] Tiny regions contain: 111,548 pixels (3.4% of image)
+[14:38:45] [MERGE] Merged 3095 tiny regions
+[14:38:45] [MERGE] Final regions: 50
+[14:38:45] 
+[14:38:48] [SIZE BREAKDOWN] Total=7,899,170 bytes | Seg=53,514 | Regions=7,844,843 | Overhead=813
+[14:38:48] [INFERENCE] Final result: 50 regions, 7,899,170 bytes
+
+[14:38:49] [VAL] Compressed=7,899,170 bytes, PNG=5,943,950 bytes, Ratio=1.329, Gain=-32.9%
+
+[14:38:49] Saved: segmentation_ep79.png
+[14:38:50] Saved: reconstruction_ep79.png
+[14:38:50]  Original: 9,840,960 bytes
+[14:38:50]  PSNR: Lossless
+[14:38:50]  MAE: 0.000000
+[14:38:50] [BEST] New best ratio: 1.329
+
+[14:38:50] Ep80 B0/180 Loss=0.3892
+[14:39:02] Ep80 B50/180 Loss=0.3902
+[14:39:14] Ep80 B100/180 Loss=0.3762
+[14:39:26] Ep80 B150/180 Loss=0.3830
+[14:39:32] Ep80 DONE - Loss: 0.3792
+[14:39:32] Ep81 B0/180 Loss=0.3903
+[14:39:44] Ep81 B50/180 Loss=0.3730
+[14:39:56] Ep81 B100/180 Loss=0.3424
+[14:40:08] Ep81 B150/180 Loss=0.3365
+[14:40:14] Ep81 DONE - Loss: 0.3800
+[14:40:15] Ep82 B0/180 Loss=0.3955
+[14:40:26] Ep82 B50/180 Loss=0.3911
+[14:40:38] Ep82 B100/180 Loss=0.3924
+[14:40:50] Ep82 B150/180 Loss=0.3809
+[14:40:57] Ep82 DONE - Loss: 0.3806
+[14:40:57] Ep83 B0/180 Loss=0.3878
+[14:41:09] Ep83 B50/180 Loss=0.3755
+[14:41:20] Ep83 B100/180 Loss=0.3919
+[14:41:32] Ep83 B150/180 Loss=0.3946
+[14:41:39] Ep83 DONE - Loss: 0.3800
+[14:41:39] Ep84 B0/180 Loss=0.3742
+[14:41:51] Ep84 B50/180 Loss=0.3817
+[14:42:03] Ep84 B100/180 Loss=0.3568
+[14:42:14] Ep84 B150/180 Loss=0.3752
+[14:42:21] Ep84 DONE - Loss: 0.3774
+[14:42:21] 
+[VALIDATION Ep84 on image 4]
+[14:42:21] [INFERENCE] Image: 2040×1608, Edges: 6,556,992
+[14:42:21] [INFERENCE] Costs: Mean=0.910, Std=0.298, Min=-1.000, Max=1.000
+[14:42:21] [INFERENCE] Target regions: 200
+[14:42:21] [THRESHOLD] DIRECT AGGRESSIVE ASSIGNMENT:
+[14:42:21]   Cost distribution: min=-1.0000, mean=0.9097, median=1.0000, max=1.0000
+[14:42:21]   Network strong (max=1.0000) → standard aggressive threshold=-0.3
+[14:42:21]   FINAL THRESHOLD: -0.3000
+[14:42:21]   Edges to MERGE (cost > -0.3000): 6,529,335 (99.6%)
+[14:42:21]   Edges to KEEP (cost <= -0.3000): 27,657 (0.4%)
+[14:42:21]   Expected regions: ~150-300 (aggressive pyramid reduction)
+[14:45:07] [GAEC] Edges in heap: 6,529,335
+[14:45:07] [GAEC] Merges executed: 3,277,019
+[14:45:07] [GAEC] Final regions: 3,301
+[14:45:07] 
+[POST-PROCESS] Starting with 3,301 regions
+[14:45:07] [MERGE] Found 3249 tiny regions (< 1000 pixels)
+[14:45:07] [MERGE] Tiny regions contain: 125,754 pixels (3.8% of image)
+[14:45:27] [MERGE] Merged 3249 tiny regions
+[14:45:27] [MERGE] Final regions: 62
+[14:45:27] 
+[14:45:30] [SIZE BREAKDOWN] Total=9,057,248 bytes | Seg=55,762 | Regions=9,000,481 | Overhead=1,005
+[14:45:30] [INFERENCE] Final result: 62 regions, 9,057,248 bytes
+
+[14:45:31] [VAL] Compressed=9,057,248 bytes, PNG=5,943,950 bytes, Ratio=1.524, Gain=-52.4%
+
+[14:45:32] Saved: segmentation_ep84.png
+[14:45:33] Saved: reconstruction_ep84.png
+[14:45:33]  Original: 9,840,960 bytes
+[14:45:33]  PSNR: Lossless
+[14:45:33]  MAE: 0.000000
+[14:45:33] Ep85 B0/180 Loss=0.3762
+[14:45:45] Ep85 B50/180 Loss=0.3825
+[14:45:56] Ep85 B100/180 Loss=0.3921
+[14:46:08] Ep85 B150/180 Loss=0.3454
+[14:46:15] Ep85 DONE - Loss: 0.3803
+[14:46:15] Ep86 B0/180 Loss=0.3721
+[14:46:27] Ep86 B50/180 Loss=0.3684
+[14:46:38] Ep86 B100/180 Loss=0.3828
+[14:46:50] Ep86 B150/180 Loss=0.3923
+[14:46:57] Ep86 DONE - Loss: 0.3800
+[14:46:57] Ep87 B0/180 Loss=0.3768
+[14:47:09] Ep87 B50/180 Loss=0.3578
+[14:47:21] Ep87 B100/180 Loss=0.3933
+[14:47:32] Ep87 B150/180 Loss=0.3501
+[14:47:39] Ep87 DONE - Loss: 0.3801
+[14:47:39] Ep88 B0/180 Loss=0.3736
+[14:47:51] Ep88 B50/180 Loss=0.3997
+[14:48:03] Ep88 B100/180 Loss=0.3773
+[14:48:15] Ep88 B150/180 Loss=0.3717
+[14:48:22] Ep88 DONE - Loss: 0.3794
+[14:48:22] Ep89 B0/180 Loss=0.3930
+[14:48:33] Ep89 B50/180 Loss=0.3988
+[14:48:45] Ep89 B100/180 Loss=0.3649
+[14:48:57] Ep89 B150/180 Loss=0.3829
+[14:49:04] Ep89 DONE - Loss: 0.3790
+[14:49:04] 
+[VALIDATION Ep89 on image 4]
+[14:49:04] [INFERENCE] Image: 2040×1608, Edges: 6,556,992
+[14:49:04] [INFERENCE] Costs: Mean=0.910, Std=0.298, Min=-1.000, Max=1.000
+[14:49:04] [INFERENCE] Target regions: 200
+[14:49:04] [THRESHOLD] DIRECT AGGRESSIVE ASSIGNMENT:
+[14:49:04]   Cost distribution: min=-1.0000, mean=0.9099, median=1.0000, max=1.0000
+[14:49:04]   Network strong (max=1.0000) → standard aggressive threshold=-0.3
+[14:49:04]   FINAL THRESHOLD: -0.3000
+[14:49:04]   Edges to MERGE (cost > -0.3000): 6,529,449 (99.6%)
+[14:49:04]   Edges to KEEP (cost <= -0.3000): 27,543 (0.4%)
+[14:49:04]   Expected regions: ~150-300 (aggressive pyramid reduction)
+[14:51:57] [GAEC] Edges in heap: 6,529,449
+[14:51:57] [GAEC] Merges executed: 3,277,091
+[14:51:57] [GAEC] Final regions: 3,229
+[14:51:58] 
+[POST-PROCESS] Starting with 3,229 regions
+[14:51:58] [MERGE] Found 3182 tiny regions (< 1000 pixels)
+[14:51:58] [MERGE] Tiny regions contain: 120,957 pixels (3.7% of image)
+[14:52:18] [MERGE] Merged 3182 tiny regions
+[14:52:18] [MERGE] Final regions: 57
+[14:52:18] 
+[14:52:21] [SIZE BREAKDOWN] Total=8,222,055 bytes | Seg=53,132 | Regions=8,167,998 | Overhead=925
+[14:52:21] [INFERENCE] Final result: 57 regions, 8,222,055 bytes
+
+[14:52:22] [VAL] Compressed=8,222,055 bytes, PNG=5,943,950 bytes, Ratio=1.383, Gain=-38.3%
+
+[14:52:22] Saved: segmentation_ep89.png
+[14:52:23] Saved: reconstruction_ep89.png
+[14:52:23]  Original: 9,840,960 bytes
+[14:52:23]  PSNR: Lossless
+[14:52:23]  MAE: 0.000000
+[14:52:23] Ep90 B0/180 Loss=0.3940
+[14:52:35] Ep90 B50/180 Loss=0.3901
+[14:52:47] Ep90 B100/180 Loss=0.3904
+[14:52:59] Ep90 B150/180 Loss=0.3516
+[14:53:05] Ep90 DONE - Loss: 0.3791
+[14:53:06] Ep91 B0/180 Loss=0.3902
+[14:53:17] Ep91 B50/180 Loss=0.3432
+[14:53:30] Ep91 B100/180 Loss=0.3763
+[14:53:42] Ep91 B150/180 Loss=0.3805
+[14:53:48] Ep91 DONE - Loss: 0.3798
+[14:53:49] Ep92 B0/180 Loss=0.3708
+[14:54:01] Ep92 B50/180 Loss=0.3742
+[14:54:12] Ep92 B100/180 Loss=0.3933
+[14:54:24] Ep92 B150/180 Loss=0.3830
+[14:54:31] Ep92 DONE - Loss: 0.3794
+[14:54:31] Ep93 B0/180 Loss=0.3745
+[14:54:43] Ep93 B50/180 Loss=0.3594
+[14:54:54] Ep93 B100/180 Loss=0.3871
+[14:55:06] Ep93 B150/180 Loss=0.3868
+[14:55:13] Ep93 DONE - Loss: 0.3794
+[14:55:13] Ep94 B0/180 Loss=0.3525
+[14:55:25] Ep94 B50/180 Loss=0.3548
+[14:55:37] Ep94 B100/180 Loss=0.3868
+[14:55:49] Ep94 B150/180 Loss=0.3433
+[14:55:55] Ep94 DONE - Loss: 0.3799
+[14:55:55] 
+[VALIDATION Ep94 on image 4]
+[14:55:55] [INFERENCE] Image: 2040×1608, Edges: 6,556,992
+[14:55:55] [INFERENCE] Costs: Mean=0.910, Std=0.298, Min=-1.000, Max=1.000
+[14:55:55] [INFERENCE] Target regions: 200
+[14:55:56] [THRESHOLD] DIRECT AGGRESSIVE ASSIGNMENT:
+[14:55:56]   Cost distribution: min=-1.0000, mean=0.9097, median=1.0000, max=1.0000
+[14:55:56]   Network strong (max=1.0000) → standard aggressive threshold=-0.3
+[14:55:56]   FINAL THRESHOLD: -0.3000
+[14:55:56]   Edges to MERGE (cost > -0.3000): 6,529,134 (99.6%)
+[14:55:56]   Edges to KEEP (cost <= -0.3000): 27,858 (0.4%)
+[14:55:56]   Expected regions: ~150-300 (aggressive pyramid reduction)
+[14:58:30] [GAEC] Edges in heap: 6,529,134
+[14:58:30] [GAEC] Merges executed: 3,277,100
+[14:58:30] [GAEC] Final regions: 3,220
+[14:58:31] 
+[POST-PROCESS] Starting with 3,220 regions
+[14:58:31] [MERGE] Found 3168 tiny regions (< 1000 pixels)
+[14:58:31] [MERGE] Tiny regions contain: 122,901 pixels (3.7% of image)
+[14:58:51] [MERGE] Merged 3168 tiny regions
+[14:58:51] [MERGE] Final regions: 60
+[14:58:51] 
+[14:58:54] [SIZE BREAKDOWN] Total=8,574,696 bytes | Seg=57,182 | Regions=8,516,541 | Overhead=973
+[14:58:54] [INFERENCE] Final result: 60 regions, 8,574,696 bytes
+
+[14:58:55] [VAL] Compressed=8,574,696 bytes, PNG=5,943,950 bytes, Ratio=1.443, Gain=-44.3%
+
+[14:58:55] Saved: segmentation_ep94.png
+[14:58:56] Saved: reconstruction_ep94.png
+[14:58:56]  Original: 9,840,960 bytes
+[14:58:56]  PSNR: Lossless
+[14:58:56]  MAE: 0.000000
+[14:58:57] Ep95 B0/180 Loss=0.3844
+[14:59:08] Ep95 B50/180 Loss=0.3749
+[14:59:20] Ep95 B100/180 Loss=0.3693
+[14:59:32] Ep95 B150/180 Loss=0.3752
+[14:59:38] Ep95 DONE - Loss: 0.3791
+[14:59:38] Ep96 B0/180 Loss=0.3916
+[14:59:50] Ep96 B50/180 Loss=0.3960
+[15:00:02] Ep96 B100/180 Loss=0.3631
+[15:00:13] Ep96 B150/180 Loss=0.3767
+[15:00:20] Ep96 DONE - Loss: 0.3803
+[15:00:20] Ep97 B0/180 Loss=0.3877
+[15:00:32] Ep97 B50/180 Loss=0.3731
+[15:00:44] Ep97 B100/180 Loss=0.3909
+[15:00:55] Ep97 B150/180 Loss=0.3889
+[15:01:02] Ep97 DONE - Loss: 0.3805
+[15:01:02] Ep98 B0/180 Loss=0.3687
+[15:01:14] Ep98 B50/180 Loss=0.3680
+[15:01:26] Ep98 B100/180 Loss=0.3833
+[15:01:38] Ep98 B150/180 Loss=0.3949
+[15:01:44] Ep98 DONE - Loss: 0.3805
+[15:01:44] Ep99 B0/180 Loss=0.3894
+[15:01:56] Ep99 B50/180 Loss=0.3803
+[15:02:08] Ep99 B100/180 Loss=0.3877
+[15:02:19] Ep99 B150/180 Loss=0.3622
+[15:02:26] Ep99 DONE - Loss: 0.3803
+[15:02:26] 
+[VALIDATION Ep99 on image 4]
+[15:02:26] [INFERENCE] Image: 2040×1608, Edges: 6,556,992
+[15:02:26] [INFERENCE] Costs: Mean=0.910, Std=0.298, Min=-1.000, Max=1.000
+[15:02:26] [INFERENCE] Target regions: 200
+[15:02:26] [THRESHOLD] DIRECT AGGRESSIVE ASSIGNMENT:
+[15:02:26]   Cost distribution: min=-1.0000, mean=0.9097, median=1.0000, max=1.0000
+[15:02:26]   Network strong (max=1.0000) → standard aggressive threshold=-0.3
+[15:02:26]   FINAL THRESHOLD: -0.3000
+[15:02:26]   Edges to MERGE (cost > -0.3000): 6,529,243 (99.6%)
+[15:02:26]   Edges to KEEP (cost <= -0.3000): 27,749 (0.4%)
+[15:02:26]   Expected regions: ~150-300 (aggressive pyramid reduction)
+[15:04:57] [GAEC] Edges in heap: 6,529,243
+[15:04:57] [GAEC] Merges executed: 3,277,044
+[15:04:57] [GAEC] Final regions: 3,276
+[15:04:57] 
+[POST-PROCESS] Starting with 3,276 regions
+[15:04:57] [MERGE] Found 3229 tiny regions (< 1000 pixels)
+[15:04:57] [MERGE] Tiny regions contain: 126,436 pixels (3.9% of image)
+[15:05:18] [MERGE] Merged 3229 tiny regions
+[15:05:18] [MERGE] Final regions: 56
+[15:05:18] 
+[15:05:20] [SIZE BREAKDOWN] Total=8,987,491 bytes | Seg=57,252 | Regions=8,929,330 | Overhead=909
+[15:05:20] [INFERENCE] Final result: 56 regions, 8,987,491 bytes
+
+[15:05:21] [VAL] Compressed=8,987,491 bytes, PNG=5,943,950 bytes, Ratio=1.512, Gain=-51.2%
+
+[15:05:22] Saved: segmentation_ep99.png
+[15:05:23] Saved: reconstruction_ep99.png
+[15:05:23]  Original: 9,840,960 bytes
+[15:05:23]  PSNR: Lossless
+[15:05:23]  MAE: 0.000000
+[15:05:23] Models saved!
+[15:05:23] 
+======================================================================
+[15:05:23] TESTING ON FULL IMAGES
+[15:05:23] ======================================================================
+
+[15:05:23] 
+[TEST 0]
+[15:05:23] [INFERENCE] Image: 1404×2040, Edges: 5,724,876
+[15:05:23] [INFERENCE] Costs: Mean=0.981, Std=0.135, Min=-1.000, Max=1.000
+[15:05:23] [INFERENCE] Target regions: 200
+[15:05:23] [THRESHOLD] DIRECT AGGRESSIVE ASSIGNMENT:
+[15:05:23]   Cost distribution: min=-1.0000, mean=0.9806, median=1.0000, max=1.0000
+[15:05:23]   Network strong (max=1.0000) → standard aggressive threshold=-0.3
+[15:05:23]   FINAL THRESHOLD: -0.3000
+[15:05:23]   Edges to MERGE (cost > -0.3000): 5,724,659 (100.0%)
+[15:05:23]   Edges to KEEP (cost <= -0.3000): 217 (0.0%)
+[15:05:23]   Expected regions: ~150-300 (aggressive pyramid reduction)
+[15:06:50] [GAEC] Edges in heap: 5,724,659
+[15:06:50] [GAEC] Merges executed: 2,864,092
+[15:06:50] [GAEC] Final regions: 68
+[15:06:50] 
+[POST-PROCESS] Starting with 68 regions
+[15:06:50] [MERGE] Found 67 tiny regions (< 1000 pixels)
+[15:06:50] [MERGE] Tiny regions contain: 417 pixels (0.0% of image)
+[15:06:50] [MERGE] Merged 67 tiny regions
+[15:06:50] [MERGE] Final regions: 1
+[15:06:50] 
+[15:06:52] [SIZE BREAKDOWN] Total=4,974,164 bytes | Seg=22,464 | Regions=4,951,671 | Overhead=29
+[15:06:52] [INFERENCE] Final result: 1 regions, 4,974,164 bytes
+
+[15:06:53] [RESULT] Regions=1, Compressed=4,974,164 bytes, PNG=4,929,207 bytes, Ratio=1.009, Gain=-0.9%
+[15:06:53] Saved: segmentation_test0.png
+[15:06:54] Saved: reconstruction_test0.png
+[15:06:54]  Original: 8,592,480 bytes
+[15:06:54]  PSNR: Lossless
+[15:06:54]  MAE: 0.000000
+[15:06:54] 
+[TEST 1]
+[15:06:54] [INFERENCE] Image: 1848×2040, Edges: 7,535,952
+[15:06:54] [INFERENCE] Costs: Mean=0.877, Std=0.357, Min=-1.000, Max=1.000
+[15:06:54] [INFERENCE] Target regions: 200
+[15:06:54] [THRESHOLD] DIRECT AGGRESSIVE ASSIGNMENT:
+[15:06:54]   Cost distribution: min=-1.0000, mean=0.8766, median=1.0000, max=1.0000
+[15:06:54]   Network strong (max=1.0000) → standard aggressive threshold=-0.3
+[15:06:54]   FINAL THRESHOLD: -0.3000
+[15:06:54]   Edges to MERGE (cost > -0.3000): 7,453,789 (98.9%)
+[15:06:54]   Edges to KEEP (cost <= -0.3000): 82,163 (1.1%)
+[15:06:54]   Expected regions: ~150-300 (aggressive pyramid reduction)
+[15:09:02] [GAEC] Edges in heap: 7,453,789
+[15:09:02] [GAEC] Merges executed: 3,752,702
+[15:09:02] [GAEC] Final regions: 17,218
+[15:09:02] 
+[POST-PROCESS] Starting with 17,218 regions
+[15:09:03] [MERGE] Found 17195 tiny regions (< 1000 pixels)
+[15:09:03] [MERGE] Tiny regions contain: 189,423 pixels (5.0% of image)
+[15:11:04] [MERGE] Merged 17195 tiny regions
+[15:11:04] [MERGE] Final regions: 639
+[15:11:04] 
+[15:11:11] [SIZE BREAKDOWN] Total=8,565,187 bytes | Seg=55,870 | Regions=8,499,080 | Overhead=10,237
+[15:11:11] [INFERENCE] Final result: 639 regions, 8,565,187 bytes
+
+[15:11:13] [RESULT] Regions=639, Compressed=8,565,187 bytes, PNG=7,048,839 bytes, Ratio=1.215, Gain=-21.5%
+[15:11:14] Saved: segmentation_test1.png
+[15:11:15] Saved: reconstruction_test1.png
+[15:11:15]  Original: 11,309,760 bytes
+[15:11:15]  PSNR: Lossless
+[15:11:15]  MAE: 0.000000
+[15:11:15] 
+[TEST 2]
+[15:11:15] [INFERENCE] Image: 1356×2040, Edges: 5,529,084
+[15:11:15] [INFERENCE] Costs: Mean=0.870, Std=0.356, Min=-1.000, Max=1.000
+[15:11:15] [INFERENCE] Target regions: 200
+[15:11:15] [THRESHOLD] DIRECT AGGRESSIVE ASSIGNMENT:
+[15:11:15]   Cost distribution: min=-1.0000, mean=0.8703, median=1.0000, max=1.0000
+[15:11:15]   Network strong (max=1.0000) → standard aggressive threshold=-0.3
+[15:11:15]   FINAL THRESHOLD: -0.3000
+[15:11:15]   Edges to MERGE (cost > -0.3000): 5,482,852 (99.2%)
+[15:11:15]   Edges to KEEP (cost <= -0.3000): 46,232 (0.8%)
+[15:11:15]   Expected regions: ~150-300 (aggressive pyramid reduction)
+[15:13:10] [GAEC] Edges in heap: 5,482,852
+[15:13:10] [GAEC] Merges executed: 2,758,636
+[15:13:10] [GAEC] Final regions: 7,604
+[15:13:11] 
+[POST-PROCESS] Starting with 7,604 regions
+[15:13:11] [MERGE] Found 7565 tiny regions (< 1000 pixels)
+[15:13:11] [MERGE] Tiny regions contain: 142,114 pixels (5.1% of image)
+[15:13:50] [MERGE] Merged 7565 tiny regions
+[15:13:50] [MERGE] Final regions: 238
+[15:13:50] 
+[15:13:53] [SIZE BREAKDOWN] Total=8,403,135 bytes | Seg=48,674 | Regions=8,350,640 | Overhead=3,821
+[15:13:53] [INFERENCE] Final result: 238 regions, 8,403,135 bytes
+
+[15:13:55] [RESULT] Regions=238, Compressed=8,403,135 bytes, PNG=5,222,581 bytes, Ratio=1.609, Gain=-60.9%
+[15:13:55] Saved: segmentation_test2.png
+[15:13:56] Saved: reconstruction_test2.png
+[15:13:56]  Original: 8,298,720 bytes
+[15:13:56]  PSNR: Lossless
+[15:13:56]  MAE: 0.000000
