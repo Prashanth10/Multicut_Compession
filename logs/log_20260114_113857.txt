@@ -1,0 +1,44 @@
+[11:38:57] Log file created: ./logs/log_20260114_113857.txt
+[11:38:57] Device: cuda
+[11:38:57] ======================================================================
+[11:38:57] MULTICUT COMPRESSION: PNG PER-REGION + DIRECT THRESHOLD
+[11:38:57] ======================================================================
+[11:38:57] Total images: 800
+[11:38:58] Training: 64×64 patches, 8064 edges
+[11:38:58] Target regions: 200
+[11:38:58] Post-process: Merge regions < 1000 pixels
+
+[11:38:58] Ep0 B0/180 Loss=1.7888
+[11:39:11] Ep0 B50/180 Loss=0.4134
+[11:39:24] Ep0 B100/180 Loss=0.5281
+[11:39:36] Ep0 B150/180 Loss=0.4394
+[11:39:44] Ep0 DONE - Loss: 0.4991
+[11:39:44] Ep1 B0/180 Loss=0.4438
+[11:39:56] Ep1 B50/180 Loss=0.4270
+[11:40:07] Ep1 B100/180 Loss=0.4014
+[11:40:19] Ep1 B150/180 Loss=0.4441
+[11:40:26] Ep1 DONE - Loss: 0.4243
+[11:40:26] Ep2 B0/180 Loss=0.4093
+[11:40:37] Ep2 B50/180 Loss=0.4078
+[11:40:49] Ep2 B100/180 Loss=0.4051
+[11:41:01] Ep2 B150/180 Loss=0.3968
+[11:41:07] Ep2 DONE - Loss: 0.4112
+[11:41:08] Ep3 B0/180 Loss=0.3968
+[11:41:19] Ep3 B50/180 Loss=0.4006
+[11:41:31] Ep3 B100/180 Loss=0.4093
+[11:41:42] Ep3 B150/180 Loss=0.4014
+[11:41:49] Ep3 DONE - Loss: 0.4102
+[11:41:49] Ep4 B0/180 Loss=0.3986
+[11:42:01] Ep4 B50/180 Loss=0.4020
+[11:42:13] Ep4 B100/180 Loss=0.3982
+[11:42:24] Ep4 B150/180 Loss=0.4082
+[11:42:31] Ep4 DONE - Loss: 0.4049
+[11:42:31] 
+[VALIDATION Ep4 on image 4]
+[11:42:31] [INFERENCE] Image: 2040×1608, Edges: 6,556,992
+[11:42:31] [INFERENCE] Costs: Mean=0.931, Std=0.255, Min=-0.995, Max=1.000
+[11:42:31] [INFERENCE] Target regions: 200
+[11:42:31] [THR-SWEEP] Downsampled from 2040x1608 -> 512x404, trying 5 thresholds
+[11:42:39] [GAEC] Edges in heap: 399,680
+[11:42:39] [GAEC] Merges executed: 204,839
+[11:42:39] [GAEC] Final regions: 2,009

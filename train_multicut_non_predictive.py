@@ -548,58 +548,155 @@ def compression_loss(img_batch, edge_costs_raw, u, v, device):
 
     return total_loss / B
 
-# THRESHOLD - DIRECT AGGRESSIVE ASSIGNMENT (SIMPLIFIED!)
-def find_optimal_threshold(edge_costs, target_regions, num_pixels):
-    """
-    SIMPLIFIED APPROACH: Direct threshold assignment
+# # THRESHOLD - DIRECT AGGRESSIVE ASSIGNMENT (SIMPLIFIED!)
+# def find_optimal_threshold(edge_costs, target_regions, num_pixels):
+#     """
+#     SIMPLIFIED APPROACH: Direct threshold assignment
     
-    NO complex percentile calculations!
-    Just use FIXED aggressive threshold: -0.5
+#     NO complex percentile calculations!
+#     Just use FIXED aggressive threshold: -0.5
     
-    Why -0.5?
-    - Network trained: cost=1.0 for similar regions (merge)
-    - Network trained: cost=-1.0 for boundaries (keep)
-    - Threshold=-0.5 is exactly in the middle
-    - All edges with cost > -0.5 merge (90%+ of edges)
-    - Only strong boundaries (cost < -0.5) preserved
-    - Result: Pyramid reduction → ~200 regions
-    """
-    if len(edge_costs) == 0:
-        return -0.5
+#     Why -0.5?
+#     - Network trained: cost=1.0 for similar regions (merge)
+#     - Network trained: cost=-1.0 for boundaries (keep)
+#     - Threshold=-0.5 is exactly in the middle
+#     - All edges with cost > -0.5 merge (90%+ of edges)
+#     - Only strong boundaries (cost < -0.5) preserved
+#     - Result: Pyramid reduction → ~200 regions
+#     """
+#     if len(edge_costs) == 0:
+#         return -0.5
 
-    max_cost = np.max(edge_costs)
-    min_cost = np.min(edge_costs)
-    median_cost = np.median(edge_costs)
-    mean_cost = np.mean(edge_costs)
+#     max_cost = np.max(edge_costs)
+#     min_cost = np.min(edge_costs)
+#     median_cost = np.median(edge_costs)
+#     mean_cost = np.mean(edge_costs)
     
-    log(f"[THRESHOLD] DIRECT AGGRESSIVE ASSIGNMENT:")
-    log(f"  Cost distribution: min={min_cost:.4f}, mean={mean_cost:.4f}, median={median_cost:.4f}, max={max_cost:.4f}")
+#     log(f"[THRESHOLD] DIRECT AGGRESSIVE ASSIGNMENT:")
+#     log(f"  Cost distribution: min={min_cost:.4f}, mean={mean_cost:.4f}, median={median_cost:.4f}, max={max_cost:.4f}")
     
-    # DIRECT THRESHOLD: Use fixed aggressive value
-    threshold = -0.5  # FIXED - aggressive merging in the middle!
+#     # DIRECT THRESHOLD: Use fixed aggressive value
+#     threshold = -0.5  # FIXED - aggressive merging in the middle!
     
-    # Adapt based on output range (optional fine-tuning)
-    if max_cost < 0.3:
-        # Weak network output - be extra aggressive
-        threshold = -0.7
-        log(f"  Network weak (max={max_cost:.4f}) → extra-aggressive threshold=-0.7")
-    elif max_cost > 0.95:
-        # Strong network output - can relax slightly
-        threshold = -0.3
-        log(f"  Network strong (max={max_cost:.4f}) → standard aggressive threshold=-0.3")
+#     # Adapt based on output range (optional fine-tuning)
+#     if max_cost < 0.3:
+#         # Weak network output - be extra aggressive
+#         threshold = -0.7
+#         log(f"  Network weak (max={max_cost:.4f}) → extra-aggressive threshold=-0.7")
+#     elif max_cost > 0.95:
+#         # Strong network output - can relax slightly
+#         threshold = -0.3
+#         log(f"  Network strong (max={max_cost:.4f}) → standard aggressive threshold=-0.3")
+#     else:
+#         log(f"  Network normal → default aggressive threshold=-0.5")
+    
+#     mergeable = (edge_costs > threshold).sum()
+#     num_no_merge = (edge_costs <= threshold).sum()
+#     merge_pct = 100 * mergeable / len(edge_costs) if len(edge_costs) > 0 else 0
+    
+#     log(f"  FINAL THRESHOLD: {threshold:.4f}")
+#     log(f"  Edges to MERGE (cost > {threshold:.4f}): {mergeable:,} ({merge_pct:.1f}%)")
+#     log(f"  Edges to KEEP (cost <= {threshold:.4f}): {num_no_merge:,} ({100-merge_pct:.1f}%)")
+#     log(f"  Expected regions: ~150-300 (aggressive pyramid reduction)")
+    
+#     return threshold
+
+def choosebestthreshold_downsampled(imgtensor, enc, pred, device,
+                                   maxside=512,
+                                   thresholds=None):
+    """
+    Pick best threshold by running full codec pipeline on a downsampled image.
+
+    Returns:
+        best_threshold (float),
+        results (dict threshold -> dict(size_bytes, numregions, ds_hw))
+    """
+    if thresholds is None:
+        # 5 candidates around your current -0.3, including more aggressive merges
+        thresholds = [-0.9, -0.7, -0.5, -0.3, -0.1]
+
+    # ----------------------------
+    # 1) Downsample (for speed)
+    # ----------------------------
+    C, H0, W0 = imgtensor.shape
+    scale = float(maxside) / float(max(H0, W0))
+    if scale < 1.0:
+        Hd = max(1, int(round(H0 * scale)))
+        Wd = max(1, int(round(W0 * scale)))
+        imgds = F.interpolate(imgtensor.unsqueeze(0), size=(Hd, Wd),
+                              mode='bilinear', align_corners=False).squeeze(0)
     else:
-        log(f"  Network normal → default aggressive threshold=-0.5")
-    
-    mergeable = (edge_costs > threshold).sum()
-    num_no_merge = (edge_costs <= threshold).sum()
-    merge_pct = 100 * mergeable / len(edge_costs) if len(edge_costs) > 0 else 0
-    
-    log(f"  FINAL THRESHOLD: {threshold:.4f}")
-    log(f"  Edges to MERGE (cost > {threshold:.4f}): {mergeable:,} ({merge_pct:.1f}%)")
-    log(f"  Edges to KEEP (cost <= {threshold:.4f}): {num_no_merge:,} ({100-merge_pct:.1f}%)")
-    log(f"  Expected regions: ~150-300 (aggressive pyramid reduction)")
-    
-    return threshold
+        Hd, Wd = H0, W0
+        imgds = imgtensor
+
+    # ----------------------------
+    # 2) Compute edge costs ONCE
+    # ----------------------------
+    enc.eval()
+    pred.eval()
+    with torch.no_grad():
+        imgdev = imgds.unsqueeze(0).to(device)                     # [1,3,Hd,Wd]
+        feat = enc(imgdev)                                         # [1,128,Hd,Wd]
+        featflat = feat.permute(0, 2, 3, 1).reshape(1, -1, 128)     # [1,N,128]
+        rgbflat = imgdev.permute(0, 2, 3, 1).reshape(1, -1, 3)      # [1,N,3]
+
+        u, v = grid_edges(Hd, Wd, device)
+
+        fu = featflat[0, u]                                        # [E,128]
+        fv = featflat[0, v]                                        # [E,128]
+        rgbdiff = rgbflat[0, u] - rgbflat[0, v]                    # [E,3]
+
+        edgecostraw = pred(fu, fv, rgbdiff)                        # [E,1]
+        edgecosts = torch.tanh(edgecostraw.squeeze(1)).cpu().numpy()
+
+        unp = u.cpu().numpy()
+        vnp = v.cpu().numpy()
+
+    maxidx = max(int(unp.max()), int(vnp.max()))
+    numnodes = maxidx + 1
+
+    # Precompute uint8 image for encoder
+    imgu8 = (imgds.permute(1, 2, 0).cpu().numpy() * 255.0).astype(np.uint8)
+
+    # ----------------------------
+    # 3) Try thresholds + full pipeline
+    # ----------------------------
+    results = {}
+    bestthr = None
+    bestsize = None
+
+    log(f"[THR-SWEEP] Downsampled from {H0}x{W0} -> {Hd}x{Wd}, trying {len(thresholds)} thresholds")
+
+    for thr in thresholds:
+        labels1d, mergescount, edgestats = gaec_additive(
+            numnodes,
+            unp, vnp, edgecosts,
+            merge_threshold=float(thr)
+        )
+
+        labels2d = labels1d.reshape(Hd, Wd).astype(np.int32)
+
+        # same post-process you already do
+        labels2d = merge_tiny_regions(labels2d, min_region_size=Config.TINY_REGION_SIZE)
+
+        encodeddata = encode_full_image_png(imgu8, labels2d)
+        sizebytes = compute_compression_size_png(encodeddata)
+
+        numregions = int(labels2d.max()) + 1
+        results[float(thr)] = {
+            "size_bytes": int(sizebytes),
+            "numregions": int(numregions),
+            "ds_hw": (int(Hd), int(Wd)),
+        }
+
+        log(f"[THR-SWEEP] thr={thr:+.3f} -> size={sizebytes:,} bytes, regions={numregions}")
+
+        if bestsize is None or sizebytes < bestsize:
+            bestsize = sizebytes
+            bestthr = float(thr)
+
+    log(f"[THR-SWEEP] BEST thr={bestthr:+.3f} size={bestsize:,} bytes @ {Hd}x{Wd}")
+    return bestthr, results
 
 # INFERENCE
 def inference_on_image(img_tensor, enc, pred, H, W, device):
@@ -628,7 +725,13 @@ def inference_on_image(img_tensor, enc, pred, H, W, device):
         target_regions = Config.TARGET_REGIONS
         log(f"[INFERENCE] Target regions: {target_regions}")
 
-        threshold = find_optimal_threshold(edge_costs, target_regions, H * W)
+        # threshold = find_optimal_threshold(edge_costs, target_regions, H * W)
+        threshold, _ = choosebestthreshold_downsampled(
+            img_tensor, enc, pred, device,
+            maxside=512,
+            thresholds=[-0.9, -0.7, -0.5, -0.3, -0.1]
+        )
+
 
         max_idx = max(u.max().item(), v.max().item())
         labels, num_merges, edge_stats = gaec_additive(
