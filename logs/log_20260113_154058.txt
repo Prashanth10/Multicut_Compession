@@ -1,0 +1,26 @@
+[15:40:58] Log file created: ./logs/log_20260113_154058.txt
+[15:40:58] Device: cuda
+[15:40:58] ======================================================================
+[15:40:58] MULTICUT COMPRESSION: FIXED LOSS FUNCTION + DEBUG
+[15:40:58] ======================================================================
+[15:40:58] Loss function: Continuous RGB difference → target cost mapping
+[15:40:58] Debug enabled: Printing every 100 batches
+
+[15:40:58] Total images: 800
+[15:40:58] Training: 64×64 patches, 8064 edges
+[15:40:58] Target regions: 200
+[15:40:58] Post-process: Merge regions < 1000 pixels
+
+[15:40:59] Ep0 B0/180 Loss=0.6556
+[15:41:11] Ep0 B50/180 Loss=0.1843
+[15:41:24] Ep0 B100/180 Loss=0.1698
+[15:41:24] 
+[DEBUG TRAINING Ep0 B100]
+[15:41:24]   Raw costs: mean=-1.0838, std=0.7539
+[15:41:24]              min=-2.8927, max=0.3983
+[15:41:24]   Scaled (tanh) costs: mean=-0.6419, std=0.3463
+[15:41:24]                        min=-0.9939, max=0.3785
+[15:41:24]   Target costs: mean=-0.4346, std=0.2376
+[15:41:24]                 min=-0.8367, max=-0.0491
+[15:41:24]   Predictions: 0.0% positive (>0.5), 67.4% negative (<-0.5)
+[15:41:24]   Targets:     0.0% positive (>0.5), 75.0% negative (<-0.5)

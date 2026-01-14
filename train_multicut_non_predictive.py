@@ -297,6 +297,7 @@ def encode_full_image_png(img_u8, labels_2d):
 
         bbox_img = img_u8[y0:y1+1, x0:x1+1].copy()
         bbox_mask = mask[y0:y1+1, x0:x1+1]
+        bbox_img[~bbox_mask] = 0
 
         pil_img = Image.fromarray(bbox_img.astype(np.uint8))
         png_buffer = io.BytesIO()
