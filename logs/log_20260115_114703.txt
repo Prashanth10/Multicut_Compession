@@ -1,0 +1,1742 @@
+[11:47:03] Log file created: ./logs/log_20260115_114703.txt
+[11:47:03] Device: cuda
+[11:47:03] ======================================================================
+[11:47:03] LEARNED COMPRESSION: QUANTIZED ERRORS + ENTROPY MODEL
+[11:47:03] ======================================================================
+[11:47:03] Total images: 800
+[11:47:04] Training: 64×64 patches, 8064 edges
+[11:47:04] Quantization: Divide errors by 4
+[11:47:04] Entropy model: Network-learned PMF per region
+
+[11:47:04] Ep0 B0/180 Loss=2.3143
+[11:47:16] Ep0 B50/180 Loss=0.4042
+[11:47:27] Ep0 B100/180 Loss=0.4327
+[11:47:39] Ep0 B150/180 Loss=0.4131
+[11:47:46] Ep0 DONE - Loss: 0.5196
+[11:47:46] Ep1 B0/180 Loss=0.4516
+[11:47:57] Ep1 B50/180 Loss=0.4255
+[11:48:09] Ep1 B100/180 Loss=0.4702
+[11:48:20] Ep1 B150/180 Loss=0.4169
+[11:48:27] Ep1 DONE - Loss: 0.4304
+[11:48:27] Ep2 B0/180 Loss=0.4236
+[11:48:39] Ep2 B50/180 Loss=0.4637
+[11:48:50] Ep2 B100/180 Loss=0.3991
+[11:49:02] Ep2 B150/180 Loss=0.4003
+[11:49:08] Ep2 DONE - Loss: 0.4128
+[11:49:09] Ep3 B0/180 Loss=0.4095
+[11:49:20] Ep3 B50/180 Loss=0.4330
+[11:49:31] Ep3 B100/180 Loss=0.4115
+[11:49:43] Ep3 B150/180 Loss=0.4016
+[11:49:50] Ep3 DONE - Loss: 0.4112
+[11:49:50] Ep4 B0/180 Loss=0.4016
+[11:50:02] Ep4 B50/180 Loss=0.4067
+[11:50:13] Ep4 B100/180 Loss=0.4020
+[11:50:25] Ep4 B150/180 Loss=0.4039
+[11:50:31] Ep4 DONE - Loss: 0.4049
+[11:50:31] 
+[VALIDATION Ep4 on image 4]
+[11:50:31] [INFERENCE] Image: 2040×1608, Edges: 6,556,992
+[11:50:31] [INFERENCE] Costs: Mean=0.936, Std=0.247, Min=-0.998, Max=1.000
+[11:50:31] [INFERENCE] Target regions: 200
+[11:50:31] [THR-SWEEP] Downsampled from 2040x1608 -> 512x404, trying 5 thresholds
+[11:50:37] [GAEC] Edges in heap: 397,455
+[11:50:38] [GAEC] Merges executed: 204,904
+[11:50:38] [GAEC] Final regions: 1,944
+[11:50:38] [MERGE] Found 1928 tiny regions (< 1000 pixels)
+[11:50:38] [MERGE] Tiny regions contain: 92,729 pixels (44.8% of image)
+[11:50:38] [MERGE] Merged 1928 tiny regions
+[11:50:38] [MERGE] Final regions: 198
+[11:50:53] [THR-SWEEP] thr=-0.900 -> size=1,113,341 bytes, regions=198
+[11:50:59] [GAEC] Edges in heap: 387,015
+[11:50:59] [GAEC] Merges executed: 204,746
+[11:50:59] [GAEC] Final regions: 2,102
+[11:50:59] [MERGE] Found 2086 tiny regions (< 1000 pixels)
+[11:50:59] [MERGE] Tiny regions contain: 93,231 pixels (45.1% of image)
+[11:51:00] [MERGE] Merged 2086 tiny regions
+[11:51:00] [MERGE] Final regions: 205
+[11:51:14] [THR-SWEEP] thr=-0.700 -> size=1,117,242 bytes, regions=205
+[11:51:20] [GAEC] Edges in heap: 380,537
+[11:51:20] [GAEC] Merges executed: 204,565
+[11:51:20] [GAEC] Final regions: 2,283
+[11:51:20] [MERGE] Found 2270 tiny regions (< 1000 pixels)
+[11:51:20] [MERGE] Tiny regions contain: 96,977 pixels (46.9% of image)
+[11:51:21] [MERGE] Merged 2270 tiny regions
+[11:51:21] [MERGE] Final regions: 218
+[11:51:36] [THR-SWEEP] thr=-0.500 -> size=1,112,779 bytes, regions=218
+[11:51:41] [GAEC] Edges in heap: 372,567
+[11:51:41] [GAEC] Merges executed: 204,310
+[11:51:41] [GAEC] Final regions: 2,538
+[11:51:41] [MERGE] Found 2527 tiny regions (< 1000 pixels)
+[11:51:41] [MERGE] Tiny regions contain: 100,000 pixels (48.3% of image)
+[11:51:42] [MERGE] Merged 2527 tiny regions
+[11:51:42] [MERGE] Final regions: 235
+[11:51:57] [THR-SWEEP] thr=-0.300 -> size=1,119,143 bytes, regions=235
+[11:52:02] [GAEC] Edges in heap: 362,285
+[11:52:02] [GAEC] Merges executed: 203,891
+[11:52:02] [GAEC] Final regions: 2,957
+[11:52:02] [MERGE] Found 2947 tiny regions (< 1000 pixels)
+[11:52:02] [MERGE] Tiny regions contain: 102,977 pixels (49.8% of image)
+[11:52:03] [MERGE] Merged 2947 tiny regions
+[11:52:03] [MERGE] Final regions: 274
+[11:52:18] [THR-SWEEP] thr=-0.100 -> size=1,105,682 bytes, regions=274
+[11:52:18] [THR-SWEEP] BEST thr=-0.100 size=1,105,682 bytes @ 512x404
+[11:54:03] [GAEC] Edges in heap: 6,443,181
+[11:54:03] [GAEC] Merges executed: 3,275,376
+[11:54:03] [GAEC] Final regions: 4,944
+[11:54:03] 
+[POST-PROCESS] Starting with 4,944 regions
+[11:54:03] [MERGE] Found 4913 tiny regions (< 1000 pixels)
+[11:54:03] [MERGE] Tiny regions contain: 81,151 pixels (2.5% of image)
+[11:54:33] [MERGE] Merged 4913 tiny regions
+[11:54:33] [MERGE] Final regions: 37
+[11:54:33] 
+[11:56:21] [INFERENCE] Final result: 37 regions, 5,397,302 bytes
+
+[11:56:22] [VAL] Compressed=5,397,302 bytes, PNG=5,943,950 bytes, Ratio=0.908, Gain=+9.2%
+
+[11:57:56] Saved: reconstruction_ep4.png
+[11:57:56]  Original: 9,840,960 bytes
+[11:57:56]  PSNR: 6.25 dB
+[11:57:56]  MAE: 105.857101
+[11:57:56] [BEST] New best ratio: 0.908
+
+[11:57:56] Ep5 B0/180 Loss=0.4001
+[11:58:08] Ep5 B50/180 Loss=0.4238
+[11:58:19] Ep5 B100/180 Loss=0.4349
+[11:58:31] Ep5 B150/180 Loss=0.4419
+[11:58:37] Ep5 DONE - Loss: 0.4077
+[11:58:38] Ep6 B0/180 Loss=0.4001
+[11:58:49] Ep6 B50/180 Loss=0.4166
+[11:59:01] Ep6 B100/180 Loss=0.4171
+[11:59:12] Ep6 B150/180 Loss=0.3949
+[11:59:19] Ep6 DONE - Loss: 0.4024
+[11:59:19] Ep7 B0/180 Loss=0.4019
+[11:59:31] Ep7 B50/180 Loss=0.4002
+[11:59:42] Ep7 B100/180 Loss=0.4084
+[11:59:54] Ep7 B150/180 Loss=0.3990
+[12:00:00] Ep7 DONE - Loss: 0.4018
+[12:00:00] Ep8 B0/180 Loss=0.4518
+[12:00:12] Ep8 B50/180 Loss=0.4018
+[12:00:23] Ep8 B100/180 Loss=0.3957
+[12:00:35] Ep8 B150/180 Loss=0.4198
+[12:00:42] Ep8 DONE - Loss: 0.4015
+[12:00:42] Ep9 B0/180 Loss=0.4008
+[12:00:53] Ep9 B50/180 Loss=0.3997
+[12:01:05] Ep9 B100/180 Loss=0.4090
+[12:01:17] Ep9 B150/180 Loss=0.3923
+[12:01:23] Ep9 DONE - Loss: 0.4028
+[12:01:23] 
+[VALIDATION Ep9 on image 4]
+[12:01:23] [INFERENCE] Image: 2040×1608, Edges: 6,556,992
+[12:01:23] [INFERENCE] Costs: Mean=0.914, Std=0.294, Min=-1.000, Max=1.000
+[12:01:23] [INFERENCE] Target regions: 200
+[12:01:23] [THR-SWEEP] Downsampled from 2040x1608 -> 512x404, trying 5 thresholds
+[12:01:30] [GAEC] Edges in heap: 384,932
+[12:01:30] [GAEC] Merges executed: 204,403
+[12:01:30] [GAEC] Final regions: 2,445
+[12:01:30] [MERGE] Found 2430 tiny regions (< 1000 pixels)
+[12:01:30] [MERGE] Tiny regions contain: 94,006 pixels (45.4% of image)
+[12:01:31] [MERGE] Merged 2430 tiny regions
+[12:01:31] [MERGE] Final regions: 191
+[12:01:43] [THR-SWEEP] thr=-0.900 -> size=884,923 bytes, regions=191
+[12:01:49] [GAEC] Edges in heap: 377,099
+[12:01:49] [GAEC] Merges executed: 204,117
+[12:01:49] [GAEC] Final regions: 2,731
+[12:01:49] [MERGE] Found 2717 tiny regions (< 1000 pixels)
+[12:01:49] [MERGE] Tiny regions contain: 96,342 pixels (46.6% of image)
+[12:01:50] [MERGE] Merged 2717 tiny regions
+[12:01:50] [MERGE] Final regions: 215
+[12:02:02] [THR-SWEEP] thr=-0.700 -> size=898,723 bytes, regions=215
+[12:02:08] [GAEC] Edges in heap: 372,618
+[12:02:08] [GAEC] Merges executed: 203,831
+[12:02:08] [GAEC] Final regions: 3,017
+[12:02:08] [MERGE] Found 3005 tiny regions (< 1000 pixels)
+[12:02:08] [MERGE] Tiny regions contain: 99,680 pixels (48.2% of image)
+[12:02:10] [MERGE] Merged 3005 tiny regions
+[12:02:10] [MERGE] Final regions: 237
+[12:02:22] [THR-SWEEP] thr=-0.500 -> size=929,830 bytes, regions=237
+[12:02:28] [GAEC] Edges in heap: 368,434
+[12:02:28] [GAEC] Merges executed: 203,471
+[12:02:28] [GAEC] Final regions: 3,377
+[12:02:28] [MERGE] Found 3365 tiny regions (< 1000 pixels)
+[12:02:28] [MERGE] Tiny regions contain: 100,578 pixels (48.6% of image)
+[12:02:29] [MERGE] Merged 3365 tiny regions
+[12:02:29] [MERGE] Final regions: 276
+[12:02:42] [THR-SWEEP] thr=-0.300 -> size=925,509 bytes, regions=276
+[12:02:47] [GAEC] Edges in heap: 355,821
+[12:02:47] [GAEC] Merges executed: 202,653
+[12:02:47] [GAEC] Final regions: 4,195
+[12:02:47] [MERGE] Found 4185 tiny regions (< 1000 pixels)
+[12:02:47] [MERGE] Tiny regions contain: 104,154 pixels (50.4% of image)
+[12:02:49] [MERGE] Merged 4185 tiny regions
+[12:02:49] [MERGE] Final regions: 350
+[12:03:02] [THR-SWEEP] thr=-0.100 -> size=958,777 bytes, regions=350
+[12:03:02] [THR-SWEEP] BEST thr=-0.900 size=884,923 bytes @ 512x404
+[12:05:03] [GAEC] Edges in heap: 6,537,719
+[12:05:03] [GAEC] Merges executed: 3,275,516
+[12:05:03] [GAEC] Final regions: 4,804
+[12:05:03] 
+[POST-PROCESS] Starting with 4,804 regions
+[12:05:03] [MERGE] Found 4676 tiny regions (< 1000 pixels)
+[12:05:03] [MERGE] Tiny regions contain: 208,754 pixels (6.4% of image)
+[12:05:32] [MERGE] Merged 4676 tiny regions
+[12:05:32] [MERGE] Final regions: 145
+[12:05:32] 
+[12:08:03] [INFERENCE] Final result: 145 regions, 7,918,093 bytes
+
+[12:08:04] [VAL] Compressed=7,918,093 bytes, PNG=5,943,950 bytes, Ratio=1.332, Gain=-33.2%
+
+[12:10:15] Saved: reconstruction_ep9.png
+[12:10:15]  Original: 9,840,960 bytes
+[12:10:15]  PSNR: 6.25 dB
+[12:10:15]  MAE: 105.967102
+[12:10:15] Ep10 B0/180 Loss=0.3966
+[12:10:27] Ep10 B50/180 Loss=0.4000
+[12:10:38] Ep10 B100/180 Loss=0.3853
+[12:10:50] Ep10 B150/180 Loss=0.3924
+[12:10:57] Ep10 DONE - Loss: 0.3983
+[12:10:57] Ep11 B0/180 Loss=0.3994
+[12:11:08] Ep11 B50/180 Loss=0.3990
+[12:11:20] Ep11 B100/180 Loss=0.4028
+[12:11:31] Ep11 B150/180 Loss=0.3940
+[12:11:38] Ep11 DONE - Loss: 0.3970
+[12:11:38] Ep12 B0/180 Loss=0.3958
+[12:11:50] Ep12 B50/180 Loss=0.3890
+[12:12:01] Ep12 B100/180 Loss=0.3961
+[12:12:13] Ep12 B150/180 Loss=0.3984
+[12:12:20] Ep12 DONE - Loss: 0.3965
+[12:12:20] Ep13 B0/180 Loss=0.3852
+[12:12:31] Ep13 B50/180 Loss=0.3804
+[12:12:43] Ep13 B100/180 Loss=0.3929
+[12:12:54] Ep13 B150/180 Loss=0.3955
+[12:13:01] Ep13 DONE - Loss: 0.3953
+[12:13:01] Ep14 B0/180 Loss=0.3926
+[12:13:13] Ep14 B50/180 Loss=0.3837
+[12:13:24] Ep14 B100/180 Loss=0.4112
+[12:13:36] Ep14 B150/180 Loss=0.4008
+[12:13:43] Ep14 DONE - Loss: 0.3956
+[12:13:43] 
+[VALIDATION Ep14 on image 4]
+[12:13:43] [INFERENCE] Image: 2040×1608, Edges: 6,556,992
+[12:13:43] [INFERENCE] Costs: Mean=0.922, Std=0.272, Min=-1.000, Max=1.000
+[12:13:43] [INFERENCE] Target regions: 200
+[12:13:43] [THR-SWEEP] Downsampled from 2040x1608 -> 512x404, trying 5 thresholds
+[12:13:49] [GAEC] Edges in heap: 390,815
+[12:13:49] [GAEC] Merges executed: 204,841
+[12:13:49] [GAEC] Final regions: 2,007
+[12:13:49] [MERGE] Found 1990 tiny regions (< 1000 pixels)
+[12:13:49] [MERGE] Tiny regions contain: 89,258 pixels (43.2% of image)
+[12:13:50] [MERGE] Merged 1990 tiny regions
+[12:13:50] [MERGE] Final regions: 185
+[12:14:02] [THR-SWEEP] thr=-0.900 -> size=884,624 bytes, regions=185
+[12:14:08] [GAEC] Edges in heap: 384,903
+[12:14:08] [GAEC] Merges executed: 204,681
+[12:14:08] [GAEC] Final regions: 2,167
+[12:14:08] [MERGE] Found 2150 tiny regions (< 1000 pixels)
+[12:14:08] [MERGE] Tiny regions contain: 91,504 pixels (44.2% of image)
+[12:14:09] [MERGE] Merged 2150 tiny regions
+[12:14:09] [MERGE] Final regions: 193
+[12:14:21] [THR-SWEEP] thr=-0.700 -> size=901,259 bytes, regions=193
+[12:14:26] [GAEC] Edges in heap: 381,427
+[12:14:26] [GAEC] Merges executed: 204,539
+[12:14:26] [GAEC] Final regions: 2,309
+[12:14:26] [MERGE] Found 2293 tiny regions (< 1000 pixels)
+[12:14:26] [MERGE] Tiny regions contain: 93,280 pixels (45.1% of image)
+[12:14:27] [MERGE] Merged 2293 tiny regions
+[12:14:27] [MERGE] Final regions: 201
+[12:14:40] [THR-SWEEP] thr=-0.500 -> size=923,269 bytes, regions=201
+[12:14:45] [GAEC] Edges in heap: 378,200
+[12:14:45] [GAEC] Merges executed: 204,352
+[12:14:45] [GAEC] Final regions: 2,496
+[12:14:45] [MERGE] Found 2481 tiny regions (< 1000 pixels)
+[12:14:45] [MERGE] Tiny regions contain: 94,544 pixels (45.7% of image)
+[12:14:46] [MERGE] Merged 2481 tiny regions
+[12:14:46] [MERGE] Final regions: 218
+[12:14:58] [THR-SWEEP] thr=-0.300 -> size=907,395 bytes, regions=218
+[12:15:04] [GAEC] Edges in heap: 369,646
+[12:15:04] [GAEC] Merges executed: 203,930
+[12:15:04] [GAEC] Final regions: 2,918
+[12:15:04] [MERGE] Found 2907 tiny regions (< 1000 pixels)
+[12:15:04] [MERGE] Tiny regions contain: 100,886 pixels (48.8% of image)
+[12:15:05] [MERGE] Merged 2907 tiny regions
+[12:15:05] [MERGE] Final regions: 251
+[12:15:18] [THR-SWEEP] thr=-0.100 -> size=948,533 bytes, regions=251
+[12:15:18] [THR-SWEEP] BEST thr=-0.900 size=884,624 bytes @ 512x404
+[12:17:03] [GAEC] Edges in heap: 6,545,066
+[12:17:03] [GAEC] Merges executed: 3,277,833
+[12:17:03] [GAEC] Final regions: 2,487
+[12:17:04] 
+[POST-PROCESS] Starting with 2,487 regions
+[12:17:04] [MERGE] Found 2417 tiny regions (< 1000 pixels)
+[12:17:04] [MERGE] Tiny regions contain: 93,264 pixels (2.8% of image)
+[12:17:19] [MERGE] Merged 2417 tiny regions
+[12:17:19] [MERGE] Final regions: 74
+[12:17:19] 
+[12:19:25] [INFERENCE] Final result: 74 regions, 6,400,668 bytes
+
+[12:19:27] [VAL] Compressed=6,400,668 bytes, PNG=5,943,950 bytes, Ratio=1.077, Gain=-7.7%
+
+[12:21:17] Saved: reconstruction_ep14.png
+[12:21:17]  Original: 9,840,960 bytes
+[12:21:17]  PSNR: 6.26 dB
+[12:21:17]  MAE: 105.792732
+[12:21:17] Ep15 B0/180 Loss=0.3878
+[12:21:28] Ep15 B50/180 Loss=0.3695
+[12:21:40] Ep15 B100/180 Loss=0.3739
+[12:21:52] Ep15 B150/180 Loss=0.3944
+[12:21:58] Ep15 DONE - Loss: 0.3937
+[12:21:59] Ep16 B0/180 Loss=0.3968
+[12:22:10] Ep16 B50/180 Loss=0.3915
+[12:22:22] Ep16 B100/180 Loss=0.3933
+[12:22:33] Ep16 B150/180 Loss=0.3837
+[12:22:40] Ep16 DONE - Loss: 0.3935
+[12:22:40] Ep17 B0/180 Loss=0.3980
+[12:22:52] Ep17 B50/180 Loss=0.3922
+[12:23:03] Ep17 B100/180 Loss=0.3943
+[12:23:15] Ep17 B150/180 Loss=0.3959
+[12:23:21] Ep17 DONE - Loss: 0.3946
+[12:23:21] Ep18 B0/180 Loss=0.3881
+[12:23:33] Ep18 B50/180 Loss=0.3968
+[12:23:45] Ep18 B100/180 Loss=0.3875
+[12:23:56] Ep18 B150/180 Loss=0.3841
+[12:24:03] Ep18 DONE - Loss: 0.3905
+[12:24:03] Ep19 B0/180 Loss=0.3961
+[12:24:15] Ep19 B50/180 Loss=0.3782
+[12:24:26] Ep19 B100/180 Loss=0.3912
+[12:24:38] Ep19 B150/180 Loss=0.3928
+[12:24:45] Ep19 DONE - Loss: 0.3913
+[12:24:45] 
+[VALIDATION Ep19 on image 4]
+[12:24:45] [INFERENCE] Image: 2040×1608, Edges: 6,556,992
+[12:24:45] [INFERENCE] Costs: Mean=0.912, Std=0.293, Min=-1.000, Max=1.000
+[12:24:45] [INFERENCE] Target regions: 200
+[12:24:45] [THR-SWEEP] Downsampled from 2040x1608 -> 512x404, trying 5 thresholds
+[12:24:53] [GAEC] Edges in heap: 387,803
+[12:24:53] [GAEC] Merges executed: 204,680
+[12:24:53] [GAEC] Final regions: 2,168
+[12:24:53] [MERGE] Found 2153 tiny regions (< 1000 pixels)
+[12:24:53] [MERGE] Tiny regions contain: 95,584 pixels (46.2% of image)
+[12:24:54] [MERGE] Merged 2153 tiny regions
+[12:24:54] [MERGE] Final regions: 173
+[12:25:06] [THR-SWEEP] thr=-0.900 -> size=856,293 bytes, regions=173
+[12:25:14] [GAEC] Edges in heap: 382,230
+[12:25:14] [GAEC] Merges executed: 204,520
+[12:25:14] [GAEC] Final regions: 2,328
+[12:25:14] [MERGE] Found 2314 tiny regions (< 1000 pixels)
+[12:25:14] [MERGE] Tiny regions contain: 96,980 pixels (46.9% of image)
+[12:25:15] [MERGE] Merged 2314 tiny regions
+[12:25:15] [MERGE] Final regions: 181
+[12:25:26] [THR-SWEEP] thr=-0.700 -> size=860,182 bytes, regions=181
+[12:25:34] [GAEC] Edges in heap: 379,081
+[12:25:34] [GAEC] Merges executed: 204,348
+[12:25:34] [GAEC] Final regions: 2,500
+[12:25:34] [MERGE] Found 2488 tiny regions (< 1000 pixels)
+[12:25:34] [MERGE] Tiny regions contain: 99,551 pixels (48.1% of image)
+[12:25:35] [MERGE] Merged 2488 tiny regions
+[12:25:35] [MERGE] Final regions: 203
+[12:25:47] [THR-SWEEP] thr=-0.500 -> size=900,674 bytes, regions=203
+[12:25:55] [GAEC] Edges in heap: 376,301
+[12:25:55] [GAEC] Merges executed: 204,177
+[12:25:55] [GAEC] Final regions: 2,671
+[12:25:55] [MERGE] Found 2661 tiny regions (< 1000 pixels)
+[12:25:55] [MERGE] Tiny regions contain: 102,362 pixels (49.5% of image)
+[12:25:56] [MERGE] Merged 2661 tiny regions
+[12:25:56] [MERGE] Final regions: 220
+[12:26:08] [THR-SWEEP] thr=-0.300 -> size=897,863 bytes, regions=220
+[12:26:15] [GAEC] Edges in heap: 371,549
+[12:26:15] [GAEC] Merges executed: 203,751
+[12:26:15] [GAEC] Final regions: 3,097
+[12:26:15] [MERGE] Found 3087 tiny regions (< 1000 pixels)
+[12:26:15] [MERGE] Tiny regions contain: 103,135 pixels (49.9% of image)
+[12:26:17] [MERGE] Merged 3087 tiny regions
+[12:26:17] [MERGE] Final regions: 253
+[12:26:29] [THR-SWEEP] thr=-0.100 -> size=921,733 bytes, regions=253
+[12:26:29] [THR-SWEEP] BEST thr=-0.900 size=856,293 bytes @ 512x404
+[12:29:14] [GAEC] Edges in heap: 6,539,643
+[12:29:14] [GAEC] Merges executed: 3,277,229
+[12:29:14] [GAEC] Final regions: 3,091
+[12:29:14] 
+[POST-PROCESS] Starting with 3,091 regions
+[12:29:14] [MERGE] Found 2994 tiny regions (< 1000 pixels)
+[12:29:14] [MERGE] Tiny regions contain: 176,812 pixels (5.4% of image)
+[12:29:32] [MERGE] Merged 2994 tiny regions
+[12:29:32] [MERGE] Final regions: 102
+[12:29:32] 
+[12:32:07] [INFERENCE] Final result: 102 regions, 7,994,889 bytes
+
+[12:32:08] [VAL] Compressed=7,994,889 bytes, PNG=5,943,950 bytes, Ratio=1.345, Gain=-34.5%
+
+[12:34:24] Saved: reconstruction_ep19.png
+[12:34:24]  Original: 9,840,960 bytes
+[12:34:24]  PSNR: 6.25 dB
+[12:34:24]  MAE: 105.846436
+[12:34:24] Ep20 B0/180 Loss=0.3905
+[12:34:36] Ep20 B50/180 Loss=0.3829
+[12:34:48] Ep20 B100/180 Loss=0.3947
+[12:35:00] Ep20 B150/180 Loss=0.4072
+[12:35:06] Ep20 DONE - Loss: 0.3898
+[12:35:07] Ep21 B0/180 Loss=0.3931
+[12:35:18] Ep21 B50/180 Loss=0.3995
+[12:35:30] Ep21 B100/180 Loss=0.3976
+[12:35:42] Ep21 B150/180 Loss=0.3877
+[12:35:49] Ep21 DONE - Loss: 0.3909
+[12:35:49] Ep22 B0/180 Loss=0.3886
+[12:36:01] Ep22 B50/180 Loss=0.3836
+[12:36:13] Ep22 B100/180 Loss=0.3961
+[12:36:25] Ep22 B150/180 Loss=0.3863
+[12:36:31] Ep22 DONE - Loss: 0.3891
+[12:36:32] Ep23 B0/180 Loss=0.3737
+[12:36:43] Ep23 B50/180 Loss=0.3890
+[12:36:55] Ep23 B100/180 Loss=0.3786
+[12:37:06] Ep23 B150/180 Loss=0.3774
+[12:37:13] Ep23 DONE - Loss: 0.3883
+[12:37:13] Ep24 B0/180 Loss=0.3946
+[12:37:25] Ep24 B50/180 Loss=0.3981
+[12:37:36] Ep24 B100/180 Loss=0.3977
+[12:37:48] Ep24 B150/180 Loss=0.3914
+[12:37:54] Ep24 DONE - Loss: 0.3875
+[12:37:54] 
+[VALIDATION Ep24 on image 4]
+[12:37:54] [INFERENCE] Image: 2040×1608, Edges: 6,556,992
+[12:37:55] [INFERENCE] Costs: Mean=0.910, Std=0.294, Min=-1.000, Max=1.000
+[12:37:55] [INFERENCE] Target regions: 200
+[12:37:55] [THR-SWEEP] Downsampled from 2040x1608 -> 512x404, trying 5 thresholds
+[12:38:02] [GAEC] Edges in heap: 387,391
+[12:38:02] [GAEC] Merges executed: 204,730
+[12:38:02] [GAEC] Final regions: 2,118
+[12:38:02] [MERGE] Found 2101 tiny regions (< 1000 pixels)
+[12:38:02] [MERGE] Tiny regions contain: 95,141 pixels (46.0% of image)
+[12:38:03] [MERGE] Merged 2101 tiny regions
+[12:38:03] [MERGE] Final regions: 178
+[12:38:15] [THR-SWEEP] thr=-0.900 -> size=901,798 bytes, regions=178
+[12:38:22] [GAEC] Edges in heap: 383,013
+[12:38:22] [GAEC] Merges executed: 204,574
+[12:38:22] [GAEC] Final regions: 2,274
+[12:38:22] [MERGE] Found 2259 tiny regions (< 1000 pixels)
+[12:38:22] [MERGE] Tiny regions contain: 98,173 pixels (47.5% of image)
+[12:38:23] [MERGE] Merged 2259 tiny regions
+[12:38:23] [MERGE] Final regions: 191
+[12:38:35] [THR-SWEEP] thr=-0.700 -> size=923,478 bytes, regions=191
+[12:38:42] [GAEC] Edges in heap: 380,466
+[12:38:42] [GAEC] Merges executed: 204,428
+[12:38:42] [GAEC] Final regions: 2,420
+[12:38:42] [MERGE] Found 2406 tiny regions (< 1000 pixels)
+[12:38:42] [MERGE] Tiny regions contain: 100,321 pixels (48.5% of image)
+[12:38:43] [MERGE] Merged 2406 tiny regions
+[12:38:43] [MERGE] Final regions: 203
+[12:38:56] [THR-SWEEP] thr=-0.500 -> size=960,886 bytes, regions=203
+[12:39:03] [GAEC] Edges in heap: 378,510
+[12:39:03] [GAEC] Merges executed: 204,300
+[12:39:03] [GAEC] Final regions: 2,548
+[12:39:03] [MERGE] Found 2534 tiny regions (< 1000 pixels)
+[12:39:03] [MERGE] Tiny regions contain: 100,515 pixels (48.6% of image)
+[12:39:04] [MERGE] Merged 2534 tiny regions
+[12:39:04] [MERGE] Final regions: 216
+[12:39:17] [THR-SWEEP] thr=-0.300 -> size=966,977 bytes, regions=216
+[12:39:24] [GAEC] Edges in heap: 376,281
+[12:39:24] [GAEC] Merges executed: 204,100
+[12:39:24] [GAEC] Final regions: 2,748
+[12:39:24] [MERGE] Found 2735 tiny regions (< 1000 pixels)
+[12:39:24] [MERGE] Tiny regions contain: 101,957 pixels (49.3% of image)
+[12:39:25] [MERGE] Merged 2735 tiny regions
+[12:39:25] [MERGE] Final regions: 234
+[12:39:38] [THR-SWEEP] thr=-0.100 -> size=980,567 bytes, regions=234
+[12:39:38] [THR-SWEEP] BEST thr=-0.900 size=901,798 bytes @ 512x404
+[12:41:40] [GAEC] Edges in heap: 6,539,205
+[12:41:40] [GAEC] Merges executed: 3,277,601
+[12:41:40] [GAEC] Final regions: 2,719
+[12:41:40] 
+[POST-PROCESS] Starting with 2,719 regions
+[12:41:41] [MERGE] Found 2624 tiny regions (< 1000 pixels)
+[12:41:41] [MERGE] Tiny regions contain: 142,520 pixels (4.3% of image)
+[12:41:57] [MERGE] Merged 2624 tiny regions
+[12:41:57] [MERGE] Final regions: 99
+[12:41:57] 
+[12:44:25] [INFERENCE] Final result: 99 regions, 7,617,630 bytes
+
+[12:44:26] [VAL] Compressed=7,617,630 bytes, PNG=5,943,950 bytes, Ratio=1.282, Gain=-28.2%
+
+[12:46:34] Saved: reconstruction_ep24.png
+[12:46:34]  Original: 9,840,960 bytes
+[12:46:34]  PSNR: 6.25 dB
+[12:46:34]  MAE: 105.865822
+[12:46:34] Ep25 B0/180 Loss=0.3998
+[12:46:46] Ep25 B50/180 Loss=0.3820
+[12:46:57] Ep25 B100/180 Loss=0.3943
+[12:47:09] Ep25 B150/180 Loss=0.3936
+[12:47:16] Ep25 DONE - Loss: 0.3877
+[12:47:16] Ep26 B0/180 Loss=0.3879
+[12:47:27] Ep26 B50/180 Loss=0.3858
+[12:47:39] Ep26 B100/180 Loss=0.3929
+[12:47:52] Ep26 B150/180 Loss=0.3826
+[12:47:59] Ep26 DONE - Loss: 0.3861
+[12:47:59] Ep27 B0/180 Loss=0.3913
+[12:48:11] Ep27 B50/180 Loss=0.3714
+[12:48:22] Ep27 B100/180 Loss=0.3759
+[12:48:34] Ep27 B150/180 Loss=0.3859
+[12:48:41] Ep27 DONE - Loss: 0.3858
+[12:48:41] Ep28 B0/180 Loss=0.3926
+[12:48:53] Ep28 B50/180 Loss=0.3839
+[12:49:04] Ep28 B100/180 Loss=0.4008
+[12:49:16] Ep28 B150/180 Loss=0.3866
+[12:49:22] Ep28 DONE - Loss: 0.3849
+[12:49:23] Ep29 B0/180 Loss=0.3794
+[12:49:34] Ep29 B50/180 Loss=0.3717
+[12:49:46] Ep29 B100/180 Loss=0.3887
+[12:49:58] Ep29 B150/180 Loss=0.3970
+[12:50:04] Ep29 DONE - Loss: 0.3854
+[12:50:04] 
+[VALIDATION Ep29 on image 4]
+[12:50:04] [INFERENCE] Image: 2040×1608, Edges: 6,556,992
+[12:50:04] [INFERENCE] Costs: Mean=0.911, Std=0.295, Min=-1.000, Max=1.000
+[12:50:04] [INFERENCE] Target regions: 200
+[12:50:04] [THR-SWEEP] Downsampled from 2040x1608 -> 512x404, trying 5 thresholds
+[12:50:13] [GAEC] Edges in heap: 385,879
+[12:50:13] [GAEC] Merges executed: 204,654
+[12:50:13] [GAEC] Final regions: 2,194
+[12:50:13] [MERGE] Found 2177 tiny regions (< 1000 pixels)
+[12:50:13] [MERGE] Tiny regions contain: 94,582 pixels (45.7% of image)
+[12:50:14] [MERGE] Merged 2177 tiny regions
+[12:50:14] [MERGE] Final regions: 191
+[12:50:26] [THR-SWEEP] thr=-0.900 -> size=910,150 bytes, regions=191
+[12:50:34] [GAEC] Edges in heap: 382,244
+[12:50:34] [GAEC] Merges executed: 204,512
+[12:50:34] [GAEC] Final regions: 2,336
+[12:50:34] [MERGE] Found 2321 tiny regions (< 1000 pixels)
+[12:50:34] [MERGE] Tiny regions contain: 97,229 pixels (47.0% of image)
+[12:50:35] [MERGE] Merged 2321 tiny regions
+[12:50:35] [MERGE] Final regions: 201
+[12:50:47] [THR-SWEEP] thr=-0.700 -> size=929,217 bytes, regions=201
+[12:50:55] [GAEC] Edges in heap: 380,226
+[12:50:55] [GAEC] Merges executed: 204,399
+[12:50:55] [GAEC] Final regions: 2,449
+[12:50:55] [MERGE] Found 2436 tiny regions (< 1000 pixels)
+[12:50:55] [MERGE] Tiny regions contain: 99,782 pixels (48.2% of image)
+[12:50:56] [MERGE] Merged 2436 tiny regions
+[12:50:56] [MERGE] Final regions: 210
+[12:51:09] [THR-SWEEP] thr=-0.500 -> size=949,689 bytes, regions=210
+[12:51:17] [GAEC] Edges in heap: 378,701
+[12:51:17] [GAEC] Merges executed: 204,315
+[12:51:17] [GAEC] Final regions: 2,533
+[12:51:17] [MERGE] Found 2520 tiny regions (< 1000 pixels)
+[12:51:17] [MERGE] Tiny regions contain: 99,901 pixels (48.3% of image)
+[12:51:18] [MERGE] Merged 2520 tiny regions
+[12:51:18] [MERGE] Final regions: 216
+[12:51:31] [THR-SWEEP] thr=-0.300 -> size=949,696 bytes, regions=216
+[12:51:39] [GAEC] Edges in heap: 377,080
+[12:51:39] [GAEC] Merges executed: 204,193
+[12:51:39] [GAEC] Final regions: 2,655
+[12:51:39] [MERGE] Found 2644 tiny regions (< 1000 pixels)
+[12:51:39] [MERGE] Tiny regions contain: 102,489 pixels (49.5% of image)
+[12:51:40] [MERGE] Merged 2644 tiny regions
+[12:51:40] [MERGE] Final regions: 230
+[12:51:52] [THR-SWEEP] thr=-0.100 -> size=970,449 bytes, regions=230
+[12:51:52] [THR-SWEEP] BEST thr=-0.900 size=910,150 bytes @ 512x404
+[12:55:11] [GAEC] Edges in heap: 6,537,680
+[12:55:11] [GAEC] Merges executed: 3,277,665
+[12:55:11] [GAEC] Final regions: 2,655
+[12:55:11] 
+[POST-PROCESS] Starting with 2,655 regions
+[12:55:11] [MERGE] Found 2566 tiny regions (< 1000 pixels)
+[12:55:11] [MERGE] Tiny regions contain: 149,606 pixels (4.6% of image)
+[12:55:27] [MERGE] Merged 2566 tiny regions
+[12:55:27] [MERGE] Final regions: 94
+[12:55:27] 
+[12:57:57] [INFERENCE] Final result: 94 regions, 7,741,806 bytes
+
+[12:57:58] [VAL] Compressed=7,741,806 bytes, PNG=5,943,950 bytes, Ratio=1.302, Gain=-30.2%
+
+[13:00:08] Saved: reconstruction_ep29.png
+[13:00:08]  Original: 9,840,960 bytes
+[13:00:08]  PSNR: 6.25 dB
+[13:00:08]  MAE: 105.892738
+[13:00:08] Ep30 B0/180 Loss=0.3932
+[13:00:20] Ep30 B50/180 Loss=0.3891
+[13:00:31] Ep30 B100/180 Loss=0.3824
+[13:00:43] Ep30 B150/180 Loss=0.3887
+[13:00:50] Ep30 DONE - Loss: 0.3855
+[13:00:50] Ep31 B0/180 Loss=0.3844
+[13:01:01] Ep31 B50/180 Loss=0.3983
+[13:01:13] Ep31 B100/180 Loss=0.3694
+[13:01:24] Ep31 B150/180 Loss=0.3782
+[13:01:31] Ep31 DONE - Loss: 0.3845
+[13:01:31] Ep32 B0/180 Loss=0.3628
+[13:01:43] Ep32 B50/180 Loss=0.3998
+[13:01:54] Ep32 B100/180 Loss=0.3872
+[13:02:06] Ep32 B150/180 Loss=0.3938
+[13:02:13] Ep32 DONE - Loss: 0.3857
+[13:02:13] Ep33 B0/180 Loss=0.3988
+[13:02:24] Ep33 B50/180 Loss=0.3931
+[13:02:36] Ep33 B100/180 Loss=0.3747
+[13:02:48] Ep33 B150/180 Loss=0.3745
+[13:02:54] Ep33 DONE - Loss: 0.3854
+[13:02:54] Ep34 B0/180 Loss=0.3550
+[13:03:06] Ep34 B50/180 Loss=0.3987
+[13:03:17] Ep34 B100/180 Loss=0.3709
+[13:03:29] Ep34 B150/180 Loss=0.3924
+[13:03:36] Ep34 DONE - Loss: 0.3836
+[13:03:36] 
+[VALIDATION Ep34 on image 4]
+[13:03:36] [INFERENCE] Image: 2040×1608, Edges: 6,556,992
+[13:03:36] [INFERENCE] Costs: Mean=0.909, Std=0.300, Min=-1.000, Max=1.000
+[13:03:36] [INFERENCE] Target regions: 200
+[13:03:36] [THR-SWEEP] Downsampled from 2040x1608 -> 512x404, trying 5 thresholds
+[13:03:42] [GAEC] Edges in heap: 384,905
+[13:03:42] [GAEC] Merges executed: 204,614
+[13:03:42] [GAEC] Final regions: 2,234
+[13:03:42] [MERGE] Found 2220 tiny regions (< 1000 pixels)
+[13:03:42] [MERGE] Tiny regions contain: 99,753 pixels (48.2% of image)
+[13:03:43] [MERGE] Merged 2220 tiny regions
+[13:03:43] [MERGE] Final regions: 197
+[13:03:56] [THR-SWEEP] thr=-0.900 -> size=954,206 bytes, regions=197
+[13:04:02] [GAEC] Edges in heap: 381,806
+[13:04:02] [GAEC] Merges executed: 204,484
+[13:04:02] [GAEC] Final regions: 2,364
+[13:04:02] [MERGE] Found 2350 tiny regions (< 1000 pixels)
+[13:04:02] [MERGE] Tiny regions contain: 100,230 pixels (48.5% of image)
+[13:04:03] [MERGE] Merged 2350 tiny regions
+[13:04:03] [MERGE] Final regions: 211
+[13:04:16] [THR-SWEEP] thr=-0.700 -> size=961,840 bytes, regions=211
+[13:04:22] [GAEC] Edges in heap: 380,061
+[13:04:22] [GAEC] Merges executed: 204,374
+[13:04:22] [GAEC] Final regions: 2,474
+[13:04:22] [MERGE] Found 2461 tiny regions (< 1000 pixels)
+[13:04:22] [MERGE] Tiny regions contain: 102,716 pixels (49.7% of image)
+[13:04:23] [MERGE] Merged 2461 tiny regions
+[13:04:23] [MERGE] Final regions: 226
+[13:04:36] [THR-SWEEP] thr=-0.500 -> size=976,692 bytes, regions=226
+[13:04:42] [GAEC] Edges in heap: 378,746
+[13:04:42] [GAEC] Merges executed: 204,296
+[13:04:42] [GAEC] Final regions: 2,552
+[13:04:42] [MERGE] Found 2539 tiny regions (< 1000 pixels)
+[13:04:42] [MERGE] Tiny regions contain: 102,784 pixels (49.7% of image)
+[13:04:43] [MERGE] Merged 2539 tiny regions
+[13:04:43] [MERGE] Final regions: 232
+[13:04:56] [THR-SWEEP] thr=-0.300 -> size=978,289 bytes, regions=232
+[13:05:02] [GAEC] Edges in heap: 377,320
+[13:05:02] [GAEC] Merges executed: 204,143
+[13:05:02] [GAEC] Final regions: 2,705
+[13:05:02] [MERGE] Found 2692 tiny regions (< 1000 pixels)
+[13:05:02] [MERGE] Tiny regions contain: 103,513 pixels (50.0% of image)
+[13:05:04] [MERGE] Merged 2692 tiny regions
+[13:05:04] [MERGE] Final regions: 245
+[13:05:17] [THR-SWEEP] thr=-0.100 -> size=993,926 bytes, regions=245
+[13:05:17] [THR-SWEEP] BEST thr=-0.900 size=954,206 bytes @ 512x404
+[13:07:54] [GAEC] Edges in heap: 6,535,949
+[13:07:54] [GAEC] Merges executed: 3,277,391
+[13:07:54] [GAEC] Final regions: 2,929
+[13:07:54] 
+[POST-PROCESS] Starting with 2,929 regions
+[13:07:54] [MERGE] Found 2839 tiny regions (< 1000 pixels)
+[13:07:54] [MERGE] Tiny regions contain: 159,195 pixels (4.9% of image)
+[13:08:12] [MERGE] Merged 2839 tiny regions
+[13:08:12] [MERGE] Final regions: 96
+[13:08:12] 
+[13:10:48] [INFERENCE] Final result: 96 regions, 8,116,913 bytes
+
+[13:10:49] [VAL] Compressed=8,116,913 bytes, PNG=5,943,950 bytes, Ratio=1.366, Gain=-36.6%
+
+[13:13:04] Saved: reconstruction_ep34.png
+[13:13:04]  Original: 9,840,960 bytes
+[13:13:04]  PSNR: 6.25 dB
+[13:13:04]  MAE: 105.862595
+[13:13:04] Ep35 B0/180 Loss=0.3755
+[13:13:16] Ep35 B50/180 Loss=0.3996
+[13:13:27] Ep35 B100/180 Loss=0.3865
+[13:13:39] Ep35 B150/180 Loss=0.3715
+[13:13:45] Ep35 DONE - Loss: 0.3834
+[13:13:46] Ep36 B0/180 Loss=0.3895
+[13:13:57] Ep36 B50/180 Loss=0.3791
+[13:14:09] Ep36 B100/180 Loss=0.3926
+[13:14:21] Ep36 B150/180 Loss=0.3949
+[13:14:27] Ep36 DONE - Loss: 0.3833
+[13:14:28] Ep37 B0/180 Loss=0.3774
+[13:14:39] Ep37 B50/180 Loss=0.3833
+[13:14:51] Ep37 B100/180 Loss=0.3832
+[13:15:03] Ep37 B150/180 Loss=0.3833
+[13:15:10] Ep37 DONE - Loss: 0.3847
+[13:15:10] Ep38 B0/180 Loss=0.3890
+[13:15:22] Ep38 B50/180 Loss=0.3884
+[13:15:34] Ep38 B100/180 Loss=0.3925
+[13:15:46] Ep38 B150/180 Loss=0.3637
+[13:15:52] Ep38 DONE - Loss: 0.3835
+[13:15:53] Ep39 B0/180 Loss=0.3800
+[13:16:04] Ep39 B50/180 Loss=0.3728
+[13:16:16] Ep39 B100/180 Loss=0.3963
+[13:16:28] Ep39 B150/180 Loss=0.3990
+[13:16:35] Ep39 DONE - Loss: 0.3837
+[13:16:35] 
+[VALIDATION Ep39 on image 4]
+[13:16:35] [INFERENCE] Image: 2040×1608, Edges: 6,556,992
+[13:16:35] [INFERENCE] Costs: Mean=0.911, Std=0.294, Min=-1.000, Max=1.000
+[13:16:35] [INFERENCE] Target regions: 200
+[13:16:35] [THR-SWEEP] Downsampled from 2040x1608 -> 512x404, trying 5 thresholds
+[13:16:42] [GAEC] Edges in heap: 385,379
+[13:16:42] [GAEC] Merges executed: 204,659
+[13:16:42] [GAEC] Final regions: 2,189
+[13:16:42] [MERGE] Found 2173 tiny regions (< 1000 pixels)
+[13:16:42] [MERGE] Tiny regions contain: 95,865 pixels (46.3% of image)
+[13:16:43] [MERGE] Merged 2173 tiny regions
+[13:16:43] [MERGE] Final regions: 229
+[13:16:56] [THR-SWEEP] thr=-0.900 -> size=970,330 bytes, regions=229
+[13:17:02] [GAEC] Edges in heap: 382,714
+[13:17:02] [GAEC] Merges executed: 204,518
+[13:17:02] [GAEC] Final regions: 2,330
+[13:17:02] [MERGE] Found 2318 tiny regions (< 1000 pixels)
+[13:17:02] [MERGE] Tiny regions contain: 100,610 pixels (48.6% of image)
+[13:17:03] [MERGE] Merged 2318 tiny regions
+[13:17:03] [MERGE] Final regions: 237
+[13:17:17] [THR-SWEEP] thr=-0.700 -> size=1,025,718 bytes, regions=237
+[13:17:23] [GAEC] Edges in heap: 381,253
+[13:17:23] [GAEC] Merges executed: 204,437
+[13:17:23] [GAEC] Final regions: 2,411
+[13:17:23] [MERGE] Found 2400 tiny regions (< 1000 pixels)
+[13:17:23] [MERGE] Tiny regions contain: 101,779 pixels (49.2% of image)
+[13:17:24] [MERGE] Merged 2400 tiny regions
+[13:17:24] [MERGE] Final regions: 244
+[13:17:38] [THR-SWEEP] thr=-0.500 -> size=1,029,914 bytes, regions=244
+[13:17:44] [GAEC] Edges in heap: 380,102
+[13:17:44] [GAEC] Merges executed: 204,367
+[13:17:44] [GAEC] Final regions: 2,481
+[13:17:44] [MERGE] Found 2471 tiny regions (< 1000 pixels)
+[13:17:44] [MERGE] Tiny regions contain: 103,120 pixels (49.9% of image)
+[13:17:46] [MERGE] Merged 2471 tiny regions
+[13:17:46] [MERGE] Final regions: 250
+[13:17:59] [THR-SWEEP] thr=-0.300 -> size=1,032,184 bytes, regions=250
+[13:18:05] [GAEC] Edges in heap: 378,865
+[13:18:05] [GAEC] Merges executed: 204,283
+[13:18:05] [GAEC] Final regions: 2,565
+[13:18:05] [MERGE] Found 2556 tiny regions (< 1000 pixels)
+[13:18:05] [MERGE] Tiny regions contain: 104,237 pixels (50.4% of image)
+[13:18:07] [MERGE] Merged 2556 tiny regions
+[13:18:07] [MERGE] Final regions: 251
+[13:18:20] [THR-SWEEP] thr=-0.100 -> size=1,042,879 bytes, regions=251
+[13:18:20] [THR-SWEEP] BEST thr=-0.900 size=970,330 bytes @ 512x404
+[13:20:42] [GAEC] Edges in heap: 6,537,513
+[13:20:42] [GAEC] Merges executed: 3,277,751
+[13:20:42] [GAEC] Final regions: 2,569
+[13:20:42] 
+[POST-PROCESS] Starting with 2,569 regions
+[13:20:42] [MERGE] Found 2504 tiny regions (< 1000 pixels)
+[13:20:42] [MERGE] Tiny regions contain: 91,312 pixels (2.8% of image)
+[13:20:57] [MERGE] Merged 2504 tiny regions
+[13:20:57] [MERGE] Final regions: 69
+[13:20:57] 
+[13:23:10] [INFERENCE] Final result: 69 regions, 6,739,519 bytes
+
+[13:23:11] [VAL] Compressed=6,739,519 bytes, PNG=5,943,950 bytes, Ratio=1.134, Gain=-13.4%
+
+[13:25:06] Saved: reconstruction_ep39.png
+[13:25:06]  Original: 9,840,960 bytes
+[13:25:06]  PSNR: 6.25 dB
+[13:25:06]  MAE: 105.950310
+[13:25:06] Ep40 B0/180 Loss=0.3886
+[13:25:19] Ep40 B50/180 Loss=0.3945
+[13:25:31] Ep40 B100/180 Loss=0.3886
+[13:25:42] Ep40 B150/180 Loss=0.3891
+[13:25:49] Ep40 DONE - Loss: 0.3833
+[13:25:50] Ep41 B0/180 Loss=0.3968
+[13:26:01] Ep41 B50/180 Loss=0.3668
+[13:26:13] Ep41 B100/180 Loss=0.3968
+[13:26:24] Ep41 B150/180 Loss=0.3970
+[13:26:31] Ep41 DONE - Loss: 0.3823
+[13:26:31] Ep42 B0/180 Loss=0.3909
+[13:26:43] Ep42 B50/180 Loss=0.3747
+[13:26:54] Ep42 B100/180 Loss=0.3730
+[13:27:06] Ep42 B150/180 Loss=0.3956
+[13:27:13] Ep42 DONE - Loss: 0.3831
+[13:27:13] Ep43 B0/180 Loss=0.3974
+[13:27:24] Ep43 B50/180 Loss=0.3834
+[13:27:36] Ep43 B100/180 Loss=0.3878
+[13:27:48] Ep43 B150/180 Loss=0.3695
+[13:27:54] Ep43 DONE - Loss: 0.3834
+[13:27:54] Ep44 B0/180 Loss=0.3678
+[13:28:06] Ep44 B50/180 Loss=0.3824
+[13:28:17] Ep44 B100/180 Loss=0.3532
+[13:28:29] Ep44 B150/180 Loss=0.3924
+[13:28:36] Ep44 DONE - Loss: 0.3835
+[13:28:36] 
+[VALIDATION Ep44 on image 4]
+[13:28:36] [INFERENCE] Image: 2040×1608, Edges: 6,556,992
+[13:28:36] [INFERENCE] Costs: Mean=0.909, Std=0.299, Min=-1.000, Max=1.000
+[13:28:36] [INFERENCE] Target regions: 200
+[13:28:36] [THR-SWEEP] Downsampled from 2040x1608 -> 512x404, trying 5 thresholds
+[13:28:42] [GAEC] Edges in heap: 384,623
+[13:28:42] [GAEC] Merges executed: 204,606
+[13:28:42] [GAEC] Final regions: 2,242
+[13:28:42] [MERGE] Found 2230 tiny regions (< 1000 pixels)
+[13:28:42] [MERGE] Tiny regions contain: 98,771 pixels (47.8% of image)
+[13:28:43] [MERGE] Merged 2230 tiny regions
+[13:28:43] [MERGE] Final regions: 208
+[13:28:57] [THR-SWEEP] thr=-0.900 -> size=1,009,384 bytes, regions=208
+[13:29:03] [GAEC] Edges in heap: 382,268
+[13:29:03] [GAEC] Merges executed: 204,474
+[13:29:03] [GAEC] Final regions: 2,374
+[13:29:03] [MERGE] Found 2366 tiny regions (< 1000 pixels)
+[13:29:03] [MERGE] Tiny regions contain: 103,227 pixels (49.9% of image)
+[13:29:04] [MERGE] Merged 2366 tiny regions
+[13:29:04] [MERGE] Final regions: 221
+[13:29:18] [THR-SWEEP] thr=-0.700 -> size=1,035,585 bytes, regions=221
+[13:29:24] [GAEC] Edges in heap: 380,932
+[13:29:24] [GAEC] Merges executed: 204,399
+[13:29:24] [GAEC] Final regions: 2,449
+[13:29:24] [MERGE] Found 2442 tiny regions (< 1000 pixels)
+[13:29:24] [MERGE] Tiny regions contain: 104,629 pixels (50.6% of image)
+[13:29:25] [MERGE] Merged 2442 tiny regions
+[13:29:25] [MERGE] Final regions: 221
+[13:29:39] [THR-SWEEP] thr=-0.500 -> size=1,041,562 bytes, regions=221
+[13:29:45] [GAEC] Edges in heap: 379,923
+[13:29:45] [GAEC] Merges executed: 204,326
+[13:29:45] [GAEC] Final regions: 2,522
+[13:29:45] [MERGE] Found 2516 tiny regions (< 1000 pixels)
+[13:29:45] [MERGE] Tiny regions contain: 105,711 pixels (51.1% of image)
+[13:29:46] [MERGE] Merged 2516 tiny regions
+[13:29:46] [MERGE] Final regions: 227
+[13:30:00] [THR-SWEEP] thr=-0.300 -> size=1,039,921 bytes, regions=227
+[13:30:06] [GAEC] Edges in heap: 378,829
+[13:30:06] [GAEC] Merges executed: 204,246
+[13:30:06] [GAEC] Final regions: 2,602
+[13:30:06] [MERGE] Found 2596 tiny regions (< 1000 pixels)
+[13:30:06] [MERGE] Tiny regions contain: 106,892 pixels (51.7% of image)
+[13:30:07] [MERGE] Merged 2596 tiny regions
+[13:30:07] [MERGE] Final regions: 236
+[13:30:20] [THR-SWEEP] thr=-0.100 -> size=1,028,672 bytes, regions=236
+[13:30:20] [THR-SWEEP] BEST thr=-0.900 size=1,009,384 bytes @ 512x404
+[13:32:39] [GAEC] Edges in heap: 6,534,489
+[13:32:39] [GAEC] Merges executed: 3,277,504
+[13:32:39] [GAEC] Final regions: 2,816
+[13:32:39] 
+[POST-PROCESS] Starting with 2,816 regions
+[13:32:39] [MERGE] Found 2756 tiny regions (< 1000 pixels)
+[13:32:39] [MERGE] Tiny regions contain: 111,530 pixels (3.4% of image)
+[13:32:56] [MERGE] Merged 2756 tiny regions
+[13:32:56] [MERGE] Final regions: 64
+[13:32:56] 
+[13:34:59] [INFERENCE] Final result: 64 regions, 6,237,075 bytes
+
+[13:35:00] [VAL] Compressed=6,237,075 bytes, PNG=5,943,950 bytes, Ratio=1.049, Gain=-4.9%
+
+[13:36:46] Saved: reconstruction_ep44.png
+[13:36:46]  Original: 9,840,960 bytes
+[13:36:46]  PSNR: 6.25 dB
+[13:36:46]  MAE: 105.907578
+[13:36:46] Ep45 B0/180 Loss=0.3642
+[13:36:58] Ep45 B50/180 Loss=0.3756
+[13:37:10] Ep45 B100/180 Loss=0.3991
+[13:37:21] Ep45 B150/180 Loss=0.3837
+[13:37:28] Ep45 DONE - Loss: 0.3823
+[13:37:28] Ep46 B0/180 Loss=0.3814
+[13:37:40] Ep46 B50/180 Loss=0.3950
+[13:37:51] Ep46 B100/180 Loss=0.3735
+[13:38:03] Ep46 B150/180 Loss=0.3660
+[13:38:09] Ep46 DONE - Loss: 0.3801
+[13:38:10] Ep47 B0/180 Loss=0.3823
+[13:38:21] Ep47 B50/180 Loss=0.3691
+[13:38:33] Ep47 B100/180 Loss=0.3877
+[13:38:44] Ep47 B150/180 Loss=0.3897
+[13:38:51] Ep47 DONE - Loss: 0.3821
+[13:38:51] Ep48 B0/180 Loss=0.3830
+[13:39:03] Ep48 B50/180 Loss=0.3841
+[13:39:14] Ep48 B100/180 Loss=0.3712
+[13:39:26] Ep48 B150/180 Loss=0.3872
+[13:39:33] Ep48 DONE - Loss: 0.3830
+[13:39:33] Ep49 B0/180 Loss=0.3775
+[13:39:45] Ep49 B50/180 Loss=0.3726
+[13:39:56] Ep49 B100/180 Loss=0.3922
+[13:40:08] Ep49 B150/180 Loss=0.3604
+[13:40:14] Ep49 DONE - Loss: 0.3812
+[13:40:14] 
+[VALIDATION Ep49 on image 4]
+[13:40:14] [INFERENCE] Image: 2040×1608, Edges: 6,556,992
+[13:40:15] [INFERENCE] Costs: Mean=0.909, Std=0.299, Min=-1.000, Max=1.000
+[13:40:15] [INFERENCE] Target regions: 200
+[13:40:15] [THR-SWEEP] Downsampled from 2040x1608 -> 512x404, trying 5 thresholds
+[13:40:22] [GAEC] Edges in heap: 384,463
+[13:40:22] [GAEC] Merges executed: 204,626
+[13:40:22] [GAEC] Final regions: 2,222
+[13:40:22] [MERGE] Found 2207 tiny regions (< 1000 pixels)
+[13:40:22] [MERGE] Tiny regions contain: 93,006 pixels (45.0% of image)
+[13:40:23] [MERGE] Merged 2207 tiny regions
+[13:40:23] [MERGE] Final regions: 199
+[13:40:34] [THR-SWEEP] thr=-0.900 -> size=890,467 bytes, regions=199
+[13:40:41] [GAEC] Edges in heap: 382,411
+[13:40:41] [GAEC] Merges executed: 204,505
+[13:40:41] [GAEC] Final regions: 2,343
+[13:40:41] [MERGE] Found 2329 tiny regions (< 1000 pixels)
+[13:40:41] [MERGE] Tiny regions contain: 94,513 pixels (45.7% of image)
+[13:40:42] [MERGE] Merged 2329 tiny regions
+[13:40:42] [MERGE] Final regions: 208
+[13:40:54] [THR-SWEEP] thr=-0.700 -> size=888,718 bytes, regions=208
+[13:41:01] [GAEC] Edges in heap: 381,284
+[13:41:01] [GAEC] Merges executed: 204,426
+[13:41:01] [GAEC] Final regions: 2,422
+[13:41:01] [MERGE] Found 2408 tiny regions (< 1000 pixels)
+[13:41:01] [MERGE] Tiny regions contain: 95,307 pixels (46.1% of image)
+[13:41:02] [MERGE] Merged 2408 tiny regions
+[13:41:02] [MERGE] Final regions: 217
+[13:41:14] [THR-SWEEP] thr=-0.500 -> size=889,602 bytes, regions=217
+[13:41:20] [GAEC] Edges in heap: 380,338
+[13:41:20] [GAEC] Merges executed: 204,357
+[13:41:20] [GAEC] Final regions: 2,491
+[13:41:21] [MERGE] Found 2477 tiny regions (< 1000 pixels)
+[13:41:21] [MERGE] Tiny regions contain: 95,605 pixels (46.2% of image)
+[13:41:22] [MERGE] Merged 2477 tiny regions
+[13:41:22] [MERGE] Final regions: 222
+[13:41:33] [THR-SWEEP] thr=-0.300 -> size=898,472 bytes, regions=222
+[13:41:40] [GAEC] Edges in heap: 379,271
+[13:41:40] [GAEC] Merges executed: 204,282
+[13:41:40] [GAEC] Final regions: 2,566
+[13:41:40] [MERGE] Found 2554 tiny regions (< 1000 pixels)
+[13:41:40] [MERGE] Tiny regions contain: 97,851 pixels (47.3% of image)
+[13:41:41] [MERGE] Merged 2554 tiny regions
+[13:41:41] [MERGE] Final regions: 232
+[13:41:53] [THR-SWEEP] thr=-0.100 -> size=915,380 bytes, regions=232
+[13:41:53] [THR-SWEEP] BEST thr=-0.700 size=888,718 bytes @ 512x404
+[13:44:23] [GAEC] Edges in heap: 6,529,977
+[13:44:23] [GAEC] Merges executed: 3,277,293
+[13:44:23] [GAEC] Final regions: 3,027
+[13:44:23] 
+[POST-PROCESS] Starting with 3,027 regions
+[13:44:23] [MERGE] Found 2956 tiny regions (< 1000 pixels)
+[13:44:23] [MERGE] Tiny regions contain: 117,188 pixels (3.6% of image)
+[13:44:41] [MERGE] Merged 2956 tiny regions
+[13:44:41] [MERGE] Final regions: 78
+[13:44:41] 
+[13:46:47] [INFERENCE] Final result: 78 regions, 6,376,563 bytes
+
+[13:46:48] [VAL] Compressed=6,376,563 bytes, PNG=5,943,950 bytes, Ratio=1.073, Gain=-7.3%
+
+[13:48:36] Saved: reconstruction_ep49.png
+[13:48:36]  Original: 9,840,960 bytes
+[13:48:36]  PSNR: 6.25 dB
+[13:48:36]  MAE: 105.914291
+[13:48:37] Ep50 B0/180 Loss=0.3739
+[13:48:48] Ep50 B50/180 Loss=0.3773
+[13:49:00] Ep50 B100/180 Loss=0.3653
+[13:49:11] Ep50 B150/180 Loss=0.3994
+[13:49:18] Ep50 DONE - Loss: 0.3823
+[13:49:18] Ep51 B0/180 Loss=0.3764
+[13:49:30] Ep51 B50/180 Loss=0.3923
+[13:49:41] Ep51 B100/180 Loss=0.3966
+[13:49:53] Ep51 B150/180 Loss=0.3887
+[13:49:59] Ep51 DONE - Loss: 0.3828
+[13:49:59] Ep52 B0/180 Loss=0.3882
+[13:50:11] Ep52 B50/180 Loss=0.3883
+[13:50:23] Ep52 B100/180 Loss=0.3751
+[13:50:34] Ep52 B150/180 Loss=0.3934
+[13:50:41] Ep52 DONE - Loss: 0.3833
+[13:50:41] Ep53 B0/180 Loss=0.3633
+[13:50:53] Ep53 B50/180 Loss=0.3866
+[13:51:04] Ep53 B100/180 Loss=0.3698
+[13:51:15] Ep53 B150/180 Loss=0.3658
+[13:51:22] Ep53 DONE - Loss: 0.3813
+[13:51:22] Ep54 B0/180 Loss=0.3726
+[13:51:34] Ep54 B50/180 Loss=0.3939
+[13:51:46] Ep54 B100/180 Loss=0.3757
+[13:51:57] Ep54 B150/180 Loss=0.3892
+[13:52:03] Ep54 DONE - Loss: 0.3810
+[13:52:03] 
+[VALIDATION Ep54 on image 4]
+[13:52:04] [INFERENCE] Image: 2040×1608, Edges: 6,556,992
+[13:52:04] [INFERENCE] Costs: Mean=0.910, Std=0.297, Min=-1.000, Max=1.000
+[13:52:04] [INFERENCE] Target regions: 200
+[13:52:04] [THR-SWEEP] Downsampled from 2040x1608 -> 512x404, trying 5 thresholds
+[13:52:11] [GAEC] Edges in heap: 385,344
+[13:52:11] [GAEC] Merges executed: 204,685
+[13:52:11] [GAEC] Final regions: 2,163
+[13:52:11] [MERGE] Found 2152 tiny regions (< 1000 pixels)
+[13:52:11] [MERGE] Tiny regions contain: 98,611 pixels (47.7% of image)
+[13:52:12] [MERGE] Merged 2152 tiny regions
+[13:52:12] [MERGE] Final regions: 214
+[13:52:25] [THR-SWEEP] thr=-0.900 -> size=950,535 bytes, regions=214
+[13:52:33] [GAEC] Edges in heap: 383,501
+[13:52:33] [GAEC] Merges executed: 204,588
+[13:52:33] [GAEC] Final regions: 2,260
+[13:52:33] [MERGE] Found 2249 tiny regions (< 1000 pixels)
+[13:52:33] [MERGE] Tiny regions contain: 98,770 pixels (47.8% of image)
+[13:52:34] [MERGE] Merged 2249 tiny regions
+[13:52:34] [MERGE] Final regions: 219
+[13:52:46] [THR-SWEEP] thr=-0.700 -> size=951,393 bytes, regions=219
+[13:52:54] [GAEC] Edges in heap: 382,526
+[13:52:54] [GAEC] Merges executed: 204,511
+[13:52:54] [GAEC] Final regions: 2,337
+[13:52:54] [MERGE] Found 2327 tiny regions (< 1000 pixels)
+[13:52:54] [MERGE] Tiny regions contain: 100,368 pixels (48.5% of image)
+[13:52:55] [MERGE] Merged 2327 tiny regions
+[13:52:55] [MERGE] Final regions: 227
+[13:53:07] [THR-SWEEP] thr=-0.500 -> size=936,913 bytes, regions=227
+[13:53:15] [GAEC] Edges in heap: 381,742
+[13:53:15] [GAEC] Merges executed: 204,453
+[13:53:15] [GAEC] Final regions: 2,395
+[13:53:15] [MERGE] Found 2386 tiny regions (< 1000 pixels)
+[13:53:15] [MERGE] Tiny regions contain: 101,485 pixels (49.1% of image)
+[13:53:16] [MERGE] Merged 2386 tiny regions
+[13:53:16] [MERGE] Final regions: 232
+[13:53:28] [THR-SWEEP] thr=-0.300 -> size=932,064 bytes, regions=232
+[13:53:35] [GAEC] Edges in heap: 380,751
+[13:53:35] [GAEC] Merges executed: 204,377
+[13:53:35] [GAEC] Final regions: 2,471
+[13:53:35] [MERGE] Found 2462 tiny regions (< 1000 pixels)
+[13:53:35] [MERGE] Tiny regions contain: 101,640 pixels (49.1% of image)
+[13:53:37] [MERGE] Merged 2462 tiny regions
+[13:53:37] [MERGE] Final regions: 236
+[13:53:49] [THR-SWEEP] thr=-0.100 -> size=934,761 bytes, regions=236
+[13:53:49] [THR-SWEEP] BEST thr=-0.300 size=932,064 bytes @ 512x404
+[13:56:38] [GAEC] Edges in heap: 6,528,260
+[13:56:38] [GAEC] Merges executed: 3,277,244
+[13:56:38] [GAEC] Final regions: 3,076
+[13:56:38] 
+[POST-PROCESS] Starting with 3,076 regions
+[13:56:38] [MERGE] Found 3001 tiny regions (< 1000 pixels)
+[13:56:38] [MERGE] Tiny regions contain: 94,547 pixels (2.9% of image)
+[13:56:56] [MERGE] Merged 3001 tiny regions
+[13:56:56] [MERGE] Final regions: 82
+[13:56:56] 
+[13:59:01] [INFERENCE] Final result: 82 regions, 6,321,331 bytes
+
+[13:59:02] [VAL] Compressed=6,321,331 bytes, PNG=5,943,950 bytes, Ratio=1.063, Gain=-6.3%
+
+[14:00:49] Saved: reconstruction_ep54.png
+[14:00:49]  Original: 9,840,960 bytes
+[14:00:49]  PSNR: 6.25 dB
+[14:00:49]  MAE: 105.809502
+[14:00:49] Ep55 B0/180 Loss=0.3692
+[14:01:01] Ep55 B50/180 Loss=0.3988
+[14:01:12] Ep55 B100/180 Loss=0.3691
+[14:01:23] Ep55 B150/180 Loss=0.3744
+[14:01:30] Ep55 DONE - Loss: 0.3820
+[14:01:31] Ep56 B0/180 Loss=0.3743
+[14:01:42] Ep56 B50/180 Loss=0.3675
+[14:01:54] Ep56 B100/180 Loss=0.3474
+[14:02:05] Ep56 B150/180 Loss=0.3596
+[14:02:12] Ep56 DONE - Loss: 0.3806
+[14:02:12] Ep57 B0/180 Loss=0.3998
+[14:02:24] Ep57 B50/180 Loss=0.3615
+[14:02:35] Ep57 B100/180 Loss=0.3962
+[14:02:47] Ep57 B150/180 Loss=0.3956
+[14:02:53] Ep57 DONE - Loss: 0.3814
+[14:02:53] Ep58 B0/180 Loss=0.3732
+[14:03:05] Ep58 B50/180 Loss=0.3930
+[14:03:16] Ep58 B100/180 Loss=0.3875
+[14:03:28] Ep58 B150/180 Loss=0.3697
+[14:03:35] Ep58 DONE - Loss: 0.3827
+[14:03:35] Ep59 B0/180 Loss=0.3584
+[14:03:46] Ep59 B50/180 Loss=0.3917
+[14:03:57] Ep59 B100/180 Loss=0.3687
+[14:04:09] Ep59 B150/180 Loss=0.3792
+[14:04:16] Ep59 DONE - Loss: 0.3806
+[14:04:16] 
+[VALIDATION Ep59 on image 4]
+[14:04:16] [INFERENCE] Image: 2040×1608, Edges: 6,556,992
+[14:04:16] [INFERENCE] Costs: Mean=0.911, Std=0.296, Min=-1.000, Max=1.000
+[14:04:16] [INFERENCE] Target regions: 200
+[14:04:16] [THR-SWEEP] Downsampled from 2040x1608 -> 512x404, trying 5 thresholds
+[14:04:24] [GAEC] Edges in heap: 385,018
+[14:04:24] [GAEC] Merges executed: 204,660
+[14:04:24] [GAEC] Final regions: 2,188
+[14:04:24] [MERGE] Found 2172 tiny regions (< 1000 pixels)
+[14:04:24] [MERGE] Tiny regions contain: 96,447 pixels (46.6% of image)
+[14:04:25] [MERGE] Merged 2172 tiny regions
+[14:04:25] [MERGE] Final regions: 210
+[14:04:38] [THR-SWEEP] thr=-0.900 -> size=971,865 bytes, regions=210
+[14:04:45] [GAEC] Edges in heap: 383,342
+[14:04:45] [GAEC] Merges executed: 204,560
+[14:04:45] [GAEC] Final regions: 2,288
+[14:04:45] [MERGE] Found 2274 tiny regions (< 1000 pixels)
+[14:04:45] [MERGE] Tiny regions contain: 99,598 pixels (48.2% of image)
+[14:04:46] [MERGE] Merged 2274 tiny regions
+[14:04:46] [MERGE] Final regions: 218
+[14:05:00] [THR-SWEEP] thr=-0.700 -> size=1,012,263 bytes, regions=218
+[14:05:07] [GAEC] Edges in heap: 382,447
+[14:05:07] [GAEC] Merges executed: 204,490
+[14:05:07] [GAEC] Final regions: 2,358
+[14:05:07] [MERGE] Found 2344 tiny regions (< 1000 pixels)
+[14:05:07] [MERGE] Tiny regions contain: 99,675 pixels (48.2% of image)
+[14:05:08] [MERGE] Merged 2344 tiny regions
+[14:05:08] [MERGE] Final regions: 225
+[14:05:22] [THR-SWEEP] thr=-0.500 -> size=1,010,004 bytes, regions=225
+[14:05:29] [GAEC] Edges in heap: 381,749
+[14:05:29] [GAEC] Merges executed: 204,433
+[14:05:29] [GAEC] Final regions: 2,415
+[14:05:29] [MERGE] Found 2402 tiny regions (< 1000 pixels)
+[14:05:29] [MERGE] Tiny regions contain: 101,076 pixels (48.9% of image)
+[14:05:30] [MERGE] Merged 2402 tiny regions
+[14:05:30] [MERGE] Final regions: 232
+[14:05:43] [THR-SWEEP] thr=-0.300 -> size=998,749 bytes, regions=232
+[14:05:51] [GAEC] Edges in heap: 380,892
+[14:05:51] [GAEC] Merges executed: 204,380
+[14:05:51] [GAEC] Final regions: 2,468
+[14:05:51] [MERGE] Found 2455 tiny regions (< 1000 pixels)
+[14:05:51] [MERGE] Tiny regions contain: 101,177 pixels (48.9% of image)
+[14:05:52] [MERGE] Merged 2455 tiny regions
+[14:05:52] [MERGE] Final regions: 234
+[14:06:05] [THR-SWEEP] thr=-0.100 -> size=1,000,004 bytes, regions=234
+[14:06:05] [THR-SWEEP] BEST thr=-0.900 size=971,865 bytes @ 512x404
+[14:08:57] [GAEC] Edges in heap: 6,535,681
+[14:08:57] [GAEC] Merges executed: 3,277,630
+[14:08:57] [GAEC] Final regions: 2,690
+[14:08:57] 
+[POST-PROCESS] Starting with 2,690 regions
+[14:08:57] [MERGE] Found 2643 tiny regions (< 1000 pixels)
+[14:08:57] [MERGE] Tiny regions contain: 75,571 pixels (2.3% of image)
+[14:09:13] [MERGE] Merged 2643 tiny regions
+[14:09:13] [MERGE] Final regions: 50
+[14:09:13] 
+[14:11:15] [INFERENCE] Final result: 50 regions, 6,157,767 bytes
+
+[14:11:16] [VAL] Compressed=6,157,767 bytes, PNG=5,943,950 bytes, Ratio=1.036, Gain=-3.6%
+
+[14:13:01] Saved: reconstruction_ep59.png
+[14:13:01]  Original: 9,840,960 bytes
+[14:13:01]  PSNR: 6.25 dB
+[14:13:01]  MAE: 105.866722
+[14:13:01] Ep60 B0/180 Loss=0.3835
+[14:13:13] Ep60 B50/180 Loss=0.3756
+[14:13:24] Ep60 B100/180 Loss=0.3792
+[14:13:36] Ep60 B150/180 Loss=0.3934
+[14:13:43] Ep60 DONE - Loss: 0.3830
+[14:13:43] Ep61 B0/180 Loss=0.3806
+[14:13:54] Ep61 B50/180 Loss=0.3831
+[14:14:06] Ep61 B100/180 Loss=0.3808
+[14:14:17] Ep61 B150/180 Loss=0.3971
+[14:14:24] Ep61 DONE - Loss: 0.3820
+[14:14:24] Ep62 B0/180 Loss=0.3788
+[14:14:36] Ep62 B50/180 Loss=0.3763
+[14:14:47] Ep62 B100/180 Loss=0.3953
+[14:14:59] Ep62 B150/180 Loss=0.3538
+[14:15:05] Ep62 DONE - Loss: 0.3810
+[14:15:06] Ep63 B0/180 Loss=0.3939
+[14:15:17] Ep63 B50/180 Loss=0.3983
+[14:15:29] Ep63 B100/180 Loss=0.3924
+[14:15:40] Ep63 B150/180 Loss=0.3886
+[14:15:47] Ep63 DONE - Loss: 0.3813
+[14:15:47] Ep64 B0/180 Loss=0.3808
+[14:15:58] Ep64 B50/180 Loss=0.3838
+[14:16:10] Ep64 B100/180 Loss=0.3767
+[14:16:22] Ep64 B150/180 Loss=0.3657
+[14:16:28] Ep64 DONE - Loss: 0.3808
+[14:16:28] 
+[VALIDATION Ep64 on image 4]
+[14:16:28] [INFERENCE] Image: 2040×1608, Edges: 6,556,992
+[14:16:28] [INFERENCE] Costs: Mean=0.908, Std=0.301, Min=-1.000, Max=1.000
+[14:16:28] [INFERENCE] Target regions: 200
+[14:16:28] [THR-SWEEP] Downsampled from 2040x1608 -> 512x404, trying 5 thresholds
+[14:16:35] [GAEC] Edges in heap: 384,250
+[14:16:35] [GAEC] Merges executed: 204,641
+[14:16:35] [GAEC] Final regions: 2,207
+[14:16:35] [MERGE] Found 2193 tiny regions (< 1000 pixels)
+[14:16:35] [MERGE] Tiny regions contain: 94,638 pixels (45.8% of image)
+[14:16:36] [MERGE] Merged 2193 tiny regions
+[14:16:36] [MERGE] Final regions: 189
+[14:16:49] [THR-SWEEP] thr=-0.900 -> size=927,009 bytes, regions=189
+[14:16:55] [GAEC] Edges in heap: 382,711
+[14:16:55] [GAEC] Merges executed: 204,561
+[14:16:55] [GAEC] Final regions: 2,287
+[14:16:55] [MERGE] Found 2273 tiny regions (< 1000 pixels)
+[14:16:55] [MERGE] Tiny regions contain: 95,114 pixels (46.0% of image)
+[14:16:56] [MERGE] Merged 2273 tiny regions
+[14:16:56] [MERGE] Final regions: 196
+[14:17:09] [THR-SWEEP] thr=-0.700 -> size=933,445 bytes, regions=196
+[14:17:16] [GAEC] Edges in heap: 381,862
+[14:17:16] [GAEC] Merges executed: 204,508
+[14:17:16] [GAEC] Final regions: 2,340
+[14:17:16] [MERGE] Found 2327 tiny regions (< 1000 pixels)
+[14:17:16] [MERGE] Tiny regions contain: 96,232 pixels (46.5% of image)
+[14:17:17] [MERGE] Merged 2327 tiny regions
+[14:17:17] [MERGE] Final regions: 203
+[14:17:29] [THR-SWEEP] thr=-0.500 -> size=939,620 bytes, regions=203
+[14:17:36] [GAEC] Edges in heap: 381,152
+[14:17:36] [GAEC] Merges executed: 204,460
+[14:17:36] [GAEC] Final regions: 2,388
+[14:17:36] [MERGE] Found 2375 tiny regions (< 1000 pixels)
+[14:17:36] [MERGE] Tiny regions contain: 96,403 pixels (46.6% of image)
+[14:17:37] [MERGE] Merged 2375 tiny regions
+[14:17:37] [MERGE] Final regions: 204
+[14:17:49] [THR-SWEEP] thr=-0.300 -> size=940,752 bytes, regions=204
+[14:17:56] [GAEC] Edges in heap: 380,289
+[14:17:56] [GAEC] Merges executed: 204,403
+[14:17:56] [GAEC] Final regions: 2,445
+[14:17:56] [MERGE] Found 2432 tiny regions (< 1000 pixels)
+[14:17:56] [MERGE] Tiny regions contain: 96,551 pixels (46.7% of image)
+[14:17:57] [MERGE] Merged 2432 tiny regions
+[14:17:57] [MERGE] Final regions: 207
+[14:18:10] [THR-SWEEP] thr=-0.100 -> size=946,177 bytes, regions=207
+[14:18:10] [THR-SWEEP] BEST thr=-0.900 size=927,009 bytes @ 512x404
+[14:20:36] [GAEC] Edges in heap: 6,534,296
+[14:20:36] [GAEC] Merges executed: 3,277,491
+[14:20:36] [GAEC] Final regions: 2,829
+[14:20:36] 
+[POST-PROCESS] Starting with 2,829 regions
+[14:20:36] [MERGE] Found 2756 tiny regions (< 1000 pixels)
+[14:20:36] [MERGE] Tiny regions contain: 145,414 pixels (4.4% of image)
+[14:20:53] [MERGE] Merged 2756 tiny regions
+[14:20:53] [MERGE] Final regions: 79
+[14:20:53] 
+[14:23:21] [INFERENCE] Final result: 79 regions, 7,658,323 bytes
+
+[14:23:22] [VAL] Compressed=7,658,323 bytes, PNG=5,943,950 bytes, Ratio=1.288, Gain=-28.8%
+
+[14:25:31] Saved: reconstruction_ep64.png
+[14:25:31]  Original: 9,840,960 bytes
+[14:25:31]  PSNR: 6.26 dB
+[14:25:31]  MAE: 105.716507
+[14:25:31] Ep65 B0/180 Loss=0.3923
+[14:25:43] Ep65 B50/180 Loss=0.3986
+[14:25:54] Ep65 B100/180 Loss=0.3851
+[14:26:06] Ep65 B150/180 Loss=0.3874
+[14:26:12] Ep65 DONE - Loss: 0.3823
+[14:26:13] Ep66 B0/180 Loss=0.3684
+[14:26:24] Ep66 B50/180 Loss=0.3981
+[14:26:36] Ep66 B100/180 Loss=0.3782
+[14:26:47] Ep66 B150/180 Loss=0.3830
+[14:26:54] Ep66 DONE - Loss: 0.3813
+[14:26:54] Ep67 B0/180 Loss=0.3815
+[14:27:06] Ep67 B50/180 Loss=0.3956
+[14:27:17] Ep67 B100/180 Loss=0.3631
+[14:27:29] Ep67 B150/180 Loss=0.3948
+[14:27:36] Ep67 DONE - Loss: 0.3805
+[14:27:36] Ep68 B0/180 Loss=0.3908
+[14:27:47] Ep68 B50/180 Loss=0.3921
+[14:27:59] Ep68 B100/180 Loss=0.3686
+[14:28:10] Ep68 B150/180 Loss=0.3973
+[14:28:17] Ep68 DONE - Loss: 0.3807
+[14:28:17] Ep69 B0/180 Loss=0.3818
+[14:28:29] Ep69 B50/180 Loss=0.3915
+[14:28:40] Ep69 B100/180 Loss=0.3715
+[14:28:52] Ep69 B150/180 Loss=0.3957
+[14:28:58] Ep69 DONE - Loss: 0.3825
+[14:28:58] 
+[VALIDATION Ep69 on image 4]
+[14:28:59] [INFERENCE] Image: 2040×1608, Edges: 6,556,992
+[14:28:59] [INFERENCE] Costs: Mean=0.909, Std=0.300, Min=-1.000, Max=1.000
+[14:28:59] [INFERENCE] Target regions: 200
+[14:28:59] [THR-SWEEP] Downsampled from 2040x1608 -> 512x404, trying 5 thresholds
+[14:29:06] [GAEC] Edges in heap: 384,448
+[14:29:06] [GAEC] Merges executed: 204,614
+[14:29:06] [GAEC] Final regions: 2,234
+[14:29:06] [MERGE] Found 2225 tiny regions (< 1000 pixels)
+[14:29:06] [MERGE] Tiny regions contain: 99,604 pixels (48.2% of image)
+[14:29:07] [MERGE] Merged 2225 tiny regions
+[14:29:07] [MERGE] Final regions: 212
+[14:29:19] [THR-SWEEP] thr=-0.900 -> size=933,795 bytes, regions=212
+[14:29:26] [GAEC] Edges in heap: 382,995
+[14:29:26] [GAEC] Merges executed: 204,526
+[14:29:26] [GAEC] Final regions: 2,322
+[14:29:26] [MERGE] Found 2313 tiny regions (< 1000 pixels)
+[14:29:26] [MERGE] Tiny regions contain: 99,764 pixels (48.2% of image)
+[14:29:27] [MERGE] Merged 2313 tiny regions
+[14:29:27] [MERGE] Final regions: 215
+[14:29:40] [THR-SWEEP] thr=-0.700 -> size=939,834 bytes, regions=215
+[14:29:47] [GAEC] Edges in heap: 382,239
+[14:29:47] [GAEC] Merges executed: 204,480
+[14:29:47] [GAEC] Final regions: 2,368
+[14:29:47] [MERGE] Found 2359 tiny regions (< 1000 pixels)
+[14:29:47] [MERGE] Tiny regions contain: 99,967 pixels (48.3% of image)
+[14:29:48] [MERGE] Merged 2359 tiny regions
+[14:29:48] [MERGE] Final regions: 219
+[14:30:00] [THR-SWEEP] thr=-0.500 -> size=943,772 bytes, regions=219
+[14:30:07] [GAEC] Edges in heap: 381,623
+[14:30:07] [GAEC] Merges executed: 204,426
+[14:30:07] [GAEC] Final regions: 2,422
+[14:30:07] [MERGE] Found 2413 tiny regions (< 1000 pixels)
+[14:30:07] [MERGE] Tiny regions contain: 100,114 pixels (48.4% of image)
+[14:30:08] [MERGE] Merged 2413 tiny regions
+[14:30:08] [MERGE] Final regions: 224
+[14:30:21] [THR-SWEEP] thr=-0.300 -> size=947,868 bytes, regions=224
+[14:30:28] [GAEC] Edges in heap: 380,903
+[14:30:28] [GAEC] Merges executed: 204,375
+[14:30:28] [GAEC] Final regions: 2,473
+[14:30:28] [MERGE] Found 2464 tiny regions (< 1000 pixels)
+[14:30:28] [MERGE] Tiny regions contain: 100,276 pixels (48.5% of image)
+[14:30:29] [MERGE] Merged 2464 tiny regions
+[14:30:29] [MERGE] Final regions: 226
+[14:30:41] [THR-SWEEP] thr=-0.100 -> size=949,888 bytes, regions=226
+[14:30:41] [THR-SWEEP] BEST thr=-0.900 size=933,795 bytes @ 512x404
+[14:33:18] [GAEC] Edges in heap: 6,534,269
+[14:33:18] [GAEC] Merges executed: 3,277,505
+[14:33:18] [GAEC] Final regions: 2,815
+[14:33:18] 
+[POST-PROCESS] Starting with 2,815 regions
+[14:33:18] [MERGE] Found 2753 tiny regions (< 1000 pixels)
+[14:33:18] [MERGE] Tiny regions contain: 98,328 pixels (3.0% of image)
+[14:33:35] [MERGE] Merged 2753 tiny regions
+[14:33:35] [MERGE] Final regions: 71
+[14:33:35] 
+[14:35:35] [INFERENCE] Final result: 71 regions, 6,062,903 bytes
+
+[14:35:36] [VAL] Compressed=6,062,903 bytes, PNG=5,943,950 bytes, Ratio=1.020, Gain=-2.0%
+
+[14:37:19] Saved: reconstruction_ep69.png
+[14:37:19]  Original: 9,840,960 bytes
+[14:37:19]  PSNR: 6.24 dB
+[14:37:19]  MAE: 106.018089
+[14:37:20] Ep70 B0/180 Loss=0.3940
+[14:37:31] Ep70 B50/180 Loss=0.3609
+[14:37:43] Ep70 B100/180 Loss=0.3956
+[14:37:54] Ep70 B150/180 Loss=0.3706
+[14:38:01] Ep70 DONE - Loss: 0.3815
+[14:38:01] Ep71 B0/180 Loss=0.3917
+[14:38:13] Ep71 B50/180 Loss=0.3700
+[14:38:24] Ep71 B100/180 Loss=0.3751
+[14:38:36] Ep71 B150/180 Loss=0.3923
+[14:38:42] Ep71 DONE - Loss: 0.3808
+[14:38:43] Ep72 B0/180 Loss=0.3750
+[14:38:55] Ep72 B50/180 Loss=0.3891
+[14:39:06] Ep72 B100/180 Loss=0.3677
+[14:39:17] Ep72 B150/180 Loss=0.3875
+[14:39:24] Ep72 DONE - Loss: 0.3809
+[14:39:24] Ep73 B0/180 Loss=0.3977
+[14:39:36] Ep73 B50/180 Loss=0.3864
+[14:39:47] Ep73 B100/180 Loss=0.3846
+[14:39:59] Ep73 B150/180 Loss=0.3491
+[14:40:06] Ep73 DONE - Loss: 0.3814
+[14:40:06] Ep74 B0/180 Loss=0.3590
+[14:40:18] Ep74 B50/180 Loss=0.3625
+[14:40:29] Ep74 B100/180 Loss=0.3899
+[14:40:41] Ep74 B150/180 Loss=0.3885
+[14:40:47] Ep74 DONE - Loss: 0.3807
+[14:40:47] 
+[VALIDATION Ep74 on image 4]
+[14:40:47] [INFERENCE] Image: 2040×1608, Edges: 6,556,992
+[14:40:48] [INFERENCE] Costs: Mean=0.910, Std=0.299, Min=-1.000, Max=1.000
+[14:40:48] [INFERENCE] Target regions: 200
+[14:40:48] [THR-SWEEP] Downsampled from 2040x1608 -> 512x404, trying 5 thresholds
+[14:40:55] [GAEC] Edges in heap: 384,461
+[14:40:55] [GAEC] Merges executed: 204,619
+[14:40:55] [GAEC] Final regions: 2,229
+[14:40:55] [MERGE] Found 2218 tiny regions (< 1000 pixels)
+[14:40:55] [MERGE] Tiny regions contain: 100,386 pixels (48.5% of image)
+[14:40:56] [MERGE] Merged 2218 tiny regions
+[14:40:56] [MERGE] Final regions: 204
+[14:41:10] [THR-SWEEP] thr=-0.900 -> size=1,076,934 bytes, regions=204
+[14:41:17] [GAEC] Edges in heap: 383,094
+[14:41:17] [GAEC] Merges executed: 204,549
+[14:41:17] [GAEC] Final regions: 2,299
+[14:41:17] [MERGE] Found 2288 tiny regions (< 1000 pixels)
+[14:41:17] [MERGE] Tiny regions contain: 100,596 pixels (48.6% of image)
+[14:41:18] [MERGE] Merged 2288 tiny regions
+[14:41:18] [MERGE] Final regions: 210
+[14:41:32] [THR-SWEEP] thr=-0.700 -> size=1,073,540 bytes, regions=210
+[14:41:39] [GAEC] Edges in heap: 382,366
+[14:41:39] [GAEC] Merges executed: 204,500
+[14:41:39] [GAEC] Final regions: 2,348
+[14:41:39] [MERGE] Found 2337 tiny regions (< 1000 pixels)
+[14:41:39] [MERGE] Tiny regions contain: 100,867 pixels (48.8% of image)
+[14:41:40] [MERGE] Merged 2337 tiny regions
+[14:41:40] [MERGE] Final regions: 212
+[14:41:54] [THR-SWEEP] thr=-0.500 -> size=1,074,643 bytes, regions=212
+[14:42:01] [GAEC] Edges in heap: 381,765
+[14:42:01] [GAEC] Merges executed: 204,455
+[14:42:01] [GAEC] Final regions: 2,393
+[14:42:01] [MERGE] Found 2382 tiny regions (< 1000 pixels)
+[14:42:01] [MERGE] Tiny regions contain: 100,934 pixels (48.8% of image)
+[14:42:02] [MERGE] Merged 2382 tiny regions
+[14:42:02] [MERGE] Final regions: 216
+[14:42:16] [THR-SWEEP] thr=-0.300 -> size=1,074,223 bytes, regions=216
+[14:42:23] [GAEC] Edges in heap: 381,019
+[14:42:23] [GAEC] Merges executed: 204,400
+[14:42:23] [GAEC] Final regions: 2,448
+[14:42:23] [MERGE] Found 2438 tiny regions (< 1000 pixels)
+[14:42:23] [MERGE] Tiny regions contain: 102,223 pixels (49.4% of image)
+[14:42:24] [MERGE] Merged 2438 tiny regions
+[14:42:24] [MERGE] Final regions: 218
+[14:42:38] [THR-SWEEP] thr=-0.100 -> size=1,081,151 bytes, regions=218
+[14:42:38] [THR-SWEEP] BEST thr=-0.700 size=1,073,540 bytes @ 512x404
+[14:45:01] [GAEC] Edges in heap: 6,531,272
+[14:45:01] [GAEC] Merges executed: 3,277,333
+[14:45:01] [GAEC] Final regions: 2,987
+[14:45:01] 
+[POST-PROCESS] Starting with 2,987 regions
+[14:45:01] [MERGE] Found 2923 tiny regions (< 1000 pixels)
+[14:45:01] [MERGE] Tiny regions contain: 137,061 pixels (4.2% of image)
+[14:45:19] [MERGE] Merged 2923 tiny regions
+[14:45:19] [MERGE] Final regions: 75
+[14:45:19] 
+[14:47:33] [INFERENCE] Final result: 75 regions, 6,794,486 bytes
+
+[14:47:34] [VAL] Compressed=6,794,486 bytes, PNG=5,943,950 bytes, Ratio=1.143, Gain=-14.3%
+
+[14:49:29] Saved: reconstruction_ep74.png
+[14:49:29]  Original: 9,840,960 bytes
+[14:49:29]  PSNR: 6.25 dB
+[14:49:29]  MAE: 105.861679
+[14:49:29] Ep75 B0/180 Loss=0.3828
+[14:49:41] Ep75 B50/180 Loss=0.3854
+[14:49:52] Ep75 B100/180 Loss=0.3661
+[14:50:04] Ep75 B150/180 Loss=0.3875
+[14:50:10] Ep75 DONE - Loss: 0.3811
+[14:50:11] Ep76 B0/180 Loss=0.3834
+[14:50:22] Ep76 B50/180 Loss=0.3515
+[14:50:34] Ep76 B100/180 Loss=0.3997
+[14:50:45] Ep76 B150/180 Loss=0.3769
+[14:50:52] Ep76 DONE - Loss: 0.3812
+[14:50:52] Ep77 B0/180 Loss=0.3922
+[14:51:03] Ep77 B50/180 Loss=0.3875
+[14:51:15] Ep77 B100/180 Loss=0.3966
+[14:51:27] Ep77 B150/180 Loss=0.3317
+[14:51:33] Ep77 DONE - Loss: 0.3810
+[14:51:33] Ep78 B0/180 Loss=0.3811
+[14:51:45] Ep78 B50/180 Loss=0.3894
+[14:51:57] Ep78 B100/180 Loss=0.3918
+[14:52:08] Ep78 B150/180 Loss=0.3965
+[14:52:15] Ep78 DONE - Loss: 0.3818
+[14:52:16] Ep79 B0/180 Loss=0.3934
+[14:52:27] Ep79 B50/180 Loss=0.3865
+[14:52:39] Ep79 B100/180 Loss=0.3970
+[14:52:50] Ep79 B150/180 Loss=0.3930
+[14:52:57] Ep79 DONE - Loss: 0.3812
+[14:52:57] 
+[VALIDATION Ep79 on image 4]
+[14:52:57] [INFERENCE] Image: 2040×1608, Edges: 6,556,992
+[14:52:57] [INFERENCE] Costs: Mean=0.909, Std=0.299, Min=-1.000, Max=1.000
+[14:52:57] [INFERENCE] Target regions: 200
+[14:52:57] [THR-SWEEP] Downsampled from 2040x1608 -> 512x404, trying 5 thresholds
+[14:53:04] [GAEC] Edges in heap: 384,615
+[14:53:04] [GAEC] Merges executed: 204,595
+[14:53:04] [GAEC] Final regions: 2,253
+[14:53:04] [MERGE] Found 2244 tiny regions (< 1000 pixels)
+[14:53:04] [MERGE] Tiny regions contain: 100,544 pixels (48.6% of image)
+[14:53:05] [MERGE] Merged 2244 tiny regions
+[14:53:05] [MERGE] Final regions: 219
+[14:53:18] [THR-SWEEP] thr=-0.900 -> size=976,041 bytes, regions=219
+[14:53:25] [GAEC] Edges in heap: 383,312
+[14:53:25] [GAEC] Merges executed: 204,515
+[14:53:25] [GAEC] Final regions: 2,333
+[14:53:25] [MERGE] Found 2324 tiny regions (< 1000 pixels)
+[14:53:25] [MERGE] Tiny regions contain: 100,675 pixels (48.7% of image)
+[14:53:26] [MERGE] Merged 2324 tiny regions
+[14:53:26] [MERGE] Final regions: 223
+[14:53:38] [THR-SWEEP] thr=-0.700 -> size=973,383 bytes, regions=223
+[14:53:45] [GAEC] Edges in heap: 382,606
+[14:53:45] [GAEC] Merges executed: 204,476
+[14:53:45] [GAEC] Final regions: 2,372
+[14:53:45] [MERGE] Found 2363 tiny regions (< 1000 pixels)
+[14:53:45] [MERGE] Tiny regions contain: 100,700 pixels (48.7% of image)
+[14:53:46] [MERGE] Merged 2363 tiny regions
+[14:53:46] [MERGE] Final regions: 225
+[14:53:59] [THR-SWEEP] thr=-0.500 -> size=969,970 bytes, regions=225
+[14:54:06] [GAEC] Edges in heap: 382,050
+[14:54:06] [GAEC] Merges executed: 204,431
+[14:54:06] [GAEC] Final regions: 2,417
+[14:54:06] [MERGE] Found 2408 tiny regions (< 1000 pixels)
+[14:54:06] [MERGE] Tiny regions contain: 100,776 pixels (48.7% of image)
+[14:54:07] [MERGE] Merged 2408 tiny regions
+[14:54:07] [MERGE] Final regions: 232
+[14:54:19] [THR-SWEEP] thr=-0.300 -> size=967,943 bytes, regions=232
+[14:54:26] [GAEC] Edges in heap: 381,343
+[14:54:26] [GAEC] Merges executed: 204,380
+[14:54:26] [GAEC] Final regions: 2,468
+[14:54:26] [MERGE] Found 2459 tiny regions (< 1000 pixels)
+[14:54:26] [MERGE] Tiny regions contain: 100,916 pixels (48.8% of image)
+[14:54:27] [MERGE] Merged 2459 tiny regions
+[14:54:27] [MERGE] Final regions: 235
+[14:54:40] [THR-SWEEP] thr=-0.100 -> size=969,527 bytes, regions=235
+[14:54:40] [THR-SWEEP] BEST thr=-0.300 size=967,943 bytes @ 512x404
+[14:57:19] [GAEC] Edges in heap: 6,528,830
+[14:57:19] [GAEC] Merges executed: 3,277,016
+[14:57:19] [GAEC] Final regions: 3,304
+[14:57:19] 
+[POST-PROCESS] Starting with 3,304 regions
+[14:57:19] [MERGE] Found 3242 tiny regions (< 1000 pixels)
+[14:57:19] [MERGE] Tiny regions contain: 109,120 pixels (3.3% of image)
+[14:57:39] [MERGE] Merged 3242 tiny regions
+[14:57:39] [MERGE] Final regions: 72
+[14:57:39] 
+[14:59:50] [INFERENCE] Final result: 72 regions, 6,695,629 bytes
+
+[14:59:51] [VAL] Compressed=6,695,629 bytes, PNG=5,943,950 bytes, Ratio=1.126, Gain=-12.6%
+
+[15:01:46] Saved: reconstruction_ep79.png
+[15:01:46]  Original: 9,840,960 bytes
+[15:01:46]  PSNR: 6.26 dB
+[15:01:46]  MAE: 105.767838
+[15:01:46] Ep80 B0/180 Loss=0.3554
+[15:01:57] Ep80 B50/180 Loss=0.3700
+[15:02:09] Ep80 B100/180 Loss=0.3716
+[15:02:21] Ep80 B150/180 Loss=0.3825
+[15:02:27] Ep80 DONE - Loss: 0.3803
+[15:02:27] Ep81 B0/180 Loss=0.3943
+[15:02:39] Ep81 B50/180 Loss=0.3869
+[15:02:50] Ep81 B100/180 Loss=0.3939
+[15:03:02] Ep81 B150/180 Loss=0.3752
+[15:03:09] Ep81 DONE - Loss: 0.3801
+[15:03:09] Ep82 B0/180 Loss=0.3560
+[15:03:21] Ep82 B50/180 Loss=0.3690
+[15:03:32] Ep82 B100/180 Loss=0.3977
+[15:03:43] Ep82 B150/180 Loss=0.3600
+[15:03:50] Ep82 DONE - Loss: 0.3800
+[15:03:50] Ep83 B0/180 Loss=0.3901
+[15:04:02] Ep83 B50/180 Loss=0.3749
+[15:04:13] Ep83 B100/180 Loss=0.3995
+[15:04:25] Ep83 B150/180 Loss=0.3775
+[15:04:32] Ep83 DONE - Loss: 0.3818
+[15:04:32] Ep84 B0/180 Loss=0.3943
+[15:04:44] Ep84 B50/180 Loss=0.3887
+[15:04:55] Ep84 B100/180 Loss=0.3945
+[15:05:07] Ep84 B150/180 Loss=0.3721
+[15:05:13] Ep84 DONE - Loss: 0.3818
+[15:05:13] 
+[VALIDATION Ep84 on image 4]
+[15:05:14] [INFERENCE] Image: 2040×1608, Edges: 6,556,992
+[15:05:14] [INFERENCE] Costs: Mean=0.910, Std=0.299, Min=-1.000, Max=1.000
+[15:05:14] [INFERENCE] Target regions: 200
+[15:05:14] [THR-SWEEP] Downsampled from 2040x1608 -> 512x404, trying 5 thresholds
+[15:05:20] [GAEC] Edges in heap: 384,529
+[15:05:20] [GAEC] Merges executed: 204,582
+[15:05:20] [GAEC] Final regions: 2,266
+[15:05:20] [MERGE] Found 2255 tiny regions (< 1000 pixels)
+[15:05:20] [MERGE] Tiny regions contain: 98,210 pixels (47.5% of image)
+[15:05:21] [MERGE] Merged 2255 tiny regions
+[15:05:21] [MERGE] Final regions: 218
+[15:05:34] [THR-SWEEP] thr=-0.900 -> size=963,995 bytes, regions=218
+[15:05:41] [GAEC] Edges in heap: 383,251
+[15:05:41] [GAEC] Merges executed: 204,508
+[15:05:41] [GAEC] Final regions: 2,340
+[15:05:41] [MERGE] Found 2329 tiny regions (< 1000 pixels)
+[15:05:41] [MERGE] Tiny regions contain: 98,535 pixels (47.6% of image)
+[15:05:42] [MERGE] Merged 2329 tiny regions
+[15:05:42] [MERGE] Final regions: 223
+[15:05:54] [THR-SWEEP] thr=-0.700 -> size=952,725 bytes, regions=223
+[15:06:01] [GAEC] Edges in heap: 382,574
+[15:06:01] [GAEC] Merges executed: 204,463
+[15:06:01] [GAEC] Final regions: 2,385
+[15:06:01] [MERGE] Found 2375 tiny regions (< 1000 pixels)
+[15:06:01] [MERGE] Tiny regions contain: 99,657 pixels (48.2% of image)
+[15:06:02] [MERGE] Merged 2375 tiny regions
+[15:06:02] [MERGE] Final regions: 225
+[15:06:15] [THR-SWEEP] thr=-0.500 -> size=966,041 bytes, regions=225
+[15:06:21] [GAEC] Edges in heap: 381,978
+[15:06:21] [GAEC] Merges executed: 204,420
+[15:06:21] [GAEC] Final regions: 2,428
+[15:06:21] [MERGE] Found 2418 tiny regions (< 1000 pixels)
+[15:06:21] [MERGE] Tiny regions contain: 100,844 pixels (48.8% of image)
+[15:06:22] [MERGE] Merged 2418 tiny regions
+[15:06:22] [MERGE] Final regions: 231
+[15:06:35] [THR-SWEEP] thr=-0.300 -> size=948,435 bytes, regions=231
+[15:06:42] [GAEC] Edges in heap: 381,288
+[15:06:42] [GAEC] Merges executed: 204,368
+[15:06:42] [GAEC] Final regions: 2,480
+[15:06:42] [MERGE] Found 2470 tiny regions (< 1000 pixels)
+[15:06:42] [MERGE] Tiny regions contain: 100,901 pixels (48.8% of image)
+[15:06:43] [MERGE] Merged 2470 tiny regions
+[15:06:43] [MERGE] Final regions: 236
+[15:06:55] [THR-SWEEP] thr=-0.100 -> size=954,717 bytes, regions=236
+[15:06:55] [THR-SWEEP] BEST thr=-0.300 size=948,435 bytes @ 512x404
+[15:09:11] [GAEC] Edges in heap: 6,528,772
+[15:09:11] [GAEC] Merges executed: 3,277,130
+[15:09:11] [GAEC] Final regions: 3,190
+[15:09:12] 
+[POST-PROCESS] Starting with 3,190 regions
+[15:09:12] [MERGE] Found 3131 tiny regions (< 1000 pixels)
+[15:09:12] [MERGE] Tiny regions contain: 109,552 pixels (3.3% of image)
+[15:09:31] [MERGE] Merged 3131 tiny regions
+[15:09:31] [MERGE] Final regions: 70
+[15:09:31] 
+[15:11:48] [INFERENCE] Final result: 70 regions, 7,064,964 bytes
+
+[15:11:49] [VAL] Compressed=7,064,964 bytes, PNG=5,943,950 bytes, Ratio=1.189, Gain=-18.9%
+
+[15:13:47] Saved: reconstruction_ep84.png
+[15:13:47]  Original: 9,840,960 bytes
+[15:13:47]  PSNR: 6.26 dB
+[15:13:47]  MAE: 105.808609
+[15:13:47] 
+[EARLY STOP] No improvement for 15 validations
+[15:13:47] Models saved!
+[15:13:47] 
+======================================================================
+[15:13:47] TESTING ON FULL IMAGES
+[15:13:47] ======================================================================
+
+[15:13:47] 
+[TEST 0]
+[15:13:48] [INFERENCE] Image: 1404×2040, Edges: 5,724,876
+[15:13:48] [INFERENCE] Costs: Mean=0.981, Std=0.134, Min=-1.000, Max=1.000
+[15:13:48] [INFERENCE] Target regions: 200
+[15:13:48] [THR-SWEEP] Downsampled from 1404x2040 -> 352x512, trying 5 thresholds
+[15:13:53] [GAEC] Edges in heap: 357,594
+[15:13:53] [GAEC] Merges executed: 179,655
+[15:13:53] [GAEC] Final regions: 569
+[15:13:54] [MERGE] Found 567 tiny regions (< 1000 pixels)
+[15:13:54] [MERGE] Tiny regions contain: 4,075 pixels (2.3% of image)
+[15:13:54] [MERGE] Merged 567 tiny regions
+[15:13:54] [MERGE] Final regions: 9
+[15:14:01] [THR-SWEEP] thr=-0.900 -> size=463,185 bytes, regions=9
+[15:14:06] [GAEC] Edges in heap: 357,404
+[15:14:06] [GAEC] Merges executed: 179,603
+[15:14:06] [GAEC] Final regions: 621
+[15:14:06] [MERGE] Found 619 tiny regions (< 1000 pixels)
+[15:14:06] [MERGE] Tiny regions contain: 4,163 pixels (2.3% of image)
+[15:14:07] [MERGE] Merged 619 tiny regions
+[15:14:07] [MERGE] Final regions: 10
+[15:14:13] [THR-SWEEP] thr=-0.700 -> size=463,234 bytes, regions=10
+[15:14:19] [GAEC] Edges in heap: 357,261
+[15:14:19] [GAEC] Merges executed: 179,570
+[15:14:19] [GAEC] Final regions: 654
+[15:14:19] [MERGE] Found 652 tiny regions (< 1000 pixels)
+[15:14:19] [MERGE] Tiny regions contain: 4,213 pixels (2.3% of image)
+[15:14:19] [MERGE] Merged 652 tiny regions
+[15:14:19] [MERGE] Final regions: 11
+[15:14:26] [THR-SWEEP] thr=-0.500 -> size=463,510 bytes, regions=11
+[15:14:32] [GAEC] Edges in heap: 357,154
+[15:14:32] [GAEC] Merges executed: 179,534
+[15:14:32] [GAEC] Final regions: 690
+[15:14:32] [MERGE] Found 688 tiny regions (< 1000 pixels)
+[15:14:32] [MERGE] Tiny regions contain: 4,350 pixels (2.4% of image)
+[15:14:32] [MERGE] Merged 688 tiny regions
+[15:14:32] [MERGE] Final regions: 12
+[15:14:39] [THR-SWEEP] thr=-0.300 -> size=463,902 bytes, regions=12
+[15:14:45] [GAEC] Edges in heap: 356,966
+[15:14:45] [GAEC] Merges executed: 179,469
+[15:14:45] [GAEC] Final regions: 755
+[15:14:45] [MERGE] Found 753 tiny regions (< 1000 pixels)
+[15:14:45] [MERGE] Tiny regions contain: 4,482 pixels (2.5% of image)
+[15:14:45] [MERGE] Merged 753 tiny regions
+[15:14:45] [MERGE] Final regions: 13
+[15:14:52] [THR-SWEEP] thr=-0.100 -> size=463,951 bytes, regions=13
+[15:14:52] [THR-SWEEP] BEST thr=-0.900 size=463,185 bytes @ 352x512
+[15:16:02] [GAEC] Edges in heap: 5,724,741
+[15:16:02] [GAEC] Merges executed: 2,864,111
+[15:16:02] [GAEC] Final regions: 49
+[15:16:02] 
+[POST-PROCESS] Starting with 49 regions
+[15:16:02] [MERGE] Found 48 tiny regions (< 1000 pixels)
+[15:16:02] [MERGE] Tiny regions contain: 284 pixels (0.0% of image)
+[15:16:03] [MERGE] Merged 48 tiny regions
+[15:16:03] [MERGE] Final regions: 1
+[15:16:03] 
+[15:17:24] [INFERENCE] Final result: 1 regions, 3,325,750 bytes
+
+[15:17:24] [RESULT] Regions=1, Compressed=3,325,750 bytes, PNG=4,929,207 bytes, Ratio=0.675, Gain=+32.5%
+[15:18:33] Saved: reconstruction_test0.png
+[15:18:33]  Original: 8,592,480 bytes
+[15:18:33]  PSNR: 11.16 dB
+[15:18:33]  MAE: 55.573074
+[15:18:33] 
+[TEST 1]
+[15:18:33] [INFERENCE] Image: 1848×2040, Edges: 7,535,952
+[15:18:33] [INFERENCE] Costs: Mean=0.876, Std=0.357, Min=-1.000, Max=1.000
+[15:18:33] [INFERENCE] Target regions: 200
+[15:18:33] [THR-SWEEP] Downsampled from 1848x2040 -> 464x512, trying 5 thresholds
+[15:18:40] [GAEC] Edges in heap: 467,387
+[15:18:40] [GAEC] Merges executed: 235,770
+[15:18:40] [GAEC] Final regions: 1,798
+[15:18:40] [MERGE] Found 1794 tiny regions (< 1000 pixels)
+[15:18:40] [MERGE] Tiny regions contain: 13,778 pixels (5.8% of image)
+[15:18:40] [MERGE] Merged 1794 tiny regions
+[15:18:40] [MERGE] Final regions: 57
+[15:18:48] [THR-SWEEP] thr=-0.900 -> size=462,866 bytes, regions=57
+[15:18:55] [GAEC] Edges in heap: 466,840
+[15:18:55] [GAEC] Merges executed: 235,679
+[15:18:55] [GAEC] Final regions: 1,889
+[15:18:55] [MERGE] Found 1885 tiny regions (< 1000 pixels)
+[15:18:55] [MERGE] Tiny regions contain: 13,988 pixels (5.9% of image)
+[15:18:56] [MERGE] Merged 1885 tiny regions
+[15:18:56] [MERGE] Final regions: 58
+[15:19:03] [THR-SWEEP] thr=-0.700 -> size=463,068 bytes, regions=58
+[15:19:10] [GAEC] Edges in heap: 466,558
+[15:19:10] [GAEC] Merges executed: 235,612
+[15:19:10] [GAEC] Final regions: 1,956
+[15:19:10] [MERGE] Found 1952 tiny regions (< 1000 pixels)
+[15:19:10] [MERGE] Tiny regions contain: 14,154 pixels (6.0% of image)
+[15:19:11] [MERGE] Merged 1952 tiny regions
+[15:19:11] [MERGE] Final regions: 58
+[15:19:19] [THR-SWEEP] thr=-0.500 -> size=463,292 bytes, regions=58
+[15:19:25] [GAEC] Edges in heap: 466,288
+[15:19:25] [GAEC] Merges executed: 235,551
+[15:19:25] [GAEC] Final regions: 2,017
+[15:19:25] [MERGE] Found 2013 tiny regions (< 1000 pixels)
+[15:19:25] [MERGE] Tiny regions contain: 14,353 pixels (6.0% of image)
+[15:19:26] [MERGE] Merged 2013 tiny regions
+[15:19:26] [MERGE] Final regions: 58
+[15:19:34] [THR-SWEEP] thr=-0.300 -> size=463,785 bytes, regions=58
+[15:19:40] [GAEC] Edges in heap: 465,999
+[15:19:40] [GAEC] Merges executed: 235,482
+[15:19:40] [GAEC] Final regions: 2,086
+[15:19:40] [MERGE] Found 2082 tiny regions (< 1000 pixels)
+[15:19:40] [MERGE] Tiny regions contain: 14,492 pixels (6.1% of image)
+[15:19:41] [MERGE] Merged 2082 tiny regions
+[15:19:41] [MERGE] Final regions: 60
+[15:19:49] [THR-SWEEP] thr=-0.100 -> size=462,644 bytes, regions=60
+[15:19:49] [THR-SWEEP] BEST thr=-0.100 size=462,644 bytes @ 464x512
+[15:21:43] [GAEC] Edges in heap: 7,449,991
+[15:21:43] [GAEC] Merges executed: 3,752,455
+[15:21:43] [GAEC] Final regions: 17,465
+[15:21:43] 
+[POST-PROCESS] Starting with 17,465 regions
+[15:21:43] [MERGE] Found 17441 tiny regions (< 1000 pixels)
+[15:21:43] [MERGE] Tiny regions contain: 203,803 pixels (5.4% of image)
+[15:23:41] [MERGE] Merged 17441 tiny regions
+[15:23:41] [MERGE] Final regions: 699
+[15:23:41] 
+[15:25:55] [INFERENCE] Final result: 699 regions, 6,878,845 bytes
+
+[15:25:57] [RESULT] Regions=699, Compressed=6,878,845 bytes, PNG=7,048,839 bytes, Ratio=0.976, Gain=+2.4%
+[15:27:46] Saved: reconstruction_test1.png
+[15:27:46]  Original: 11,309,760 bytes
+[15:27:46]  PSNR: 11.55 dB
+[15:27:46]  MAE: 54.540833
+[15:27:46] 
+[TEST 2]
+[15:27:46] [INFERENCE] Image: 1356×2040, Edges: 5,529,084
+[15:27:46] [INFERENCE] Costs: Mean=0.870, Std=0.356, Min=-1.000, Max=1.000
+[15:27:46] [INFERENCE] Target regions: 200
+[15:27:46] [THR-SWEEP] Downsampled from 1356x2040 -> 340x512, trying 5 thresholds
+[15:27:52] [GAEC] Edges in heap: 333,059
+[15:27:52] [GAEC] Merges executed: 171,849
+[15:27:52] [GAEC] Final regions: 2,231
+[15:27:52] [MERGE] Found 2204 tiny regions (< 1000 pixels)
+[15:27:52] [MERGE] Tiny regions contain: 35,080 pixels (20.2% of image)
+[15:27:52] [MERGE] Merged 2204 tiny regions
+[15:27:52] [MERGE] Final regions: 146
+[15:28:03] [THR-SWEEP] thr=-0.900 -> size=761,127 bytes, regions=146
+[15:28:09] [GAEC] Edges in heap: 332,237
+[15:28:09] [GAEC] Merges executed: 171,736
+[15:28:09] [GAEC] Final regions: 2,344
+[15:28:09] [MERGE] Found 2318 tiny regions (< 1000 pixels)
+[15:28:09] [MERGE] Tiny regions contain: 36,724 pixels (21.1% of image)
+[15:28:10] [MERGE] Merged 2318 tiny regions
+[15:28:10] [MERGE] Final regions: 150
+[15:28:20] [THR-SWEEP] thr=-0.700 -> size=759,270 bytes, regions=150
+[15:28:26] [GAEC] Edges in heap: 331,782
+[15:28:26] [GAEC] Merges executed: 171,678
+[15:28:26] [GAEC] Final regions: 2,402
+[15:28:26] [MERGE] Found 2376 tiny regions (< 1000 pixels)
+[15:28:26] [MERGE] Tiny regions contain: 36,898 pixels (21.2% of image)
+[15:28:26] [MERGE] Merged 2376 tiny regions
+[15:28:26] [MERGE] Final regions: 155
+[15:28:37] [THR-SWEEP] thr=-0.500 -> size=759,690 bytes, regions=155
+[15:28:43] [GAEC] Edges in heap: 331,330
+[15:28:43] [GAEC] Merges executed: 171,614
+[15:28:43] [GAEC] Final regions: 2,466
+[15:28:43] [MERGE] Found 2440 tiny regions (< 1000 pixels)
+[15:28:43] [MERGE] Tiny regions contain: 37,058 pixels (21.3% of image)
+[15:28:43] [MERGE] Merged 2440 tiny regions
+[15:28:43] [MERGE] Final regions: 160
+[15:28:54] [THR-SWEEP] thr=-0.300 -> size=760,942 bytes, regions=160
+[15:29:00] [GAEC] Edges in heap: 330,715
+[15:29:00] [GAEC] Merges executed: 171,516
+[15:29:00] [GAEC] Final regions: 2,564
+[15:29:00] [MERGE] Found 2537 tiny regions (< 1000 pixels)
+[15:29:00] [MERGE] Tiny regions contain: 37,363 pixels (21.5% of image)
+[15:29:00] [MERGE] Merged 2537 tiny regions
+[15:29:00] [MERGE] Final regions: 167
+[15:29:11] [THR-SWEEP] thr=-0.100 -> size=761,083 bytes, regions=167
+[15:29:11] [THR-SWEEP] BEST thr=-0.700 size=759,270 bytes @ 340x512
+[15:30:45] [GAEC] Edges in heap: 5,486,457
+[15:30:45] [GAEC] Merges executed: 2,759,242
+[15:30:45] [GAEC] Final regions: 6,998
+[15:30:45] 
+[POST-PROCESS] Starting with 6,998 regions
+[15:30:45] [MERGE] Found 6966 tiny regions (< 1000 pixels)
+[15:30:45] [MERGE] Tiny regions contain: 142,690 pixels (5.2% of image)
+[15:31:20] [MERGE] Merged 6966 tiny regions
+[15:31:20] [MERGE] Final regions: 215
+[15:31:20] 
+[15:33:11] [INFERENCE] Final result: 215 regions, 5,707,407 bytes
+
+[15:33:12] [RESULT] Regions=215, Compressed=5,707,407 bytes, PNG=5,222,581 bytes, Ratio=1.093, Gain=-9.3%
+[15:34:45] Saved: reconstruction_test2.png
+[15:34:45]  Original: 8,298,720 bytes
+[15:34:45]  PSNR: 5.93 dB
+[15:34:45]  MAE: 111.902336
