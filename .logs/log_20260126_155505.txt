@@ -1,0 +1,48 @@
+[15:55:05] Log file created: .logs/log_20260126_155505.txt
+[15:55:05] Device: cuda
+[15:55:05] ======================================================================
+[15:55:05] MULTICUT COMPRESSION - FIXED VERSION
+[15:55:05] ======================================================================
+[15:55:05] Total images: 200
+[15:55:05] Training 64x64 patches, 8,064 edges
+[15:55:05] Target regions: 200
+[15:55:05] Ep0 B0/45 Loss=0.8645
+[15:55:06] Ep0 DONE - Loss 0.2812
+[15:55:06] [VALIDATION] Ep0 on image 0
+[15:55:06] [INFERENCE] Image 256x256, Edges 130,560
+[15:55:06] [INFERENCE] Costs Mean=0.692, Std=0.067, Min=0.380, Max=0.934
+[15:55:06] [THRESHOLD] Cost range: [0.3801, 0.9336]
+[15:55:06] [THRESHOLD] Searching for threshold that produces ~200 regions...
+[15:55:06] [THRESHOLD]   Threshold  -0.90:        0 edges → ~ 13056 regions (error:  12856)
+[15:55:06] [THRESHOLD]   Threshold  -0.86:        0 edges → ~ 13056 regions (error:  12856)
+[15:55:06] [THRESHOLD]   Threshold  -0.82:        0 edges → ~ 13056 regions (error:  12856)
+[15:55:06] [THRESHOLD]   Threshold  -0.77:        0 edges → ~ 13056 regions (error:  12856)
+[15:55:06] [THRESHOLD]   Threshold  -0.73:        0 edges → ~ 13056 regions (error:  12856)
+[15:55:06] [THRESHOLD]   Threshold  -0.69:        0 edges → ~ 13056 regions (error:  12856)
+[15:55:06] [THRESHOLD]   Threshold  -0.65:        0 edges → ~ 13056 regions (error:  12856)
+[15:55:06] [THRESHOLD]   Threshold  -0.61:        0 edges → ~ 13056 regions (error:  12856)
+[15:55:06] [THRESHOLD]   Threshold  -0.56:        0 edges → ~ 13056 regions (error:  12856)
+[15:55:06] [THRESHOLD]   Threshold  -0.52:        0 edges → ~ 13056 regions (error:  12856)
+[15:55:06] [THRESHOLD]   Threshold  -0.48:        0 edges → ~ 13056 regions (error:  12856)
+[15:55:06] [THRESHOLD]   Threshold  -0.44:        0 edges → ~ 13056 regions (error:  12856)
+[15:55:06] [THRESHOLD]   Threshold  -0.39:        0 edges → ~ 13056 regions (error:  12856)
+[15:55:06] [THRESHOLD]   Threshold  -0.35:        0 edges → ~ 13056 regions (error:  12856)
+[15:55:06] [THRESHOLD]   Threshold  -0.31:        0 edges → ~ 13056 regions (error:  12856)
+[15:55:06] [THRESHOLD]   Threshold  -0.27:        0 edges → ~ 13056 regions (error:  12856)
+[15:55:06] [THRESHOLD]   Threshold  -0.23:        0 edges → ~ 13056 regions (error:  12856)
+[15:55:06] [THRESHOLD]   Threshold  -0.18:        0 edges → ~ 13056 regions (error:  12856)
+[15:55:06] [THRESHOLD]   Threshold  -0.14:        0 edges → ~ 13056 regions (error:  12856)
+[15:55:06] [THRESHOLD]   Threshold  -0.10:        0 edges → ~ 13056 regions (error:  12856)
+[15:55:06] [THRESHOLD] Selected threshold: -0.9000
+[15:55:06] [GAEC] Edges in heap: 0
+[15:55:06] [GAEC] Merges executed: 0
+[15:55:06] [GAEC] Final regions: 65,536
+[15:55:06] [POST-PROCESS] Starting with 65,536 regions
+[15:55:06] [MERGE] Regions 65536 > 500, applying merge
+[15:55:06] [MERGE] Found 65536 tiny regions (< 1000 pixels)
+[15:55:06] [MERGE] Current total regions: 65536
+[15:55:06] [MERGE] Tiny regions contain 65,536 pixels (100.0% of image)
+[15:55:06] [MERGE] Processing 0/65536 tiny regions...
+[15:55:06] [MERGE] Early stop after 100 merges (max_iterations=100)
+[15:55:06] [MERGE] Merged 100 tiny regions
+[15:55:06] [MERGE] Final regions: 65511

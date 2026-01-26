@@ -1,0 +1,14 @@
+[15:40:50] Log file created: .logs/log_20260126_154050.txt
+[15:40:50] Device: cuda
+[15:40:50] ======================================================================
+[15:40:50] MULTICUT COMPRESSION - WITH ALL 5 FIXES
+[15:40:50] ======================================================================
+[15:40:50] FIX 1: scale=10.0 (strong signal)
+[15:40:50] FIX 2: Dynamic threshold selection
+[15:40:50] FIX 3: Early termination in merge (max_iterations=100)
+[15:40:50] FIX 4: Region check before merge (threshold=500)
+[15:40:50] FIX 5: Reduced sampling (16 edges)
+[15:40:50] ======================================================================
+[15:40:50] Total images: 200
+[15:40:50] Training 64x64 patches, 8,064 edges
+[15:40:50] Target regions: 200

@@ -1,0 +1,42 @@
+[15:51:35] Log file created: .logs/log_20260126_155135.txt
+[15:51:35] Device: cuda
+[15:51:35] ======================================================================
+[15:51:35] MULTICUT COMPRESSION - WITH ALL 5 FIXES
+[15:51:35] ======================================================================
+[15:51:35] FIX 1: scale=10.0 (strong signal)
+[15:51:35] FIX 2: Dynamic threshold selection
+[15:51:35] FIX 3: Early termination in merge (max_iterations=100)
+[15:51:35] FIX 4: Region check before merge (threshold=500)
+[15:51:35] FIX 5: Reduced sampling (16 edges)
+[15:51:35] ======================================================================
+[15:51:35] Total images: 200
+[15:51:35] Training 64x64 patches, 8,064 edges
+[15:51:35] Target regions: 200
+[15:51:36] Ep0 B0/45 Loss=0.7556
+[15:51:36] Ep0 DONE - Loss 0.2729
+[15:51:36] [VALIDATION] Ep0 on image 0
+[15:51:36] [INFERENCE] Image 256x256, Edges 130,560
+[15:51:36] [INFERENCE] Costs Mean=0.722, Std=0.065, Min=0.402, Max=0.949
+[15:51:36] [THRESHOLD] Cost range: [0.4019, 0.9488]
+[15:51:36] [THRESHOLD] Searching for threshold that produces ~200 regions...
+[15:51:36] [THRESHOLD]   Threshold  -0.90:        0 edges → ~ 13056 regions (error:  12856)
+[15:51:36] [THRESHOLD]   Threshold  -0.83:        0 edges → ~ 13056 regions (error:  12856)
+[15:51:36] [THRESHOLD]   Threshold  -0.75:        0 edges → ~ 13056 regions (error:  12856)
+[15:51:36] [THRESHOLD]   Threshold  -0.68:        0 edges → ~ 13056 regions (error:  12856)
+[15:51:36] [THRESHOLD]   Threshold  -0.61:        0 edges → ~ 13056 regions (error:  12856)
+[15:51:36] [THRESHOLD]   Threshold  -0.53:        0 edges → ~ 13056 regions (error:  12856)
+[15:51:36] [THRESHOLD]   Threshold  -0.46:        0 edges → ~ 13056 regions (error:  12856)
+[15:51:36] [THRESHOLD]   Threshold  -0.38:        0 edges → ~ 13056 regions (error:  12856)
+[15:51:36] [THRESHOLD]   Threshold  -0.31:        0 edges → ~ 13056 regions (error:  12856)
+[15:51:36] [THRESHOLD]   Threshold  -0.24:        0 edges → ~ 13056 regions (error:  12856)
+[15:51:36] [THRESHOLD]   Threshold  -0.16:        0 edges → ~ 13056 regions (error:  12856)
+[15:51:36] [THRESHOLD]   Threshold  -0.09:        0 edges → ~ 13056 regions (error:  12856)
+[15:51:36] [THRESHOLD]   Threshold  -0.02:        0 edges → ~ 13056 regions (error:  12856)
+[15:51:36] [THRESHOLD]   Threshold   0.06:        0 edges → ~ 13056 regions (error:  12856)
+[15:51:36] [THRESHOLD]   Threshold   0.13:        0 edges → ~ 13056 regions (error:  12856)
+[15:51:36] [THRESHOLD]   Threshold   0.21:        0 edges → ~ 13056 regions (error:  12856)
+[15:51:36] [THRESHOLD]   Threshold   0.28:        0 edges → ~ 13056 regions (error:  12856)
+[15:51:36] [THRESHOLD]   Threshold   0.35:        0 edges → ~ 13056 regions (error:  12856)
+[15:51:36] [THRESHOLD]   Threshold   0.43:        9 edges → ~ 13055 regions (error:  12855)
+[15:51:36] [THRESHOLD]   Threshold   0.50:      248 edges → ~ 13031 regions (error:  12831)
+[15:51:36] [THRESHOLD] Selected threshold: 0.5000
