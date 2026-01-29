@@ -1,0 +1,583 @@
+[18:16:38] Log file created: ./logs/log_20260128_181638.txt
+[18:16:38] Device: cuda
+[18:16:38] ======================================================================
+[18:16:38] MULTICUT COSTS + GAEC + CODEC-AWARE REINFORCE (JPEG-LS style residuals)
+[18:16:38] ======================================================================
+[18:16:38] Total images: 800
+[18:16:39] Training: 64×64 patches, edges=8,064
+[18:16:39] Target regions (patch): 120
+[18:16:39] Train tiny merge size=128, infer tiny merge size=256
+[18:16:39] Cost std exploration=0.12
+[18:16:39] Validation crop size=512×512 (final tests use full images)
+[18:16:45] Ep0 B0/360 Loss=-1888.6121 MeanBytes=7308.5 Baseline=9973.1
+[18:17:43] Ep0 B20/360 Loss=-1481.8657 MeanBytes=7471.0 Baseline=9553.7
+[18:18:41] Ep0 B40/360 Loss=-773.1984 MeanBytes=8091.0 Baseline=9184.9
+[18:19:39] Ep0 B60/360 Loss=-1162.0747 MeanBytes=7265.0 Baseline=8877.7
+[18:20:37] Ep0 B80/360 Loss=270.0095 MeanBytes=9000.5 Baseline=8620.5
+[18:21:34] Ep0 B100/360 Loss=-65.1667 MeanBytes=8383.0 Baseline=8454.1
+[18:22:32] Ep0 B120/360 Loss=934.5970 MeanBytes=9676.5 Baseline=8372.4
+[18:23:30] Ep0 B140/360 Loss=-1996.4370 MeanBytes=5397.5 Baseline=8207.4
+[18:24:27] Ep0 B160/360 Loss=-365.4300 MeanBytes=7554.0 Baseline=8076.2
+[18:25:25] Ep0 B180/360 Loss=-363.3383 MeanBytes=7514.0 Baseline=8035.1
+[18:26:23] Ep0 B200/360 Loss=1722.7362 MeanBytes=10386.5 Baseline=7979.5
+[18:27:21] Ep0 B220/360 Loss=552.0254 MeanBytes=8773.5 Baseline=8004.9
+[18:28:18] Ep0 B240/360 Loss=-2219.8643 MeanBytes=4786.5 Baseline=7949.8
+[18:29:16] Ep0 B260/360 Loss=1199.9160 MeanBytes=9588.0 Baseline=7941.3
+[18:30:14] Ep0 B280/360 Loss=-1164.9647 MeanBytes=6212.5 Baseline=7871.0
+[18:31:12] Ep0 B300/360 Loss=-126.2285 MeanBytes=7667.0 Baseline=7839.9
+[18:32:09] Ep0 B320/360 Loss=-1752.9805 MeanBytes=5254.0 Baseline=7772.8
+[18:33:07] Ep0 B340/360 Loss=-441.1586 MeanBytes=7117.0 Baseline=7753.2
+[18:33:59] Ep0 DONE - Loss: -443.2221
+[18:34:05] Ep1 B0/360 Loss=150.5414 MeanBytes=7928.5 Baseline=7724.0
+[18:35:03] Ep1 B20/360 Loss=192.7133 MeanBytes=8065.5 Baseline=7813.9
+[18:36:01] Ep1 B40/360 Loss=-776.5020 MeanBytes=6683.0 Baseline=7775.7
+[18:36:59] Ep1 B60/360 Loss=2087.5544 MeanBytes=10713.5 Baseline=7826.1
+[18:37:56] Ep1 B80/360 Loss=385.6600 MeanBytes=8313.0 Baseline=7739.5
+[18:38:54] Ep1 B100/360 Loss=-1439.5894 MeanBytes=5720.0 Baseline=7752.3
+[18:39:52] Ep1 B120/360 Loss=553.8840 MeanBytes=8517.5 Baseline=7741.6
+[18:40:49] Ep1 B140/360 Loss=-2212.2910 MeanBytes=4595.0 Baseline=7733.9
+[18:41:47] Ep1 B160/360 Loss=3111.0317 MeanBytes=12204.5 Baseline=7788.4
+[18:42:44] Ep1 B180/360 Loss=-598.8188 MeanBytes=6902.0 Baseline=7746.3
+[18:43:42] Ep1 B200/360 Loss=2330.8413 MeanBytes=11175.5 Baseline=7884.0
+[18:44:40] Ep1 B220/360 Loss=608.5214 MeanBytes=8722.5 Baseline=7811.3
+[18:45:37] Ep1 B240/360 Loss=1199.7592 MeanBytes=9554.5 Baseline=7847.4
+[18:46:35] Ep1 B260/360 Loss=1026.8053 MeanBytes=9220.0 Baseline=7793.5
+[18:47:32] Ep1 B280/360 Loss=1013.1004 MeanBytes=9347.5 Baseline=7900.2
+[18:48:30] Ep1 B300/360 Loss=-1380.8922 MeanBytes=5769.0 Baseline=7706.2
+[18:49:27] Ep1 B320/360 Loss=-317.2125 MeanBytes=7256.5 Baseline=7673.1
+[18:50:25] Ep1 B340/360 Loss=182.9172 MeanBytes=7810.0 Baseline=7546.5
+[18:51:17] Ep1 DONE - Loss: -43.2614
+[18:51:23] Ep2 B0/360 Loss=-701.8700 MeanBytes=6497.5 Baseline=7485.8
+[18:52:21] Ep2 B20/360 Loss=592.5688 MeanBytes=8493.5 Baseline=7660.6
+[18:53:18] Ep2 B40/360 Loss=604.8690 MeanBytes=8543.5 Baseline=7697.3
+[18:54:15] Ep2 B60/360 Loss=1384.7898 MeanBytes=9665.0 Baseline=7737.4
+[18:55:13] Ep2 B80/360 Loss=-1326.8445 MeanBytes=5742.5 Baseline=7635.5
+[18:56:11] Ep2 B100/360 Loss=161.2125 MeanBytes=7797.5 Baseline=7562.3
+[18:57:08] Ep2 B120/360 Loss=619.9010 MeanBytes=8410.0 Baseline=7536.5
+[18:58:06] Ep2 B140/360 Loss=-503.9846 MeanBytes=6840.0 Baseline=7543.3
+[18:59:03] Ep2 B160/360 Loss=-1673.2581 MeanBytes=5210.0 Baseline=7568.2
+[19:00:01] Ep2 B180/360 Loss=1705.4487 MeanBytes=10017.5 Baseline=7617.7
+[19:00:59] Ep2 B200/360 Loss=-2271.1907 MeanBytes=4365.0 Baseline=7569.1
+[19:01:56] Ep2 B220/360 Loss=1054.7097 MeanBytes=9124.0 Baseline=7661.1
+[19:02:54] Ep2 B240/360 Loss=-620.3970 MeanBytes=6758.5 Baseline=7639.5
+[19:03:52] Ep2 B260/360 Loss=1036.2344 MeanBytes=9092.5 Baseline=7628.1
+[19:04:49] Ep2 B280/360 Loss=-694.3579 MeanBytes=6700.5 Baseline=7678.9
+[19:05:47] Ep2 B300/360 Loss=-1752.9933 MeanBytes=5243.0 Baseline=7707.3
+[19:06:44] Ep2 B320/360 Loss=101.8916 MeanBytes=7870.5 Baseline=7724.1
+[19:07:42] Ep2 B340/360 Loss=1010.5764 MeanBytes=9176.0 Baseline=7745.2
+[19:08:34] Ep2 DONE - Loss: 30.1043
+[19:08:40] Ep3 B0/360 Loss=-213.3891 MeanBytes=7347.5 Baseline=7645.3
+[19:09:38] Ep3 B20/360 Loss=-252.4500 MeanBytes=7257.5 Baseline=7601.9
+[19:10:35] Ep3 B40/360 Loss=-622.9518 MeanBytes=6854.0 Baseline=7694.1
+[19:11:33] Ep3 B60/360 Loss=603.5151 MeanBytes=8496.0 Baseline=7647.3
+[19:12:30] Ep3 B80/360 Loss=2427.3601 MeanBytes=11148.5 Baseline=7689.0
+[19:13:28] Ep3 B100/360 Loss=218.4893 MeanBytes=7960.5 Baseline=7658.0
+[19:14:25] Ep3 B120/360 Loss=-2303.2170 MeanBytes=4259.5 Baseline=7558.7
+[19:15:23] Ep3 B140/360 Loss=-470.0394 MeanBytes=7019.0 Baseline=7671.1
+[19:16:21] Ep3 B160/360 Loss=-54.3394 MeanBytes=7648.5 Baseline=7722.1
+[19:17:18] Ep3 B180/360 Loss=586.6431 MeanBytes=8523.0 Baseline=7692.4
+[19:18:16] Ep3 B200/360 Loss=-1539.4259 MeanBytes=5455.5 Baseline=7606.5
+[19:19:13] Ep3 B220/360 Loss=-2.8570 MeanBytes=7535.0 Baseline=7553.1
+[19:20:11] Ep3 B240/360 Loss=-75.5488 MeanBytes=7395.5 Baseline=7499.3
+[19:21:09] Ep3 B260/360 Loss=39.2805 MeanBytes=7659.5 Baseline=7606.9
+[19:22:06] Ep3 B280/360 Loss=-85.8956 MeanBytes=7433.5 Baseline=7565.6
+[19:23:04] Ep3 B300/360 Loss=803.2714 MeanBytes=8696.0 Baseline=7569.2
+[19:24:02] Ep3 B320/360 Loss=-139.7317 MeanBytes=7340.0 Baseline=7534.1
+[19:24:59] Ep3 B340/360 Loss=1.2467 MeanBytes=7681.5 Baseline=7678.2
+[19:25:52] Ep3 DONE - Loss: 16.6533
+[19:25:57] Ep4 B0/360 Loss=-434.1120 MeanBytes=7108.0 Baseline=7723.4
+[19:26:55] Ep4 B20/360 Loss=-902.2823 MeanBytes=6369.0 Baseline=7634.1
+[19:27:53] Ep4 B40/360 Loss=1195.4271 MeanBytes=9419.5 Baseline=7707.1
+[19:28:50] Ep4 B60/360 Loss=925.2449 MeanBytes=8970.5 Baseline=7650.9
+[19:29:48] Ep4 B80/360 Loss=173.0723 MeanBytes=7848.5 Baseline=7611.0
+[19:30:45] Ep4 B100/360 Loss=169.7170 MeanBytes=7960.5 Baseline=7717.4
+[19:31:43] Ep4 B120/360 Loss=-2062.8049 MeanBytes=4757.0 Baseline=7649.3
+[19:32:41] Ep4 B140/360 Loss=-975.7662 MeanBytes=6237.0 Baseline=7633.4
+[19:33:38] Ep4 B160/360 Loss=-1207.2711 MeanBytes=5928.5 Baseline=7634.8
+[19:34:36] Ep4 B180/360 Loss=-793.7935 MeanBytes=6554.5 Baseline=7687.4
+[19:35:33] Ep4 B200/360 Loss=328.3362 MeanBytes=8188.0 Baseline=7724.4
+[19:36:31] Ep4 B220/360 Loss=33.5522 MeanBytes=7810.0 Baseline=7774.6
+[19:37:28] Ep4 B240/360 Loss=-262.2756 MeanBytes=7450.5 Baseline=7820.3
+[19:38:26] Ep4 B260/360 Loss=-364.2360 MeanBytes=7325.5 Baseline=7870.1
+[19:39:24] Ep4 B280/360 Loss=-1618.8708 MeanBytes=5563.0 Baseline=7866.4
+[19:40:21] Ep4 B300/360 Loss=-229.4053 MeanBytes=7542.0 Baseline=7862.1
+[19:41:19] Ep4 B320/360 Loss=-112.1379 MeanBytes=7752.0 Baseline=7909.9
+[19:42:16] Ep4 B340/360 Loss=-1693.0991 MeanBytes=5521.5 Baseline=7895.0
+[19:43:09] Ep4 DONE - Loss: 4.9735
+[19:43:09] 
+[VALIDATION Ep4 on image 1]
+[19:43:09] [VALIDATION] Cropped from 1848×2040 to 512×512
+[19:43:09] [INFERENCE] Image: 512×512, Edges: 523,264
+[19:43:09] [INFERENCE] Costs Mean=-0.057, Std=0.055, Min=-0.348, Max=0.203
+[19:43:09] [THR-FULL] Evaluating 8 thresholds on FULL 512×512
+[19:43:31] [INFERENCE] GAEC thr=-0.950 merges=260,071 regions=2,073 (t=22.0s)
+[19:43:31] [POST-PROCESS] Starting with 2,073 regions
+[19:43:31] [MERGE] Found 1823 tiny regions (< 256 pixels)
+[19:43:31] [MERGE] Tiny regions contain: 96,600 pixels (36.8% of image)
+[19:43:31] [MERGE] Iter 0: merged 1823 tiny regions -> now 579 regions
+[19:43:31] [MERGE] Found 322 tiny regions (< 256 pixels)
+[19:43:31] [MERGE] Tiny regions contain: 19,105 pixels (7.3% of image)
+[19:43:31] [MERGE] Iter 1: merged 322 tiny regions -> now 329 regions
+[19:43:31] [MERGE] Reached max_iters=2. Final regions: 329
+[19:43:39] [SIZE] thr=-0.950 Total=647,346 (Seg=55,375, Resid=591,953)
+[19:44:00] [INFERENCE] GAEC thr=-0.800 merges=259,552 regions=2,592 (t=22.0s)
+[19:44:00] [POST-PROCESS] Starting with 2,592 regions
+[19:44:00] [MERGE] Found 2349 tiny regions (< 256 pixels)
+[19:44:00] [MERGE] Tiny regions contain: 109,546 pixels (41.8% of image)
+[19:44:01] [MERGE] Iter 0: merged 2349 tiny regions -> now 700 regions
+[19:44:01] [MERGE] Found 441 tiny regions (< 256 pixels)
+[19:44:01] [MERGE] Tiny regions contain: 25,171 pixels (9.6% of image)
+[19:44:01] [MERGE] Iter 1: merged 441 tiny regions -> now 374 regions
+[19:44:01] [MERGE] Reached max_iters=2. Final regions: 374
+[19:44:08] [SIZE] thr=-0.800 Total=646,856 (Seg=54,874, Resid=591,964)
+[19:44:30] [INFERENCE] GAEC thr=-0.650 merges=258,705 regions=3,439 (t=21.9s)
+[19:44:30] [POST-PROCESS] Starting with 3,439 regions
+[19:44:30] [MERGE] Found 3202 tiny regions (< 256 pixels)
+[19:44:30] [MERGE] Tiny regions contain: 125,112 pixels (47.7% of image)
+[19:44:30] [MERGE] Iter 0: merged 3202 tiny regions -> now 915 regions
+[19:44:30] [MERGE] Found 655 tiny regions (< 256 pixels)
+[19:44:30] [MERGE] Tiny regions contain: 35,275 pixels (13.5% of image)
+[19:44:30] [MERGE] Iter 1: merged 655 tiny regions -> now 462 regions
+[19:44:30] [MERGE] Reached max_iters=2. Final regions: 462
+[19:44:38] [SIZE] thr=-0.650 Total=647,586 (Seg=55,591, Resid=591,977)
+[19:44:59] [INFERENCE] GAEC thr=-0.500 merges=257,208 regions=4,936 (t=21.5s)
+[19:44:59] [POST-PROCESS] Starting with 4,936 regions
+[19:44:59] [MERGE] Found 4723 tiny regions (< 256 pixels)
+[19:44:59] [MERGE] Tiny regions contain: 146,394 pixels (55.8% of image)
+[19:44:59] [MERGE] Iter 0: merged 4723 tiny regions -> now 1,264 regions
+[19:44:59] [MERGE] Found 1013 tiny regions (< 256 pixels)
+[19:44:59] [MERGE] Tiny regions contain: 52,293 pixels (19.9% of image)
+[19:44:59] [MERGE] Iter 1: merged 1013 tiny regions -> now 620 regions
+[19:44:59] [MERGE] Reached max_iters=2. Final regions: 620
+[19:45:07] [SIZE] thr=-0.500 Total=650,481 (Seg=58,484, Resid=591,979)
+[19:45:28] [INFERENCE] GAEC thr=-0.350 merges=254,472 regions=7,672 (t=20.8s)
+[19:45:28] [POST-PROCESS] Starting with 7,672 regions
+[19:45:28] [MERGE] Found 7491 tiny regions (< 256 pixels)
+[19:45:28] [MERGE] Tiny regions contain: 171,954 pixels (65.6% of image)
+[19:45:28] [MERGE] Iter 0: merged 7491 tiny regions -> now 1,826 regions
+[19:45:28] [MERGE] Found 1574 tiny regions (< 256 pixels)
+[19:45:28] [MERGE] Tiny regions contain: 75,699 pixels (28.9% of image)
+[19:45:28] [MERGE] Iter 1: merged 1574 tiny regions -> now 899 regions
+[19:45:28] [MERGE] Reached max_iters=2. Final regions: 899
+[19:45:35] [SIZE] thr=-0.350 Total=656,657 (Seg=64,692, Resid=591,947)
+[19:45:54] [INFERENCE] GAEC thr=-0.200 merges=248,042 regions=14,102 (t=19.1s)
+[19:45:54] [POST-PROCESS] Starting with 14,102 regions
+[19:45:54] [MERGE] Found 13974 tiny regions (< 256 pixels)
+[19:45:54] [MERGE] Tiny regions contain: 206,708 pixels (78.9% of image)
+[19:45:54] [MERGE] Iter 0: merged 13974 tiny regions -> now 3,212 regions
+[19:45:54] [MERGE] Found 3005 tiny regions (< 256 pixels)
+[19:45:54] [MERGE] Tiny regions contain: 124,371 pixels (47.4% of image)
+[19:45:54] [MERGE] Iter 1: merged 3005 tiny regions -> now 1,692 regions
+[19:45:54] [MERGE] Reached max_iters=2. Final regions: 1,692
+[19:46:02] [SIZE] thr=-0.200 Total=671,791 (Seg=80,124, Resid=591,649)
+[19:46:10] [INFERENCE] GAEC thr=-0.050 merges=147,377 regions=114,767 (t=8.4s)
+[19:46:10] [POST-PROCESS] Starting with 114,767 regions
+[19:46:10] [MERGE] Found 114750 tiny regions (< 256 pixels)
+[19:46:10] [MERGE] Tiny regions contain: 256,440 pixels (97.8% of image)
+[19:46:11] [MERGE] Iter 0: merged 114750 tiny regions -> now 55,540 regions
+[19:46:11] [MERGE] Found 55495 tiny regions (< 256 pixels)
+[19:46:11] [MERGE] Tiny regions contain: 240,126 pixels (91.6% of image)
+[19:46:11] [MERGE] Iter 1: merged 55495 tiny regions -> now 32,578 regions
+[19:46:11] [MERGE] Reached max_iters=2. Final regions: 32,578
+[19:46:19] [SIZE] thr=-0.050 Total=783,375 (Seg=192,311, Resid=591,046)
+[19:46:21] [INFERENCE] GAEC thr=0.000 merges=53,553 regions=208,591 (t=2.7s)
+[19:46:21] [POST-PROCESS] Starting with 208,591 regions
+[19:46:21] [MERGE] SKIP tiny-merge (regions 208,591 > cap 200,000)
+[19:46:29] [CODEC] MC02_JPEG_LS_STYLE | ctx=108 | g_thr=4 | max_k=10
+[19:46:29] [SIZE BREAKDOWN] Total=646,856 bytes | Seg=54,874 | Residual=591,964 | Overhead=18 | Residual_bpp=18.065
+[19:46:29] [RICE K HIST] R: k=5:127,647, k=4:81,449, k=2:28,388, k=3:20,086
+[19:46:29] [RICE K HIST] G: k=5:125,435, k=4:81,952, k=2:29,683, k=3:20,933
+[19:46:29] [RICE K HIST] B: k=4:113,437, k=5:81,117, k=2:38,788, k=3:25,283
+[19:46:29] [INFERENCE] Best thr=-0.800 -> regions=374, bytes=646,856
+[19:46:29] [INFERENCE] Final result: 374 regions, 646,856 bytes
+[19:46:29] [INFERENCE] Baseline PNG=582,146 bytes | Ratio=1.111 | Gain=-11.1%
+[19:46:29] [VAL] Compressed=646,856 bytes, PNG=582,146 bytes, Ratio=1.111, Gain=-11.1%
+
+[19:46:30] Saved: segmentation_gem_ep4.png
+[19:46:38] Saved: reconstruction_gem_ep4.png
+[19:46:38]  Reconstruction OK: True
+[19:46:38]  Labels match: True
+[19:46:38]  PSNR: Lossless
+[19:46:38]  MAE: 0.000000
+[19:46:38] [BEST] New best ratio: 1.111
+
+[19:46:44] Ep5 B0/360 Loss=633.5167 MeanBytes=8673.5 Baseline=7765.3
+[19:47:41] Ep5 B20/360 Loss=223.6518 MeanBytes=8130.5 Baseline=7808.9
+[19:48:39] Ep5 B40/360 Loss=104.8629 MeanBytes=7849.5 Baseline=7698.6
+[19:49:36] Ep5 B60/360 Loss=656.1764 MeanBytes=8628.5 Baseline=7669.3
+[19:50:33] Ep5 B80/360 Loss=-734.0789 MeanBytes=6556.5 Baseline=7584.4
+[19:51:31] Ep5 B100/360 Loss=-1313.9302 MeanBytes=5830.0 Baseline=7679.2
+[19:52:28] Ep5 B120/360 Loss=162.9512 MeanBytes=7967.5 Baseline=7755.1
+[19:53:26] Ep5 B140/360 Loss=-1629.2732 MeanBytes=5410.0 Baseline=7741.3
+[19:54:23] Ep5 B160/360 Loss=693.1591 MeanBytes=8701.5 Baseline=7723.9
+[19:55:20] Ep5 B180/360 Loss=586.5952 MeanBytes=8547.0 Baseline=7724.2
+[19:56:18] Ep5 B200/360 Loss=1589.9026 MeanBytes=9958.0 Baseline=7700.7
+[19:57:15] Ep5 B220/360 Loss=875.8338 MeanBytes=8935.0 Baseline=7683.9
+[19:58:13] Ep5 B240/360 Loss=-87.1277 MeanBytes=7603.0 Baseline=7732.1
+[19:59:10] Ep5 B260/360 Loss=-1410.5507 MeanBytes=5702.5 Baseline=7697.5
+[20:00:07] Ep5 B280/360 Loss=-325.9788 MeanBytes=7264.5 Baseline=7712.8
+[20:01:04] Ep5 B300/360 Loss=-671.9287 MeanBytes=6695.5 Baseline=7674.6
+[20:02:02] Ep5 B320/360 Loss=-1789.0254 MeanBytes=5080.5 Baseline=7651.9
+[20:02:59] Ep5 B340/360 Loss=-1076.7550 MeanBytes=6047.0 Baseline=7552.8
+[20:03:51] Ep5 DONE - Loss: -34.0986
+[20:03:57] Ep6 B0/360 Loss=256.9116 MeanBytes=7960.5 Baseline=7584.2
+[20:04:55] Ep6 B20/360 Loss=-1332.6565 MeanBytes=5706.5 Baseline=7593.1
+[20:05:52] Ep6 B40/360 Loss=-2296.4280 MeanBytes=4272.0 Baseline=7504.5
+[20:06:50] Ep6 B60/360 Loss=1388.5291 MeanBytes=9498.0 Baseline=7539.3
+[20:07:47] Ep6 B80/360 Loss=2549.6475 MeanBytes=11183.5 Baseline=7594.3
+[20:08:45] Ep6 B100/360 Loss=-1376.0341 MeanBytes=5741.0 Baseline=7664.9
+[20:09:42] Ep6 B120/360 Loss=2062.6797 MeanBytes=10616.0 Baseline=7687.3
+[20:10:40] Ep6 B140/360 Loss=1655.2205 MeanBytes=10073.5 Baseline=7727.7
+[20:11:37] Ep6 B160/360 Loss=1421.5326 MeanBytes=9604.0 Baseline=7591.2
+[20:12:35] Ep6 B180/360 Loss=666.7470 MeanBytes=8677.0 Baseline=7715.2
+[20:13:32] Ep6 B200/360 Loss=-792.1287 MeanBytes=6614.0 Baseline=7694.4
+[20:14:30] Ep6 B220/360 Loss=1813.5883 MeanBytes=10163.0 Baseline=7620.7
+[20:15:28] Ep6 B240/360 Loss=-558.7258 MeanBytes=6879.0 Baseline=7686.7
+[20:16:25] Ep6 B260/360 Loss=-1760.0022 MeanBytes=5124.0 Baseline=7611.8
+[20:17:22] Ep6 B280/360 Loss=-911.8495 MeanBytes=6361.0 Baseline=7658.4
+[20:18:20] Ep6 B300/360 Loss=-1240.8688 MeanBytes=5886.5 Baseline=7655.8
+[20:19:17] Ep6 B320/360 Loss=597.2958 MeanBytes=8520.0 Baseline=7678.9
+[20:20:15] Ep6 B340/360 Loss=753.3737 MeanBytes=8800.0 Baseline=7726.3
+[20:21:07] Ep6 DONE - Loss: 24.9549
+[20:21:13] Ep7 B0/360 Loss=624.3870 MeanBytes=8593.0 Baseline=7714.3
+[20:22:10] Ep7 B20/360 Loss=595.5173 MeanBytes=8469.5 Baseline=7625.9
+[20:23:08] Ep7 B40/360 Loss=1293.1926 MeanBytes=9372.5 Baseline=7572.9
+[20:24:06] Ep7 B60/360 Loss=-474.0223 MeanBytes=7017.5 Baseline=7679.9
+[20:25:03] Ep7 B80/360 Loss=1148.7789 MeanBytes=9314.0 Baseline=7697.7
+[20:26:01] Ep7 B100/360 Loss=1377.4727 MeanBytes=9552.0 Baseline=7639.2
+[20:26:58] Ep7 B120/360 Loss=-738.4539 MeanBytes=6515.0 Baseline=7568.2
+[20:27:56] Ep7 B140/360 Loss=-491.9243 MeanBytes=6901.0 Baseline=7592.7
+[20:28:53] Ep7 B160/360 Loss=-822.1072 MeanBytes=6419.5 Baseline=7563.7
+[20:29:51] Ep7 B180/360 Loss=-1513.6967 MeanBytes=5464.0 Baseline=7598.5
+[20:30:49] Ep7 B200/360 Loss=243.6584 MeanBytes=7943.5 Baseline=7601.3
+[20:31:46] Ep7 B220/360 Loss=-1117.3301 MeanBytes=6040.5 Baseline=7606.0
+[20:32:44] Ep7 B240/360 Loss=1475.9524 MeanBytes=9809.0 Baseline=7752.1
+[20:33:41] Ep7 B260/360 Loss=-362.9738 MeanBytes=7143.0 Baseline=7656.7
+[20:34:39] Ep7 B280/360 Loss=1033.5129 MeanBytes=9120.5 Baseline=7683.8
+[20:35:36] Ep7 B300/360 Loss=2125.3132 MeanBytes=10648.5 Baseline=7638.8
+[20:36:34] Ep7 B320/360 Loss=-1310.5396 MeanBytes=5724.0 Baseline=7583.7
+[20:37:31] Ep7 B340/360 Loss=-1594.7190 MeanBytes=5268.5 Baseline=7539.8
+[20:38:23] Ep7 DONE - Loss: -15.0879
+[20:38:29] Ep8 B0/360 Loss=-712.5729 MeanBytes=6623.5 Baseline=7617.1
+[20:39:27] Ep8 B20/360 Loss=1315.3088 MeanBytes=9531.0 Baseline=7676.5
+[20:40:24] Ep8 B40/360 Loss=914.1509 MeanBytes=8896.0 Baseline=7613.6
+[20:41:22] Ep8 B60/360 Loss=-513.0189 MeanBytes=6943.0 Baseline=7675.6
+[20:42:20] Ep8 B80/360 Loss=2423.8188 MeanBytes=11166.0 Baseline=7742.2
+[20:43:17] Ep8 B100/360 Loss=-2037.1207 MeanBytes=4845.0 Baseline=7706.3
+[20:44:15] Ep8 B120/360 Loss=-1466.6323 MeanBytes=5634.5 Baseline=7700.7
+[20:45:12] Ep8 B140/360 Loss=-1426.4995 MeanBytes=5659.5 Baseline=7635.4
+[20:46:10] Ep8 B160/360 Loss=-1843.1046 MeanBytes=5023.5 Baseline=7594.3
+[20:47:07] Ep8 B180/360 Loss=-657.4713 MeanBytes=6723.0 Baseline=7637.2
+[20:48:05] Ep8 B200/360 Loss=541.2479 MeanBytes=8495.5 Baseline=7729.9
+[20:49:03] Ep8 B220/360 Loss=29.1367 MeanBytes=7735.0 Baseline=7740.0
+[20:50:00] Ep8 B240/360 Loss=-1584.8955 MeanBytes=5421.0 Baseline=7665.9
+[20:50:58] Ep8 B260/360 Loss=-26.5473 MeanBytes=7562.5 Baseline=7598.4
+[20:51:55] Ep8 B280/360 Loss=-1678.9169 MeanBytes=5133.0 Baseline=7535.1
+[20:52:53] Ep8 B300/360 Loss=2062.3320 MeanBytes=10528.5 Baseline=7625.5
+[20:53:50] Ep8 B320/360 Loss=-297.3435 MeanBytes=7277.0 Baseline=7686.3
+[20:54:48] Ep8 B340/360 Loss=-546.2795 MeanBytes=6797.0 Baseline=7577.2
+[20:55:40] Ep8 DONE - Loss: -4.3707
+[20:55:46] Ep9 B0/360 Loss=1574.0778 MeanBytes=9826.5 Baseline=7625.7
+[20:56:43] Ep9 B20/360 Loss=262.8985 MeanBytes=8038.0 Baseline=7643.5
+[20:57:41] Ep9 B40/360 Loss=1811.9475 MeanBytes=10204.5 Baseline=7597.1
+[20:58:38] Ep9 B60/360 Loss=2175.7236 MeanBytes=10830.5 Baseline=7754.8
+[20:59:36] Ep9 B80/360 Loss=-637.2285 MeanBytes=6840.5 Baseline=7739.2
+[21:00:33] Ep9 B100/360 Loss=-1097.3059 MeanBytes=6198.5 Baseline=7751.5
+[21:01:31] Ep9 B120/360 Loss=-249.2240 MeanBytes=7465.0 Baseline=7815.4
+[21:02:29] Ep9 B140/360 Loss=-593.7128 MeanBytes=6949.5 Baseline=7800.2
+[21:03:26] Ep9 B160/360 Loss=-4.0782 MeanBytes=7806.5 Baseline=7802.8
+[21:04:24] Ep9 B180/360 Loss=-577.0450 MeanBytes=6931.0 Baseline=7746.0
+[21:05:21] Ep9 B200/360 Loss=66.0481 MeanBytes=7770.0 Baseline=7677.6
+[21:06:19] Ep9 B220/360 Loss=5.5635 MeanBytes=7652.0 Baseline=7650.3
+[21:07:17] Ep9 B240/360 Loss=750.0377 MeanBytes=8755.0 Baseline=7707.5
+[21:08:14] Ep9 B260/360 Loss=1240.2053 MeanBytes=9461.0 Baseline=7726.9
+[21:09:12] Ep9 B280/360 Loss=1589.8936 MeanBytes=10010.0 Baseline=7790.5
+[21:10:09] Ep9 B300/360 Loss=351.5974 MeanBytes=8206.5 Baseline=7714.3
+[21:11:07] Ep9 B320/360 Loss=394.7785 MeanBytes=8160.5 Baseline=7607.8
+[21:12:04] Ep9 B340/360 Loss=52.0853 MeanBytes=7751.0 Baseline=7684.7
+[21:12:56] Ep9 DONE - Loss: 8.0773
+[21:12:56] 
+[VALIDATION Ep9 on image 0]
+[21:12:57] [VALIDATION] Cropped from 1404×2040 to 512×512
+[21:12:57] [INFERENCE] Image: 512×512, Edges: 523,264
+[21:12:57] [INFERENCE] Costs Mean=-0.129, Std=0.072, Min=-0.337, Max=0.116
+[21:12:57] [THR-FULL] Evaluating 8 thresholds on FULL 512×512
+[21:13:17] [INFERENCE] GAEC thr=-0.950 merges=257,502 regions=4,642 (t=20.3s)
+[21:13:17] [POST-PROCESS] Starting with 4,642 regions
+[21:13:17] [MERGE] Found 4432 tiny regions (< 256 pixels)
+[21:13:17] [MERGE] Tiny regions contain: 151,798 pixels (57.9% of image)
+[21:13:17] [MERGE] Iter 0: merged 4432 tiny regions -> now 1,212 regions
+[21:13:17] [MERGE] Found 948 tiny regions (< 256 pixels)
+[21:13:17] [MERGE] Tiny regions contain: 51,212 pixels (19.5% of image)
+[21:13:17] [MERGE] Iter 1: merged 948 tiny regions -> now 597 regions
+[21:13:17] [MERGE] Reached max_iters=2. Final regions: 597
+[21:13:24] [SIZE] thr=-0.950 Total=558,019 (Seg=59,296, Resid=498,705)
+[21:13:44] [INFERENCE] GAEC thr=-0.800 merges=256,474 regions=5,670 (t=19.9s)
+[21:13:44] [POST-PROCESS] Starting with 5,670 regions
+[21:13:44] [MERGE] Found 5470 tiny regions (< 256 pixels)
+[21:13:44] [MERGE] Tiny regions contain: 164,773 pixels (62.9% of image)
+[21:13:44] [MERGE] Iter 0: merged 5470 tiny regions -> now 1,446 regions
+[21:13:44] [MERGE] Found 1176 tiny regions (< 256 pixels)
+[21:13:44] [MERGE] Tiny regions contain: 63,312 pixels (24.2% of image)
+[21:13:44] [MERGE] Iter 1: merged 1176 tiny regions -> now 713 regions
+[21:13:44] [MERGE] Reached max_iters=2. Final regions: 713
+[21:13:51] [SIZE] thr=-0.800 Total=561,437 (Seg=62,718, Resid=498,701)
+[21:14:11] [INFERENCE] GAEC thr=-0.650 merges=254,896 regions=7,248 (t=19.5s)
+[21:14:11] [POST-PROCESS] Starting with 7,248 regions
+[21:14:11] [MERGE] Found 7075 tiny regions (< 256 pixels)
+[21:14:11] [MERGE] Tiny regions contain: 182,169 pixels (69.5% of image)
+[21:14:11] [MERGE] Iter 0: merged 7075 tiny regions -> now 1,802 regions
+[21:14:11] [MERGE] Found 1553 tiny regions (< 256 pixels)
+[21:14:11] [MERGE] Tiny regions contain: 83,394 pixels (31.8% of image)
+[21:14:11] [MERGE] Iter 1: merged 1553 tiny regions -> now 884 regions
+[21:14:11] [MERGE] Reached max_iters=2. Final regions: 884
+[21:14:18] [SIZE] thr=-0.650 Total=565,466 (Seg=66,812, Resid=498,636)
+[21:14:37] [INFERENCE] GAEC thr=-0.500 merges=252,772 regions=9,372 (t=19.1s)
+[21:14:37] [POST-PROCESS] Starting with 9,372 regions
+[21:14:37] [MERGE] Found 9236 tiny regions (< 256 pixels)
+[21:14:37] [MERGE] Tiny regions contain: 201,131 pixels (76.7% of image)
+[21:14:37] [MERGE] Iter 0: merged 9236 tiny regions -> now 2,294 regions
+[21:14:37] [MERGE] Found 2053 tiny regions (< 256 pixels)
+[21:14:37] [MERGE] Tiny regions contain: 106,797 pixels (40.7% of image)
+[21:14:37] [MERGE] Iter 1: merged 2053 tiny regions -> now 1,178 regions
+[21:14:37] [MERGE] Reached max_iters=2. Final regions: 1,178
+[21:14:44] [SIZE] thr=-0.500 Total=573,702 (Seg=75,057, Resid=498,627)
+[21:15:02] [INFERENCE] GAEC thr=-0.350 merges=249,517 regions=12,627 (t=17.7s)
+[21:15:02] [POST-PROCESS] Starting with 12,627 regions
+[21:15:02] [MERGE] Found 12515 tiny regions (< 256 pixels)
+[21:15:02] [MERGE] Tiny regions contain: 216,761 pixels (82.7% of image)
+[21:15:02] [MERGE] Iter 0: merged 12515 tiny regions -> now 3,028 regions
+[21:15:02] [MERGE] Found 2818 tiny regions (< 256 pixels)
+[21:15:02] [MERGE] Tiny regions contain: 136,421 pixels (52.0% of image)
+[21:15:03] [MERGE] Iter 1: merged 2818 tiny regions -> now 1,618 regions
+[21:15:03] [MERGE] Reached max_iters=2. Final regions: 1,618
+[21:15:10] [SIZE] thr=-0.350 Total=583,149 (Seg=84,492, Resid=498,639)
+[21:15:23] [INFERENCE] GAEC thr=-0.200 merges=208,332 regions=53,812 (t=13.4s)
+[21:15:23] [POST-PROCESS] Starting with 53,812 regions
+[21:15:23] [MERGE] Found 53753 tiny regions (< 256 pixels)
+[21:15:23] [MERGE] Tiny regions contain: 240,211 pixels (91.6% of image)
+[21:15:23] [MERGE] Iter 0: merged 53753 tiny regions -> now 26,076 regions
+[21:15:23] [MERGE] Found 25955 tiny regions (< 256 pixels)
+[21:15:23] [MERGE] Tiny regions contain: 192,694 pixels (73.5% of image)
+[21:15:23] [MERGE] Iter 1: merged 25955 tiny regions -> now 14,528 regions
+[21:15:23] [MERGE] Reached max_iters=2. Final regions: 14,528
+[21:15:31] [SIZE] thr=-0.200 Total=630,560 (Seg=132,026, Resid=498,516)
+[21:15:34] [INFERENCE] GAEC thr=-0.050 merges=48,946 regions=213,198 (t=3.3s)
+[21:15:34] [POST-PROCESS] Starting with 213,198 regions
+[21:15:34] [MERGE] SKIP tiny-merge (regions 213,198 > cap 200,000)
+[21:15:36] [INFERENCE] GAEC thr=0.000 merges=11,944 regions=250,200 (t=1.6s)
+[21:15:36] [POST-PROCESS] Starting with 250,200 regions
+[21:15:36] [MERGE] SKIP tiny-merge (regions 250,200 > cap 200,000)
+[21:15:43] [CODEC] MC02_JPEG_LS_STYLE | ctx=108 | g_thr=4 | max_k=10
+[21:15:43] [SIZE BREAKDOWN] Total=558,019 bytes | Seg=59,296 | Residual=498,705 | Overhead=18 | Residual_bpp=15.219
+[21:15:43] [RICE K HIST] R: k=3:230,752, k=2:18,278, k=4:11,856, k=1:1,193
+[21:15:43] [RICE K HIST] G: k=3:227,632, k=2:32,745, k=1:1,261, k=4:442
+[21:15:43] [RICE K HIST] B: k=3:182,292, k=4:70,740, k=2:8,086, k=1:967
+[21:15:43] [INFERENCE] Best thr=-0.950 -> regions=597, bytes=558,019
+[21:15:43] [INFERENCE] Final result: 597 regions, 558,019 bytes
+[21:15:43] [INFERENCE] Baseline PNG=513,578 bytes | Ratio=1.087 | Gain=-8.7%
+[21:15:43] [VAL] Compressed=558,019 bytes, PNG=513,578 bytes, Ratio=1.087, Gain=-8.7%
+
+[21:15:44] Saved: segmentation_gem_ep9.png
+[21:15:51] Saved: reconstruction_gem_ep9.png
+[21:15:51]  Reconstruction OK: True
+[21:15:51]  Labels match: True
+[21:15:51]  PSNR: Lossless
+[21:15:51]  MAE: 0.000000
+[21:15:51] [BEST] New best ratio: 1.087
+
+[21:15:57] Ep10 B0/360 Loss=971.4979 MeanBytes=9046.5 Baseline=7654.2
+[21:16:55] Ep10 B20/360 Loss=3405.5366 MeanBytes=12638.5 Baseline=7801.6
+[21:17:53] Ep10 B40/360 Loss=1154.7592 MeanBytes=9515.5 Baseline=7887.9
+[21:18:51] Ep10 B60/360 Loss=146.5060 MeanBytes=8167.0 Baseline=7958.9
+[21:19:49] Ep10 B80/360 Loss=-2755.6191 MeanBytes=3917.5 Baseline=7813.6
+[21:20:46] Ep10 B100/360 Loss=-248.8560 MeanBytes=7346.5 Baseline=7704.7
+[21:21:44] Ep10 B120/360 Loss=-635.2978 MeanBytes=6759.5 Baseline=7667.8
+[21:22:42] Ep10 B140/360 Loss=-267.5950 MeanBytes=7300.0 Baseline=7688.9
+[21:23:39] Ep10 B160/360 Loss=-1532.8010 MeanBytes=5422.5 Baseline=7570.1
+[21:24:37] Ep10 B180/360 Loss=207.9241 MeanBytes=7931.0 Baseline=7620.2
+[21:25:35] Ep10 B200/360 Loss=-1447.6641 MeanBytes=5555.0 Baseline=7591.7
+[21:26:32] Ep10 B220/360 Loss=629.7953 MeanBytes=8404.0 Baseline=7538.4
+[21:27:30] Ep10 B240/360 Loss=792.0927 MeanBytes=8759.0 Baseline=7644.7
+[21:28:27] Ep10 B260/360 Loss=-2461.5046 MeanBytes=4152.0 Baseline=7627.9
+[21:29:25] Ep10 B280/360 Loss=-104.2849 MeanBytes=7583.0 Baseline=7727.1
+[21:30:22] Ep10 B300/360 Loss=1160.0214 MeanBytes=9303.0 Baseline=7682.6
+[21:31:19] Ep10 B320/360 Loss=229.7346 MeanBytes=8036.0 Baseline=7693.0
+[21:32:17] Ep10 B340/360 Loss=2020.6831 MeanBytes=10658.5 Baseline=7801.3
+[21:33:09] Ep10 DONE - Loss: 47.9456
+[21:33:15] Ep11 B0/360 Loss=-73.6649 MeanBytes=7767.5 Baseline=7881.1
+[21:34:13] Ep11 B20/360 Loss=-1683.3552 MeanBytes=5518.0 Baseline=7910.3
+[21:35:10] Ep11 B40/360 Loss=-671.1964 MeanBytes=6816.0 Baseline=7737.8
+[21:36:08] Ep11 B60/360 Loss=329.0161 MeanBytes=8198.0 Baseline=7732.2
+[21:37:05] Ep11 B80/360 Loss=-826.0912 MeanBytes=6512.5 Baseline=7666.8
+[21:38:02] Ep11 B100/360 Loss=454.0332 MeanBytes=8295.0 Baseline=7647.4
+[21:38:59] Ep11 B120/360 Loss=-886.2659 MeanBytes=6282.0 Baseline=7518.8
+[21:39:57] Ep11 B140/360 Loss=-826.3644 MeanBytes=6369.0 Baseline=7541.8
+[21:40:54] Ep11 B160/360 Loss=1132.1572 MeanBytes=9219.0 Baseline=7631.3
+[21:41:52] Ep11 B180/360 Loss=-546.9878 MeanBytes=6893.0 Baseline=7647.0
+[21:42:49] Ep11 B200/360 Loss=-860.5874 MeanBytes=6388.5 Baseline=7594.6
+[21:43:47] Ep11 B220/360 Loss=1901.6768 MeanBytes=10366.5 Baseline=7640.4
+[21:44:44] Ep11 B240/360 Loss=673.9276 MeanBytes=8550.0 Baseline=7592.7
+[21:45:42] Ep11 B260/360 Loss=41.0466 MeanBytes=7734.0 Baseline=7631.3
+[21:46:39] Ep11 B280/360 Loss=-1614.1423 MeanBytes=5367.0 Baseline=7627.4
+[21:47:36] Ep11 B300/360 Loss=-52.0091 MeanBytes=7441.0 Baseline=7518.1
+[21:48:34] Ep11 B320/360 Loss=-1117.5901 MeanBytes=6044.0 Baseline=7599.3
+[21:49:31] Ep11 B340/360 Loss=-1051.3408 MeanBytes=6132.0 Baseline=7591.7
+[21:50:23] Ep11 DONE - Loss: -26.4532
+[21:50:29] Ep12 B0/360 Loss=-1485.6179 MeanBytes=5600.0 Baseline=7723.3
+[21:51:26] Ep12 B20/360 Loss=-213.7046 MeanBytes=7249.0 Baseline=7569.0
+[21:52:23] Ep12 B40/360 Loss=-982.4232 MeanBytes=6156.5 Baseline=7547.9
+[21:53:21] Ep12 B60/360 Loss=816.0396 MeanBytes=8777.5 Baseline=7634.1
+[21:54:18] Ep12 B80/360 Loss=-2040.4926 MeanBytes=4685.5 Baseline=7558.1
+[21:55:16] Ep12 B100/360 Loss=214.6377 MeanBytes=7754.0 Baseline=7459.1
+[21:56:13] Ep12 B120/360 Loss=949.1819 MeanBytes=8821.5 Baseline=7526.9
+[21:57:11] Ep12 B140/360 Loss=-199.1479 MeanBytes=7298.5 Baseline=7574.5
+[21:58:08] Ep12 B160/360 Loss=1254.4250 MeanBytes=9361.5 Baseline=7604.8
+[21:59:06] Ep12 B180/360 Loss=539.9205 MeanBytes=8440.5 Baseline=7685.9
+[22:00:03] Ep12 B200/360 Loss=268.0780 MeanBytes=8080.0 Baseline=7698.3
+[22:01:01] Ep12 B220/360 Loss=685.8509 MeanBytes=8627.0 Baseline=7655.9
+[22:01:59] Ep12 B240/360 Loss=309.4512 MeanBytes=8129.5 Baseline=7675.5
+[22:02:56] Ep12 B260/360 Loss=-594.5903 MeanBytes=6763.0 Baseline=7617.8
+[22:03:54] Ep12 B280/360 Loss=1824.7960 MeanBytes=10270.5 Baseline=7705.2
+[22:04:51] Ep12 B300/360 Loss=552.1288 MeanBytes=8575.0 Baseline=7781.5
+[22:05:49] Ep12 B320/360 Loss=1104.7531 MeanBytes=9259.0 Baseline=7685.7
+[22:06:46] Ep12 B340/360 Loss=435.4456 MeanBytes=8231.5 Baseline=7626.5
+[22:07:38] Ep12 DONE - Loss: -30.9455
+[22:07:44] Ep13 B0/360 Loss=-324.2225 MeanBytes=7106.0 Baseline=7582.5
+[22:08:41] Ep13 B20/360 Loss=-361.3835 MeanBytes=7202.0 Baseline=7699.5
+[22:09:39] Ep13 B40/360 Loss=1262.8677 MeanBytes=9337.5 Baseline=7569.7
+[22:10:36] Ep13 B60/360 Loss=-1264.7843 MeanBytes=5717.5 Baseline=7514.7
+[22:11:34] Ep13 B80/360 Loss=1212.6985 MeanBytes=9397.5 Baseline=7712.8
+[22:12:31] Ep13 B100/360 Loss=943.7653 MeanBytes=9096.5 Baseline=7764.3
+[22:13:28] Ep13 B120/360 Loss=1430.9525 MeanBytes=9918.5 Baseline=7890.1
+[22:14:26] Ep13 B140/360 Loss=1022.7985 MeanBytes=9310.0 Baseline=7868.7
+[22:15:23] Ep13 B160/360 Loss=68.1994 MeanBytes=7907.5 Baseline=7822.9
+[22:16:21] Ep13 B180/360 Loss=677.5897 MeanBytes=8760.5 Baseline=7815.2
+[22:17:18] Ep13 B200/360 Loss=-352.2933 MeanBytes=7220.0 Baseline=7722.9
+[22:18:15] Ep13 B220/360 Loss=1314.2177 MeanBytes=9617.0 Baseline=7766.6
+[22:19:13] Ep13 B240/360 Loss=-1305.4313 MeanBytes=5950.5 Baseline=7820.9
+[22:20:10] Ep13 B260/360 Loss=-1697.0830 MeanBytes=5365.5 Baseline=7760.5
+[22:21:08] Ep13 B280/360 Loss=3153.3640 MeanBytes=12202.5 Baseline=7720.4
+[22:22:05] Ep13 B300/360 Loss=2170.2769 MeanBytes=10767.0 Baseline=7718.6
+[22:23:02] Ep13 B320/360 Loss=1124.5208 MeanBytes=9300.5 Baseline=7708.1
+[22:24:00] Ep13 B340/360 Loss=-474.1566 MeanBytes=7004.0 Baseline=7685.3
+[22:24:52] Ep13 DONE - Loss: 29.0726
+[22:24:58] Ep14 B0/360 Loss=1447.6383 MeanBytes=9827.0 Baseline=7761.4
+[22:25:55] Ep14 B20/360 Loss=2460.2688 MeanBytes=11186.5 Baseline=7707.5
+[22:26:53] Ep14 B40/360 Loss=36.7156 MeanBytes=7664.0 Baseline=7595.8
+[22:27:50] Ep14 B60/360 Loss=956.8507 MeanBytes=9013.5 Baseline=7660.3
+[22:28:47] Ep14 B80/360 Loss=750.3337 MeanBytes=8767.5 Baseline=7744.4
+[22:29:45] Ep14 B100/360 Loss=-2232.8462 MeanBytes=4625.5 Baseline=7766.6
+[22:30:42] Ep14 B120/360 Loss=801.8732 MeanBytes=8782.5 Baseline=7682.8
+[22:31:39] Ep14 B140/360 Loss=-653.4942 MeanBytes=6729.5 Baseline=7657.2
+[22:32:37] Ep14 B160/360 Loss=-652.5497 MeanBytes=6677.0 Baseline=7583.2
+[22:33:35] Ep14 B180/360 Loss=-203.8209 MeanBytes=7429.0 Baseline=7704.3
+[22:34:32] Ep14 B200/360 Loss=-207.3258 MeanBytes=7360.5 Baseline=7666.5
+[22:35:30] Ep14 B220/360 Loss=-186.0182 MeanBytes=7408.5 Baseline=7654.3
+[22:36:27] Ep14 B240/360 Loss=-101.7916 MeanBytes=7501.5 Baseline=7648.2
+[22:37:24] Ep14 B260/360 Loss=-42.1274 MeanBytes=7638.5 Baseline=7684.1
+[22:38:22] Ep14 B280/360 Loss=-228.9014 MeanBytes=7430.5 Baseline=7737.5
+[22:39:19] Ep14 B300/360 Loss=-1498.0273 MeanBytes=5409.0 Baseline=7528.9
+[22:40:16] Ep14 B320/360 Loss=400.6448 MeanBytes=8063.0 Baseline=7507.3
+[22:41:14] Ep14 B340/360 Loss=262.8972 MeanBytes=7941.5 Baseline=7569.2
+[22:42:06] Ep14 DONE - Loss: -49.3018
+[22:42:06] 
+[VALIDATION Ep14 on image 2]
+[22:42:06] [VALIDATION] Cropped from 1356×2040 to 512×512
+[22:42:06] [INFERENCE] Image: 512×512, Edges: 523,264
+[22:42:06] [INFERENCE] Costs Mean=-0.113, Std=0.046, Min=-0.363, Max=0.137
+[22:42:06] [THR-FULL] Evaluating 8 thresholds on FULL 512×512
+[22:42:27] [INFERENCE] GAEC thr=-0.950 merges=258,331 regions=3,813 (t=21.4s)
+[22:42:27] [POST-PROCESS] Starting with 3,813 regions
+[22:42:27] [MERGE] Found 3575 tiny regions (< 256 pixels)
+[22:42:27] [MERGE] Tiny regions contain: 147,248 pixels (56.2% of image)
+[22:42:27] [MERGE] Iter 0: merged 3575 tiny regions -> now 1,011 regions
+[22:42:27] [MERGE] Found 743 tiny regions (< 256 pixels)
+[22:42:27] [MERGE] Tiny regions contain: 48,889 pixels (18.6% of image)
+[22:42:28] [MERGE] Iter 1: merged 743 tiny regions -> now 512 regions
+[22:42:28] [MERGE] Reached max_iters=2. Final regions: 512
+[22:42:34] [SIZE] thr=-0.950 Total=514,845 (Seg=55,752, Resid=459,075)
+[22:42:55] [INFERENCE] GAEC thr=-0.800 merges=257,383 regions=4,761 (t=21.0s)
+[22:42:55] [POST-PROCESS] Starting with 4,761 regions
+[22:42:55] [MERGE] Found 4554 tiny regions (< 256 pixels)
+[22:42:55] [MERGE] Tiny regions contain: 164,571 pixels (62.8% of image)
+[22:42:55] [MERGE] Iter 0: merged 4554 tiny regions -> now 1,228 regions
+[22:42:55] [MERGE] Found 966 tiny regions (< 256 pixels)
+[22:42:55] [MERGE] Tiny regions contain: 57,939 pixels (22.1% of image)
+[22:42:56] [MERGE] Iter 1: merged 966 tiny regions -> now 606 regions
+[22:42:56] [MERGE] Reached max_iters=2. Final regions: 606
+[22:43:02] [SIZE] thr=-0.800 Total=515,958 (Seg=56,881, Resid=459,059)
+[22:43:23] [INFERENCE] GAEC thr=-0.650 merges=255,905 regions=6,239 (t=20.6s)
+[22:43:23] [POST-PROCESS] Starting with 6,239 regions
+[22:43:23] [MERGE] Found 6068 tiny regions (< 256 pixels)
+[22:43:23] [MERGE] Tiny regions contain: 185,502 pixels (70.8% of image)
+[22:43:23] [MERGE] Iter 0: merged 6068 tiny regions -> now 1,614 regions
+[22:43:23] [MERGE] Found 1355 tiny regions (< 256 pixels)
+[22:43:23] [MERGE] Tiny regions contain: 76,318 pixels (29.1% of image)
+[22:43:23] [MERGE] Iter 1: merged 1355 tiny regions -> now 780 regions
+[22:43:23] [MERGE] Reached max_iters=2. Final regions: 780
+[22:43:30] [SIZE] thr=-0.650 Total=519,793 (Seg=60,726, Resid=459,049)
+[22:43:50] [INFERENCE] GAEC thr=-0.500 merges=253,609 regions=8,535 (t=20.0s)
+[22:43:50] [POST-PROCESS] Starting with 8,535 regions
+[22:43:50] [MERGE] Found 8414 tiny regions (< 256 pixels)
+[22:43:50] [MERGE] Tiny regions contain: 213,140 pixels (81.3% of image)
+[22:43:50] [MERGE] Iter 0: merged 8414 tiny regions -> now 2,177 regions
+[22:43:50] [MERGE] Found 1919 tiny regions (< 256 pixels)
+[22:43:50] [MERGE] Tiny regions contain: 106,748 pixels (40.7% of image)
+[22:43:50] [MERGE] Iter 1: merged 1919 tiny regions -> now 1,110 regions
+[22:43:50] [MERGE] Reached max_iters=2. Final regions: 1,110
+[22:43:57] [SIZE] thr=-0.500 Total=530,151 (Seg=71,112, Resid=459,021)
+[22:44:16] [INFERENCE] GAEC thr=-0.350 merges=249,579 regions=12,565 (t=18.8s)
+[22:44:16] [POST-PROCESS] Starting with 12,565 regions
+[22:44:16] [MERGE] Found 12496 tiny regions (< 256 pixels)
+[22:44:16] [MERGE] Tiny regions contain: 235,840 pixels (90.0% of image)
+[22:44:16] [MERGE] Iter 0: merged 12496 tiny regions -> now 3,159 regions
+[22:44:16] [MERGE] Found 2942 tiny regions (< 256 pixels)
+[22:44:16] [MERGE] Tiny regions contain: 151,999 pixels (58.0% of image)
+[22:44:16] [MERGE] Iter 1: merged 2942 tiny regions -> now 1,687 regions
+[22:44:16] [MERGE] Reached max_iters=2. Final regions: 1,687
+[22:44:23] [SIZE] thr=-0.350 Total=544,387 (Seg=85,317, Resid=459,052)
+[22:44:39] [INFERENCE] GAEC thr=-0.200 merges=236,352 regions=25,792 (t=15.5s)
+[22:44:39] [POST-PROCESS] Starting with 25,792 regions
+[22:44:39] [MERGE] Found 25770 tiny regions (< 256 pixels)
+[22:44:39] [MERGE] Tiny regions contain: 254,148 pixels (96.9% of image)
+[22:44:39] [MERGE] Iter 0: merged 25770 tiny regions -> now 7,107 regions
+[22:44:39] [MERGE] Found 6996 tiny regions (< 256 pixels)
+[22:44:39] [MERGE] Tiny regions contain: 214,778 pixels (81.9% of image)
+[22:44:39] [MERGE] Iter 1: merged 6996 tiny regions -> now 4,043 regions
+[22:44:39] [MERGE] Reached max_iters=2. Final regions: 4,043
+[22:44:46] [SIZE] thr=-0.200 Total=572,586 (Seg=113,541, Resid=459,027)
+[22:44:48] [INFERENCE] GAEC thr=-0.050 merges=21,670 regions=240,474 (t=1.9s)
+[22:44:48] [POST-PROCESS] Starting with 240,474 regions
+[22:44:48] [MERGE] SKIP tiny-merge (regions 240,474 > cap 200,000)
+[22:44:49] [INFERENCE] GAEC thr=0.000 merges=2,899 regions=259,245 (t=1.4s)
+[22:44:49] [POST-PROCESS] Starting with 259,245 regions
+[22:44:49] [MERGE] SKIP tiny-merge (regions 259,245 > cap 200,000)
+[22:44:56] [CODEC] MC02_JPEG_LS_STYLE | ctx=108 | g_thr=4 | max_k=10
+[22:44:56] [SIZE BREAKDOWN] Total=514,845 bytes | Seg=55,752 | Residual=459,075 | Overhead=18 | Residual_bpp=14.010
+[22:44:56] [RICE K HIST] R: k=1:98,493, k=4:91,390, k=3:51,087, k=2:21,024
+[22:44:56] [RICE K HIST] G: k=4:115,205, k=1:95,936, k=3:37,467, k=2:12,148
+[22:44:56] [RICE K HIST] B: k=1:103,638, k=4:90,841, k=3:39,335, k=5:17,769
+[22:44:56] [INFERENCE] Best thr=-0.950 -> regions=512, bytes=514,845
+[22:44:56] [INFERENCE] Final result: 512 regions, 514,845 bytes
+[22:44:56] [INFERENCE] Baseline PNG=455,820 bytes | Ratio=1.129 | Gain=-12.9%
+[22:44:56] [VAL] Compressed=514,845 bytes, PNG=455,820 bytes, Ratio=1.129, Gain=-12.9%
+
+[22:44:57] Saved: segmentation_gem_ep14.png
+[22:45:04] Saved: reconstruction_gem_ep14.png
+[22:45:04]  Reconstruction OK: True
+[22:45:04]  Labels match: True
+[22:45:04]  PSNR: Lossless
+[22:45:04]  MAE: 0.000000
+[22:45:10] Ep15 B0/360 Loss=66.0157 MeanBytes=7576.5 Baseline=7490.6
+[22:46:08] Ep15 B20/360 Loss=1068.2247 MeanBytes=9003.0 Baseline=7492.7
+[22:47:05] Ep15 B40/360 Loss=1281.4954 MeanBytes=9262.5 Baseline=7483.2
+[22:48:03] Ep15 B60/360 Loss=1445.2482 MeanBytes=9500.5 Baseline=7483.2
+[22:49:00] Ep15 B80/360 Loss=-360.6053 MeanBytes=6997.0 Baseline=7502.5
+[22:49:58] Ep15 B100/360 Loss=-408.6617 MeanBytes=6905.5 Baseline=7476.5
+[22:50:55] Ep15 B120/360 Loss=-636.6318 MeanBytes=6550.0 Baseline=7414.8
+[22:51:53] Ep15 B140/360 Loss=822.1992 MeanBytes=8609.5 Baseline=7460.0
+[22:52:50] Ep15 B160/360 Loss=175.0276 MeanBytes=7750.5 Baseline=7502.2
+[22:53:48] Ep15 B180/360 Loss=-222.0991 MeanBytes=7274.5 Baseline=7578.3
+[22:54:45] Ep15 B200/360 Loss=140.5586 MeanBytes=7612.0 Baseline=7416.2
+[22:55:43] Ep15 B220/360 Loss=791.3966 MeanBytes=8506.5 Baseline=7399.3
