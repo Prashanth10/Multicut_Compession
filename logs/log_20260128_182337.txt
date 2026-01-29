@@ -1,0 +1,848 @@
+[18:23:37] Log file created: ./logs/log_20260128_182337.txt
+[18:23:37] Device: cuda
+[18:23:37] ======================================================================
+[18:23:37] MULTICUT COMPRESSION: UPDATED WITH COMPRESSION-AWARE OPTIMIZATIONS
+[18:23:37] ======================================================================
+[18:23:37] TINYREGIONSIZE: 5000
+[18:23:37] Masked PNG: Enabled
+[18:23:37] Greedy merge: Enabled
+[18:23:37] ======================================================================
+
+[18:23:37] Total images: 800
+[18:23:38] Training: 64×64 patches, 8064 edges
+
+[18:23:44] Ep0 B0/180 Loss=2.4531
+[18:24:07] Ep0 B50/180 Loss=0.4985
+[18:24:30] Ep0 B100/180 Loss=0.5306
+[18:24:54] Ep0 B150/180 Loss=0.4468
+[18:25:08] Ep0 DONE - Loss: 0.5106
+[18:25:08] Ep1 B0/180 Loss=0.4067
+[18:25:19] Ep1 B50/180 Loss=0.4272
+[18:25:31] Ep1 B100/180 Loss=0.4418
+[18:25:42] Ep1 B150/180 Loss=0.4044
+[18:25:49] Ep1 DONE - Loss: 0.4278
+[18:25:49] Ep2 B0/180 Loss=0.4338
+[18:26:01] Ep2 B50/180 Loss=0.4110
+[18:26:12] Ep2 B100/180 Loss=0.4111
+[18:26:24] Ep2 B150/180 Loss=0.4507
+[18:26:31] Ep2 DONE - Loss: 0.4149
+[18:26:31] Ep3 B0/180 Loss=0.4041
+[18:26:42] Ep3 B50/180 Loss=0.4022
+[18:26:54] Ep3 B100/180 Loss=0.3995
+[18:27:06] Ep3 B150/180 Loss=0.4358
+[18:27:12] Ep3 DONE - Loss: 0.4108
+[18:27:12] Ep4 B0/180 Loss=0.4096
+[18:27:24] Ep4 B50/180 Loss=0.4003
+[18:27:36] Ep4 B100/180 Loss=0.4000
+[18:27:47] Ep4 B150/180 Loss=0.3998
+[18:27:54] Ep4 DONE - Loss: 0.4055
+[18:27:54] 
+[VALIDATION Ep4 on image 4]
+[18:27:54] [INFERENCE] Image: 2040×1608, Edges: 6,556,992
+[18:27:54] [INFERENCE] Costs: Mean=0.921, Std=0.269, Min=-0.996, Max=1.000
+[18:27:54] [INFERENCE] Target regions: 200
+[18:27:54] [THRESHOLD] DIRECT AGGRESSIVE ASSIGNMENT:
+[18:27:54]   Cost distribution: min=-0.9962, mean=0.9210, median=0.9999, max=1.0000
+[18:27:54]   Network strong (max=1.0000) → standard aggressive threshold=-0.3
+[18:27:54]   FINAL THRESHOLD: -0.3000
+[18:27:54]   Edges to MERGE (cost > -0.3000): 6,479,574 (98.8%)
+[18:27:54]   Edges to KEEP (cost <= -0.3000): 77,418 (1.2%)
+[18:30:16] [GAEC] Edges in heap: 6,479,574
+[18:30:16] [GAEC] Merges executed: 3,274,081
+[18:30:16] [GAEC] Final regions: 6,239
+[18:30:16] 
+[POST-PROCESS] Starting with 6,239 regions
+[18:30:16] [MERGE] Found 6224 tiny regions (< 5000 pixels)
+[18:30:16] [MERGE] Tiny regions contain: 202,382 pixels (6.2% of image)
+[18:30:53] [MERGE] Merged 6224 tiny regions
+[18:30:53] [MERGE] Final regions: 59
+[18:30:53] 
+[GREEDY MERGE] Starting with 59 regions
+[18:34:56] [GREEDY MERGE] Iter 1: Merged regions (0, 2), saved 18341 bytes
+[18:38:54] [GREEDY MERGE] Iter 2: Merged regions (0, 16), saved 11214 bytes
+[18:42:40] [GREEDY MERGE] Iter 3: Merged regions (0, 38), saved 10547 bytes
+[18:46:09] [GREEDY MERGE] Iter 4: Merged regions (0, 36), saved 12850 bytes
+[18:49:13] [GREEDY MERGE] Iter 5: Merged regions (0, 22), saved 10477 bytes
+[18:52:05] [GREEDY MERGE] Iter 6: Merged regions (0, 20), saved 8993 bytes
+[18:54:46] [GREEDY MERGE] Iter 7: Merged regions (0, 36), saved 7398 bytes
+[18:57:18] [GREEDY MERGE] Iter 8: Merged regions (0, 49), saved 5874 bytes
+[18:59:46] [GREEDY MERGE] Iter 9: Merged regions (0, 22), saved 5752 bytes
+[19:02:10] [GREEDY MERGE] Iter 10: Merged regions (0, 34), saved 4962 bytes
+[19:04:31] [GREEDY MERGE] Iter 11: Merged regions (0, 37), saved 4478 bytes
+[19:06:48] [GREEDY MERGE] Iter 12: Merged regions (0, 4), saved 3787 bytes
+[19:09:04] [GREEDY MERGE] Iter 13: Merged regions (0, 26), saved 3527 bytes
+[19:11:16] [GREEDY MERGE] Iter 14: Merged regions (0, 30), saved 1272 bytes
+[19:13:25] [GREEDY MERGE] Iter 15: Merged regions (0, 38), saved 1124 bytes
+[19:15:31] [GREEDY MERGE] Iter 16: Merged regions (0, 34), saved 855 bytes
+[19:17:31] [GREEDY MERGE] Iter 17: Merged regions (0, 39), saved 766 bytes
+[19:19:28] [GREEDY MERGE] Iter 18: Merged regions (0, 29), saved 761 bytes
+[19:21:23] [GREEDY MERGE] Iter 19: Merged regions (0, 36), saved 619 bytes
+[19:23:14] [GREEDY MERGE] Iter 20: Merged regions (0, 16), saved 593 bytes
+[19:23:14] [GREEDY MERGE] Final: 39 regions
+
+[19:23:14] 
+[19:23:16] [INFERENCE] Final result: 39 regions, 5,865,573 bytes
+
+[19:23:17] [VAL] Compressed=5,865,573 bytes, PNG=5,943,950 bytes, Ratio=0.987, Gain=+1.3%
+
+[19:23:17] Saved: segmentation_ep4.png
+[19:23:18] Saved: reconstruction_ep4.png
+[19:23:18]   PSNR: Lossless
+[19:23:18]   MAE: 0.000000
+[19:23:18] [BEST] New best ratio: 0.987
+
+[19:23:19] Ep5 B0/180 Loss=0.4178
+[19:23:30] Ep5 B50/180 Loss=0.4073
+[19:23:42] Ep5 B100/180 Loss=0.3987
+[19:23:54] Ep5 B150/180 Loss=0.3991
+[19:24:00] Ep5 DONE - Loss: 0.4035
+[19:24:00] Ep6 B0/180 Loss=0.4046
+[19:24:12] Ep6 B50/180 Loss=0.4139
+[19:24:23] Ep6 B100/180 Loss=0.4034
+[19:24:35] Ep6 B150/180 Loss=0.4035
+[19:24:42] Ep6 DONE - Loss: 0.4003
+[19:24:42] Ep7 B0/180 Loss=0.3931
+[19:24:54] Ep7 B50/180 Loss=0.4078
+[19:25:05] Ep7 B100/180 Loss=0.3912
+[19:25:17] Ep7 B150/180 Loss=0.3956
+[19:25:24] Ep7 DONE - Loss: 0.4015
+[19:25:24] Ep8 B0/180 Loss=0.4023
+[19:25:35] Ep8 B50/180 Loss=0.3986
+[19:25:47] Ep8 B100/180 Loss=0.3957
+[19:25:59] Ep8 B150/180 Loss=0.3897
+[19:26:06] Ep8 DONE - Loss: 0.3994
+[19:26:06] Ep9 B0/180 Loss=0.3879
+[19:26:18] Ep9 B50/180 Loss=0.3946
+[19:26:29] Ep9 B100/180 Loss=0.4200
+[19:26:41] Ep9 B150/180 Loss=0.3963
+[19:26:47] Ep9 DONE - Loss: 0.4016
+[19:26:47] 
+[VALIDATION Ep9 on image 4]
+[19:26:48] [INFERENCE] Image: 2040×1608, Edges: 6,556,992
+[19:26:48] [INFERENCE] Costs: Mean=0.926, Std=0.261, Min=-1.000, Max=1.000
+[19:26:48] [INFERENCE] Target regions: 200
+[19:26:48] [THRESHOLD] DIRECT AGGRESSIVE ASSIGNMENT:
+[19:26:48]   Cost distribution: min=-0.9998, mean=0.9264, median=1.0000, max=1.0000
+[19:26:48]   Network strong (max=1.0000) → standard aggressive threshold=-0.3
+[19:26:48]   FINAL THRESHOLD: -0.3000
+[19:26:48]   Edges to MERGE (cost > -0.3000): 6,509,788 (99.3%)
+[19:26:48]   Edges to KEEP (cost <= -0.3000): 47,204 (0.7%)
+[19:28:22] [GAEC] Edges in heap: 6,509,788
+[19:28:22] [GAEC] Merges executed: 3,276,440
+[19:28:22] [GAEC] Final regions: 3,880
+[19:28:23] 
+[POST-PROCESS] Starting with 3,880 regions
+[19:28:23] [MERGE] Found 3855 tiny regions (< 5000 pixels)
+[19:28:23] [MERGE] Tiny regions contain: 150,009 pixels (4.6% of image)
+[19:28:46] [MERGE] Merged 3855 tiny regions
+[19:28:46] [MERGE] Final regions: 40
+[19:28:46] 
+[GREEDY MERGE] Starting with 40 regions
+[19:32:15] [GREEDY MERGE] Iter 1: Merged regions (0, 1), saved 18197 bytes
+[19:35:31] [GREEDY MERGE] Iter 2: Merged regions (25, 26), saved 9663 bytes
+[19:38:37] [GREEDY MERGE] Iter 3: Merged regions (0, 25), saved 11416 bytes
+[19:41:23] [GREEDY MERGE] Iter 4: Merged regions (0, 14), saved 6964 bytes
+[19:43:59] [GREEDY MERGE] Iter 5: Merged regions (0, 22), saved 6538 bytes
+[19:46:29] [GREEDY MERGE] Iter 6: Merged regions (0, 19), saved 6156 bytes
+[19:48:50] [GREEDY MERGE] Iter 7: Merged regions (0, 13), saved 6117 bytes
+[19:51:00] [GREEDY MERGE] Iter 8: Merged regions (0, 14), saved 5523 bytes
+[19:53:00] [GREEDY MERGE] Iter 9: Merged regions (0, 15), saved 6378 bytes
+[19:54:56] [GREEDY MERGE] Iter 10: Merged regions (0, 11), saved 5243 bytes
+[19:56:49] [GREEDY MERGE] Iter 11: Merged regions (0, 26), saved 4943 bytes
+[19:58:29] [GREEDY MERGE] Iter 12: Merged regions (0, 19), saved 5587 bytes
+[20:00:00] [GREEDY MERGE] Iter 13: Merged regions (0, 9), saved 4948 bytes
+[20:01:26] [GREEDY MERGE] Iter 14: Merged regions (0, 17), saved 4336 bytes
+[20:02:44] [GREEDY MERGE] Iter 15: Merged regions (0, 15), saved 4447 bytes
+[20:03:58] [GREEDY MERGE] Iter 16: Merged regions (0, 24), saved 3996 bytes
+[20:05:10] [GREEDY MERGE] Iter 17: Merged regions (0, 20), saved 3447 bytes
+[20:06:16] [GREEDY MERGE] Iter 18: Merged regions (0, 18), saved 4113 bytes
+[20:07:19] [GREEDY MERGE] Iter 19: Merged regions (0, 9), saved 3432 bytes
+[20:08:17] [GREEDY MERGE] Iter 20: Merged regions (0, 9), saved 3836 bytes
+[20:08:17] [GREEDY MERGE] Final: 20 regions
+
+[20:08:17] 
+[20:08:20] [INFERENCE] Final result: 20 regions, 5,872,165 bytes
+
+[20:08:21] [VAL] Compressed=5,872,165 bytes, PNG=5,943,950 bytes, Ratio=0.988, Gain=+1.2%
+
+[20:08:21] Saved: segmentation_ep9.png
+[20:08:22] Saved: reconstruction_ep9.png
+[20:08:22]   PSNR: Lossless
+[20:08:22]   MAE: 0.000000
+[20:08:22] Ep10 B0/180 Loss=0.3981
+[20:08:34] Ep10 B50/180 Loss=0.3998
+[20:08:45] Ep10 B100/180 Loss=0.3895
+[20:08:57] Ep10 B150/180 Loss=0.4062
+[20:09:04] Ep10 DONE - Loss: 0.3989
+[20:09:04] Ep11 B0/180 Loss=0.3822
+[20:09:16] Ep11 B50/180 Loss=0.4078
+[20:09:27] Ep11 B100/180 Loss=0.3895
+[20:09:39] Ep11 B150/180 Loss=0.3973
+[20:09:46] Ep11 DONE - Loss: 0.3981
+[20:09:46] Ep12 B0/180 Loss=0.4016
+[20:09:57] Ep12 B50/180 Loss=0.4000
+[20:10:09] Ep12 B100/180 Loss=0.4038
+[20:10:21] Ep12 B150/180 Loss=0.4006
+[20:10:27] Ep12 DONE - Loss: 0.3980
+[20:10:28] Ep13 B0/180 Loss=0.3887
+[20:10:39] Ep13 B50/180 Loss=0.4004
+[20:10:51] Ep13 B100/180 Loss=0.3965
+[20:11:02] Ep13 B150/180 Loss=0.3834
+[20:11:09] Ep13 DONE - Loss: 0.3944
+[20:11:09] Ep14 B0/180 Loss=0.3955
+[20:11:21] Ep14 B50/180 Loss=0.3903
+[20:11:33] Ep14 B100/180 Loss=0.3970
+[20:11:44] Ep14 B150/180 Loss=0.3947
+[20:11:51] Ep14 DONE - Loss: 0.3963
+[20:11:51] 
+[VALIDATION Ep14 on image 4]
+[20:11:51] [INFERENCE] Image: 2040×1608, Edges: 6,556,992
+[20:11:51] [INFERENCE] Costs: Mean=0.919, Std=0.275, Min=-1.000, Max=1.000
+[20:11:51] [INFERENCE] Target regions: 200
+[20:11:51] [THRESHOLD] DIRECT AGGRESSIVE ASSIGNMENT:
+[20:11:51]   Cost distribution: min=-1.0000, mean=0.9190, median=0.9999, max=1.0000
+[20:11:51]   Network strong (max=1.0000) → standard aggressive threshold=-0.3
+[20:11:51]   FINAL THRESHOLD: -0.3000
+[20:11:51]   Edges to MERGE (cost > -0.3000): 6,511,143 (99.3%)
+[20:11:51]   Edges to KEEP (cost <= -0.3000): 45,849 (0.7%)
+[20:14:17] [GAEC] Edges in heap: 6,511,143
+[20:14:17] [GAEC] Merges executed: 3,276,647
+[20:14:17] [GAEC] Final regions: 3,673
+[20:14:17] 
+[POST-PROCESS] Starting with 3,673 regions
+[20:14:17] [MERGE] Found 3646 tiny regions (< 5000 pixels)
+[20:14:17] [MERGE] Tiny regions contain: 226,187 pixels (6.9% of image)
+[20:14:39] [MERGE] Merged 3646 tiny regions
+[20:14:39] [MERGE] Final regions: 64
+[20:14:39] 
+[GREEDY MERGE] Starting with 64 regions
+[20:20:16] [GREEDY MERGE] Iter 1: Merged regions (1, 5), saved 19764 bytes
+[20:25:34] [GREEDY MERGE] Iter 2: Merged regions (0, 1), saved 14972 bytes
+[20:30:47] [GREEDY MERGE] Iter 3: Merged regions (0, 8), saved 10583 bytes
+[20:35:51] [GREEDY MERGE] Iter 4: Merged regions (51, 58), saved 8899 bytes
+[20:40:48] [GREEDY MERGE] Iter 5: Merged regions (0, 10), saved 8078 bytes
+[20:45:33] [GREEDY MERGE] Iter 6: Merged regions (47, 50), saved 6792 bytes
+[20:50:01] [GREEDY MERGE] Iter 7: Merged regions (33, 47), saved 7232 bytes
+[20:54:18] [GREEDY MERGE] Iter 8: Merged regions (11, 33), saved 5707 bytes
+[20:58:12] [GREEDY MERGE] Iter 9: Merged regions (0, 11), saved 14311 bytes
+[21:01:47] [GREEDY MERGE] Iter 10: Merged regions (0, 1), saved 18597 bytes
+[21:05:07] [GREEDY MERGE] Iter 11: Merged regions (0, 28), saved 7670 bytes
+[21:08:12] [GREEDY MERGE] Iter 12: Merged regions (0, 34), saved 6064 bytes
+[21:11:10] [GREEDY MERGE] Iter 13: Merged regions (0, 38), saved 8719 bytes
+[21:14:02] [GREEDY MERGE] Iter 14: Merged regions (0, 30), saved 5606 bytes
+[21:16:44] [GREEDY MERGE] Iter 15: Merged regions (0, 30), saved 5293 bytes
+[21:19:22] [GREEDY MERGE] Iter 16: Merged regions (0, 41), saved 4999 bytes
+[21:21:54] [GREEDY MERGE] Iter 17: Merged regions (0, 26), saved 4272 bytes
+[21:24:15] [GREEDY MERGE] Iter 18: Merged regions (0, 16), saved 3928 bytes
+[21:26:24] [GREEDY MERGE] Iter 19: Merged regions (0, 24), saved 4390 bytes
+[21:28:30] [GREEDY MERGE] Iter 20: Merged regions (0, 21), saved 3832 bytes
+[21:28:30] [GREEDY MERGE] Final: 44 regions
+
+[21:28:30] 
+[21:28:32] [INFERENCE] Final result: 44 regions, 5,884,149 bytes
+
+[21:28:33] [VAL] Compressed=5,884,149 bytes, PNG=5,943,950 bytes, Ratio=0.990, Gain=+1.0%
+
+[21:28:34] Saved: segmentation_ep14.png
+[21:28:35] Saved: reconstruction_ep14.png
+[21:28:35]   PSNR: Lossless
+[21:28:35]   MAE: 0.000000
+[21:28:35] Ep15 B0/180 Loss=0.3800
+[21:28:47] Ep15 B50/180 Loss=0.3867
+[21:28:58] Ep15 B100/180 Loss=0.3757
+[21:29:10] Ep15 B150/180 Loss=0.3879
+[21:29:17] Ep15 DONE - Loss: 0.3929
+[21:29:17] Ep16 B0/180 Loss=0.3997
+[21:29:29] Ep16 B50/180 Loss=0.3997
+[21:29:40] Ep16 B100/180 Loss=0.4010
+[21:29:52] Ep16 B150/180 Loss=0.3972
+[21:29:59] Ep16 DONE - Loss: 0.3926
+[21:29:59] Ep17 B0/180 Loss=0.4006
+[21:30:11] Ep17 B50/180 Loss=0.3902
+[21:30:22] Ep17 B100/180 Loss=0.3978
+[21:30:34] Ep17 B150/180 Loss=0.3774
+[21:30:40] Ep17 DONE - Loss: 0.3917
+[21:30:41] Ep18 B0/180 Loss=0.3824
+[21:30:52] Ep18 B50/180 Loss=0.3740
+[21:31:04] Ep18 B100/180 Loss=0.3998
+[21:31:15] Ep18 B150/180 Loss=0.3918
+[21:31:22] Ep18 DONE - Loss: 0.3897
+[21:31:22] Ep19 B0/180 Loss=0.3991
+[21:31:34] Ep19 B50/180 Loss=0.3752
+[21:31:46] Ep19 B100/180 Loss=0.4046
+[21:31:57] Ep19 B150/180 Loss=0.4021
+[21:32:04] Ep19 DONE - Loss: 0.3893
+[21:32:04] 
+[VALIDATION Ep19 on image 4]
+[21:32:04] [INFERENCE] Image: 2040×1608, Edges: 6,556,992
+[21:32:04] [INFERENCE] Costs: Mean=0.908, Std=0.302, Min=-1.000, Max=1.000
+[21:32:04] [INFERENCE] Target regions: 200
+[21:32:04] [THRESHOLD] DIRECT AGGRESSIVE ASSIGNMENT:
+[21:32:04]   Cost distribution: min=-1.0000, mean=0.9081, median=1.0000, max=1.0000
+[21:32:04]   Network strong (max=1.0000) → standard aggressive threshold=-0.3
+[21:32:04]   FINAL THRESHOLD: -0.3000
+[21:32:04]   Edges to MERGE (cost > -0.3000): 6,509,588 (99.3%)
+[21:32:04]   Edges to KEEP (cost <= -0.3000): 47,404 (0.7%)
+[21:34:02] [GAEC] Edges in heap: 6,509,588
+[21:34:02] [GAEC] Merges executed: 3,275,485
+[21:34:02] [GAEC] Final regions: 4,835
+[21:34:02] 
+[POST-PROCESS] Starting with 4,835 regions
+[21:34:02] [MERGE] Found 4790 tiny regions (< 5000 pixels)
+[21:34:02] [MERGE] Tiny regions contain: 504,411 pixels (15.4% of image)
+[21:34:32] [MERGE] Merged 4790 tiny regions
+[21:34:32] [MERGE] Final regions: 117
+[21:34:32] 
+[GREEDY MERGE] Starting with 117 regions
+[21:46:46] [GREEDY MERGE] Iter 1: Merged regions (1, 9), saved 19919 bytes
+[21:58:39] [GREEDY MERGE] Iter 2: Merged regions (87, 90), saved 9455 bytes
+[22:10:08] [GREEDY MERGE] Iter 3: Merged regions (55, 67), saved 8114 bytes
+[22:21:31] [GREEDY MERGE] Iter 4: Merged regions (47, 67), saved 8079 bytes
+[22:32:34] [GREEDY MERGE] Iter 5: Merged regions (47, 60), saved 9717 bytes
+[22:43:27] [GREEDY MERGE] Iter 6: Merged regions (1, 10), saved 7508 bytes
+[22:54:00] [GREEDY MERGE] Iter 7: Merged regions (83, 92), saved 6914 bytes
+[23:04:13] [GREEDY MERGE] Iter 8: Merged regions (83, 88), saved 6539 bytes
+[23:14:11] [GREEDY MERGE] Iter 9: Merged regions (78, 83), saved 6730 bytes
+[23:23:54] [GREEDY MERGE] Iter 10: Merged regions (46, 78), saved 12806 bytes
+[23:33:18] [GREEDY MERGE] Iter 11: Merged regions (46, 54), saved 11821 bytes
+[23:42:23] [GREEDY MERGE] Iter 12: Merged regions (46, 61), saved 7823 bytes
+[23:51:11] [GREEDY MERGE] Iter 13: Merged regions (46, 49), saved 6775 bytes
+[23:59:41] [GREEDY MERGE] Iter 14: Merged regions (46, 51), saved 10091 bytes
+[00:07:57] [GREEDY MERGE] Iter 15: Merged regions (44, 46), saved 7308 bytes
+[00:16:00] [GREEDY MERGE] Iter 16: Merged regions (44, 47), saved 6790 bytes
+[00:23:51] [GREEDY MERGE] Iter 17: Merged regions (1, 14), saved 5781 bytes
+[00:31:36] [GREEDY MERGE] Iter 18: Merged regions (1, 5), saved 5498 bytes
+[00:39:10] [GREEDY MERGE] Iter 19: Merged regions (42, 43), saved 5477 bytes
+[00:46:24] [GREEDY MERGE] Iter 20: Merged regions (20, 42), saved 9524 bytes
+[00:46:24] [GREEDY MERGE] Final: 97 regions
+
+[00:46:24] 
+[00:46:27] [INFERENCE] Final result: 97 regions, 6,051,888 bytes
+
+[00:46:28] [VAL] Compressed=6,051,888 bytes, PNG=5,943,950 bytes, Ratio=1.018, Gain=-1.8%
+
+[00:46:29] Saved: segmentation_ep19.png
+[00:46:30] Saved: reconstruction_ep19.png
+[00:46:30]   PSNR: Lossless
+[00:46:30]   MAE: 0.000000
+[00:46:30] Ep20 B0/180 Loss=0.3770
+[00:46:42] Ep20 B50/180 Loss=0.3849
+[00:46:53] Ep20 B100/180 Loss=0.3721
+[00:47:05] Ep20 B150/180 Loss=0.3985
+[00:47:12] Ep20 DONE - Loss: 0.3883
+[00:47:12] Ep21 B0/180 Loss=0.3876
+[00:47:23] Ep21 B50/180 Loss=0.3739
+[00:47:35] Ep21 B100/180 Loss=0.3934
+[00:47:47] Ep21 B150/180 Loss=0.3992
+[00:47:53] Ep21 DONE - Loss: 0.3881
+[00:47:54] Ep22 B0/180 Loss=0.3867
+[00:48:05] Ep22 B50/180 Loss=0.3830
+[00:48:17] Ep22 B100/180 Loss=0.3981
+[00:48:29] Ep22 B150/180 Loss=0.3967
+[00:48:35] Ep22 DONE - Loss: 0.3878
+[00:48:35] Ep23 B0/180 Loss=0.3999
+[00:48:47] Ep23 B50/180 Loss=0.3878
+[00:48:59] Ep23 B100/180 Loss=0.3937
+[00:49:10] Ep23 B150/180 Loss=0.3814
+[00:49:17] Ep23 DONE - Loss: 0.3877
+[00:49:17] Ep24 B0/180 Loss=0.3968
+[00:49:29] Ep24 B50/180 Loss=0.3911
+[00:49:40] Ep24 B100/180 Loss=0.3961
+[00:49:52] Ep24 B150/180 Loss=0.3904
+[00:49:59] Ep24 DONE - Loss: 0.3870
+[00:49:59] 
+[VALIDATION Ep24 on image 4]
+[00:49:59] [INFERENCE] Image: 2040×1608, Edges: 6,556,992
+[00:49:59] [INFERENCE] Costs: Mean=0.911, Std=0.292, Min=-1.000, Max=1.000
+[00:49:59] [INFERENCE] Target regions: 200
+[00:49:59] [THRESHOLD] DIRECT AGGRESSIVE ASSIGNMENT:
+[00:49:59]   Cost distribution: min=-1.0000, mean=0.9109, median=1.0000, max=1.0000
+[00:49:59]   Network strong (max=1.0000) → standard aggressive threshold=-0.3
+[00:49:59]   FINAL THRESHOLD: -0.3000
+[00:49:59]   Edges to MERGE (cost > -0.3000): 6,518,982 (99.4%)
+[00:49:59]   Edges to KEEP (cost <= -0.3000): 38,010 (0.6%)
+[00:52:35] [GAEC] Edges in heap: 6,518,982
+[00:52:35] [GAEC] Merges executed: 3,276,895
+[00:52:35] [GAEC] Final regions: 3,425
+[00:52:35] 
+[POST-PROCESS] Starting with 3,425 regions
+[00:52:35] [MERGE] Found 3390 tiny regions (< 5000 pixels)
+[00:52:35] [MERGE] Tiny regions contain: 247,355 pixels (7.5% of image)
+[00:52:56] [MERGE] Merged 3390 tiny regions
+[00:52:56] [MERGE] Final regions: 60
+[00:52:56] 
+[GREEDY MERGE] Starting with 60 regions
+[00:58:57] [GREEDY MERGE] Iter 1: Merged regions (20, 23), saved 14835 bytes
+[01:04:37] [GREEDY MERGE] Iter 2: Merged regions (1, 9), saved 11146 bytes
+[01:10:08] [GREEDY MERGE] Iter 3: Merged regions (19, 44), saved 8431 bytes
+[01:15:24] [GREEDY MERGE] Iter 4: Merged regions (51, 55), saved 8228 bytes
+[01:20:32] [GREEDY MERGE] Iter 5: Merged regions (19, 54), saved 7732 bytes
+[01:25:26] [GREEDY MERGE] Iter 6: Merged regions (1, 13), saved 7212 bytes
+[01:30:08] [GREEDY MERGE] Iter 7: Merged regions (32, 34), saved 5183 bytes
+[01:34:38] [GREEDY MERGE] Iter 8: Merged regions (1, 12), saved 5046 bytes
+[01:39:00] [GREEDY MERGE] Iter 9: Merged regions (17, 50), saved 4804 bytes
+[01:43:07] [GREEDY MERGE] Iter 10: Merged regions (17, 46), saved 5378 bytes
+[01:46:57] [GREEDY MERGE] Iter 11: Merged regions (1, 14), saved 4719 bytes
+[01:50:38] [GREEDY MERGE] Iter 12: Merged regions (30, 41), saved 4516 bytes
+[01:54:16] [GREEDY MERGE] Iter 13: Merged regions (0, 1), saved 4311 bytes
+[01:57:49] [GREEDY MERGE] Iter 14: Merged regions (15, 26), saved 4063 bytes
+[02:01:13] [GREEDY MERGE] Iter 15: Merged regions (15, 36), saved 4044 bytes
+[02:04:30] [GREEDY MERGE] Iter 16: Merged regions (0, 12), saved 3875 bytes
+[02:07:38] [GREEDY MERGE] Iter 17: Merged regions (0, 14), saved 4352 bytes
+[02:10:35] [GREEDY MERGE] Iter 18: Merged regions (0, 2), saved 19143 bytes
+[02:13:27] [GREEDY MERGE] Iter 19: Merged regions (0, 25), saved 9183 bytes
+[02:16:06] [GREEDY MERGE] Iter 20: Merged regions (0, 38), saved 11725 bytes
+[02:16:06] [GREEDY MERGE] Final: 40 regions
+
+[02:16:06] 
+[02:16:08] [INFERENCE] Final result: 40 regions, 5,920,259 bytes
+
+[02:16:09] [VAL] Compressed=5,920,259 bytes, PNG=5,943,950 bytes, Ratio=0.996, Gain=+0.4%
+
+[02:16:10] Saved: segmentation_ep24.png
+[02:16:11] Saved: reconstruction_ep24.png
+[02:16:11]   PSNR: Lossless
+[02:16:11]   MAE: 0.000000
+[02:16:11] Ep25 B0/180 Loss=0.3847
+[02:16:23] Ep25 B50/180 Loss=0.3835
+[02:16:34] Ep25 B100/180 Loss=0.3624
+[02:16:46] Ep25 B150/180 Loss=0.3800
+[02:16:53] Ep25 DONE - Loss: 0.3864
+[02:16:53] Ep26 B0/180 Loss=0.3863
+[02:17:05] Ep26 B50/180 Loss=0.3837
+[02:17:16] Ep26 B100/180 Loss=0.3642
+[02:17:28] Ep26 B150/180 Loss=0.3977
+[02:17:34] Ep26 DONE - Loss: 0.3861
+[02:17:35] Ep27 B0/180 Loss=0.3697
+[02:17:46] Ep27 B50/180 Loss=0.3815
+[02:17:58] Ep27 B100/180 Loss=0.3804
+[02:18:09] Ep27 B150/180 Loss=0.3778
+[02:18:16] Ep27 DONE - Loss: 0.3849
+[02:18:16] Ep28 B0/180 Loss=0.3585
+[02:18:28] Ep28 B50/180 Loss=0.3747
+[02:18:40] Ep28 B100/180 Loss=0.3758
+[02:18:52] Ep28 B150/180 Loss=0.3903
+[02:18:58] Ep28 DONE - Loss: 0.3850
+[02:18:58] Ep29 B0/180 Loss=0.3970
+[02:19:10] Ep29 B50/180 Loss=0.3988
+[02:19:22] Ep29 B100/180 Loss=0.3982
+[02:19:33] Ep29 B150/180 Loss=0.3720
+[02:19:40] Ep29 DONE - Loss: 0.3840
+[02:19:40] 
+[VALIDATION Ep29 on image 4]
+[02:19:40] [INFERENCE] Image: 2040×1608, Edges: 6,556,992
+[02:19:40] [INFERENCE] Costs: Mean=0.910, Std=0.295, Min=-1.000, Max=1.000
+[02:19:40] [INFERENCE] Target regions: 200
+[02:19:40] [THRESHOLD] DIRECT AGGRESSIVE ASSIGNMENT:
+[02:19:40]   Cost distribution: min=-1.0000, mean=0.9102, median=1.0000, max=1.0000
+[02:19:40]   Network strong (max=1.0000) → standard aggressive threshold=-0.3
+[02:19:40]   FINAL THRESHOLD: -0.3000
+[02:19:40]   Edges to MERGE (cost > -0.3000): 6,521,936 (99.5%)
+[02:19:40]   Edges to KEEP (cost <= -0.3000): 35,056 (0.5%)
+[02:22:03] [GAEC] Edges in heap: 6,521,936
+[02:22:03] [GAEC] Merges executed: 3,276,956
+[02:22:03] [GAEC] Final regions: 3,364
+[02:22:03] 
+[POST-PROCESS] Starting with 3,364 regions
+[02:22:03] [MERGE] Found 3332 tiny regions (< 5000 pixels)
+[02:22:03] [MERGE] Tiny regions contain: 243,427 pixels (7.4% of image)
+[02:22:24] [MERGE] Merged 3332 tiny regions
+[02:22:24] [MERGE] Final regions: 63
+[02:22:24] 
+[GREEDY MERGE] Starting with 63 regions
+[02:27:53] [GREEDY MERGE] Iter 1: Merged regions (0, 9), saved 35300 bytes
+[02:32:55] [GREEDY MERGE] Iter 2: Merged regions (0, 51), saved 16705 bytes
+[02:37:33] [GREEDY MERGE] Iter 3: Merged regions (0, 40), saved 14250 bytes
+[02:41:56] [GREEDY MERGE] Iter 4: Merged regions (0, 58), saved 12840 bytes
+[02:46:09] [GREEDY MERGE] Iter 5: Merged regions (0, 9), saved 8811 bytes
+[02:50:15] [GREEDY MERGE] Iter 6: Merged regions (0, 22), saved 8785 bytes
+[02:54:06] [GREEDY MERGE] Iter 7: Merged regions (0, 12), saved 6471 bytes
+[02:57:47] [GREEDY MERGE] Iter 8: Merged regions (0, 17), saved 6570 bytes
+[03:01:17] [GREEDY MERGE] Iter 9: Merged regions (0, 37), saved 6094 bytes
+[03:04:37] [GREEDY MERGE] Iter 10: Merged regions (0, 31), saved 6372 bytes
+[03:07:45] [GREEDY MERGE] Iter 11: Merged regions (0, 36), saved 6052 bytes
+[03:10:48] [GREEDY MERGE] Iter 12: Merged regions (0, 4), saved 6083 bytes
+[03:13:48] [GREEDY MERGE] Iter 13: Merged regions (0, 13), saved 5738 bytes
+[03:16:43] [GREEDY MERGE] Iter 14: Merged regions (0, 26), saved 5383 bytes
+[03:19:35] [GREEDY MERGE] Iter 15: Merged regions (0, 19), saved 5592 bytes
+[03:22:11] [GREEDY MERGE] Iter 16: Merged regions (0, 6), saved 5308 bytes
+[03:24:44] [GREEDY MERGE] Iter 17: Merged regions (0, 41), saved 5283 bytes
+[03:27:13] [GREEDY MERGE] Iter 18: Merged regions (0, 43), saved 5218 bytes
+[03:29:38] [GREEDY MERGE] Iter 19: Merged regions (0, 22), saved 5054 bytes
+[03:31:51] [GREEDY MERGE] Iter 20: Merged regions (0, 39), saved 4975 bytes
+[03:31:51] [GREEDY MERGE] Final: 43 regions
+
+[03:31:51] 
+[03:31:54] [INFERENCE] Final result: 43 regions, 5,920,298 bytes
+
+[03:31:55] [VAL] Compressed=5,920,298 bytes, PNG=5,943,950 bytes, Ratio=0.996, Gain=+0.4%
+
+[03:31:55] Saved: segmentation_ep29.png
+[03:31:56] Saved: reconstruction_ep29.png
+[03:31:56]   PSNR: Lossless
+[03:31:56]   MAE: 0.000000
+[03:31:56] Ep30 B0/180 Loss=0.3750
+[03:32:08] Ep30 B50/180 Loss=0.3812
+[03:32:20] Ep30 B100/180 Loss=0.3807
+[03:32:31] Ep30 B150/180 Loss=0.3880
+[03:32:38] Ep30 DONE - Loss: 0.3852
+[03:32:38] Ep31 B0/180 Loss=0.3924
+[03:32:50] Ep31 B50/180 Loss=0.3926
+[03:33:01] Ep31 B100/180 Loss=0.3928
+[03:33:13] Ep31 B150/180 Loss=0.3874
+[03:33:20] Ep31 DONE - Loss: 0.3847
+[03:33:20] Ep32 B0/180 Loss=0.3883
+[03:33:32] Ep32 B50/180 Loss=0.3988
+[03:33:43] Ep32 B100/180 Loss=0.3812
+[03:33:55] Ep32 B150/180 Loss=0.3572
+[03:34:02] Ep32 DONE - Loss: 0.3840
+[03:34:02] Ep33 B0/180 Loss=0.3815
+[03:34:13] Ep33 B50/180 Loss=0.3961
+[03:34:25] Ep33 B100/180 Loss=0.3754
+[03:34:37] Ep33 B150/180 Loss=0.3866
+[03:34:43] Ep33 DONE - Loss: 0.3841
+[03:34:44] Ep34 B0/180 Loss=0.3456
+[03:34:55] Ep34 B50/180 Loss=0.3778
+[03:35:07] Ep34 B100/180 Loss=0.3619
+[03:35:18] Ep34 B150/180 Loss=0.3996
+[03:35:25] Ep34 DONE - Loss: 0.3838
+[03:35:25] 
+[VALIDATION Ep34 on image 4]
+[03:35:25] [INFERENCE] Image: 2040×1608, Edges: 6,556,992
+[03:35:25] [INFERENCE] Costs: Mean=0.912, Std=0.292, Min=-1.000, Max=1.000
+[03:35:25] [INFERENCE] Target regions: 200
+[03:35:26] [THRESHOLD] DIRECT AGGRESSIVE ASSIGNMENT:
+[03:35:26]   Cost distribution: min=-1.0000, mean=0.9122, median=1.0000, max=1.0000
+[03:35:26]   Network strong (max=1.0000) → standard aggressive threshold=-0.3
+[03:35:26]   FINAL THRESHOLD: -0.3000
+[03:35:26]   Edges to MERGE (cost > -0.3000): 6,527,362 (99.5%)
+[03:35:26]   Edges to KEEP (cost <= -0.3000): 29,630 (0.5%)
+[03:37:34] [GAEC] Edges in heap: 6,527,362
+[03:37:34] [GAEC] Merges executed: 3,276,929
+[03:37:34] [GAEC] Final regions: 3,391
+[03:37:34] 
+[POST-PROCESS] Starting with 3,391 regions
+[03:37:35] [MERGE] Found 3372 tiny regions (< 5000 pixels)
+[03:37:35] [MERGE] Tiny regions contain: 160,952 pixels (4.9% of image)
+[03:37:55] [MERGE] Merged 3372 tiny regions
+[03:37:55] [MERGE] Final regions: 33
+[03:37:55] 
+[GREEDY MERGE] Starting with 33 regions
+[03:40:17] [GREEDY MERGE] Iter 1: Merged regions (0, 3), saved 41391 bytes
+[03:42:14] [GREEDY MERGE] Iter 2: Merged regions (0, 20), saved 8530 bytes
+[03:44:01] [GREEDY MERGE] Iter 3: Merged regions (0, 4), saved 7230 bytes
+[03:45:43] [GREEDY MERGE] Iter 4: Merged regions (0, 25), saved 7000 bytes
+[03:47:22] [GREEDY MERGE] Iter 5: Merged regions (0, 17), saved 6806 bytes
+[03:48:54] [GREEDY MERGE] Iter 6: Merged regions (0, 7), saved 5387 bytes
+[03:50:24] [GREEDY MERGE] Iter 7: Merged regions (0, 14), saved 5201 bytes
+[03:51:50] [GREEDY MERGE] Iter 8: Merged regions (0, 18), saved 4800 bytes
+[03:53:10] [GREEDY MERGE] Iter 9: Merged regions (0, 11), saved 4635 bytes
+[03:54:20] [GREEDY MERGE] Iter 10: Merged regions (0, 12), saved 7938 bytes
+[03:55:24] [GREEDY MERGE] Iter 11: Merged regions (0, 10), saved 4931 bytes
+[03:56:22] [GREEDY MERGE] Iter 12: Merged regions (0, 7), saved 6728 bytes
+[03:57:18] [GREEDY MERGE] Iter 13: Merged regions (0, 10), saved 4722 bytes
+[03:58:11] [GREEDY MERGE] Iter 14: Merged regions (0, 17), saved 4595 bytes
+[03:59:01] [GREEDY MERGE] Iter 15: Merged regions (0, 15), saved 3815 bytes
+[03:59:48] [GREEDY MERGE] Iter 16: Merged regions (0, 17), saved 2937 bytes
+[04:00:32] [GREEDY MERGE] Iter 17: Merged regions (0, 6), saved 2859 bytes
+[04:01:12] [GREEDY MERGE] Iter 18: Merged regions (0, 11), saved 615 bytes
+[04:01:49] [GREEDY MERGE] Iter 19: Merged regions (0, 7), saved 592 bytes
+[04:02:23] [GREEDY MERGE] Iter 20: Merged regions (0, 10), saved 256 bytes
+[04:02:23] [GREEDY MERGE] Final: 13 regions
+
+[04:02:23] 
+[04:02:25] [INFERENCE] Final result: 13 regions, 5,881,455 bytes
+
+[04:02:26] [VAL] Compressed=5,881,455 bytes, PNG=5,943,950 bytes, Ratio=0.989, Gain=+1.1%
+
+[04:02:26] Saved: segmentation_ep34.png
+[04:02:27] Saved: reconstruction_ep34.png
+[04:02:27]   PSNR: Lossless
+[04:02:27]   MAE: 0.000000
+[04:02:28] Ep35 B0/180 Loss=0.3716
+[04:02:39] Ep35 B50/180 Loss=0.3924
+[04:02:51] Ep35 B100/180 Loss=0.3814
+[04:03:03] Ep35 B150/180 Loss=0.3946
+[04:03:09] Ep35 DONE - Loss: 0.3831
+[04:03:10] Ep36 B0/180 Loss=0.3624
+[04:03:21] Ep36 B50/180 Loss=0.3663
+[04:03:33] Ep36 B100/180 Loss=0.3901
+[04:03:45] Ep36 B150/180 Loss=0.3846
+[04:03:51] Ep36 DONE - Loss: 0.3834
+[04:03:51] Ep37 B0/180 Loss=0.3576
+[04:04:03] Ep37 B50/180 Loss=0.3613
+[04:04:15] Ep37 B100/180 Loss=0.3701
+[04:04:26] Ep37 B150/180 Loss=0.3866
+[04:04:33] Ep37 DONE - Loss: 0.3833
+[04:04:33] Ep38 B0/180 Loss=0.3771
+[04:04:45] Ep38 B50/180 Loss=0.3923
+[04:04:57] Ep38 B100/180 Loss=0.3928
+[04:05:08] Ep38 B150/180 Loss=0.3747
+[04:05:15] Ep38 DONE - Loss: 0.3838
+[04:05:15] Ep39 B0/180 Loss=0.3904
+[04:05:27] Ep39 B50/180 Loss=0.3734
+[04:05:38] Ep39 B100/180 Loss=0.3979
+[04:05:50] Ep39 B150/180 Loss=0.3884
+[04:05:57] Ep39 DONE - Loss: 0.3817
+[04:05:57] 
+[VALIDATION Ep39 on image 4]
+[04:05:57] [INFERENCE] Image: 2040×1608, Edges: 6,556,992
+[04:05:57] [INFERENCE] Costs: Mean=0.912, Std=0.292, Min=-1.000, Max=1.000
+[04:05:57] [INFERENCE] Target regions: 200
+[04:05:57] [THRESHOLD] DIRECT AGGRESSIVE ASSIGNMENT:
+[04:05:57]   Cost distribution: min=-1.0000, mean=0.9117, median=1.0000, max=1.0000
+[04:05:57]   Network strong (max=1.0000) → standard aggressive threshold=-0.3
+[04:05:57]   FINAL THRESHOLD: -0.3000
+[04:05:57]   Edges to MERGE (cost > -0.3000): 6,529,968 (99.6%)
+[04:05:57]   Edges to KEEP (cost <= -0.3000): 27,024 (0.4%)
+[04:08:46] [GAEC] Edges in heap: 6,529,968
+[04:08:46] [GAEC] Merges executed: 3,277,226
+[04:08:46] [GAEC] Final regions: 3,094
+[04:08:46] 
+[POST-PROCESS] Starting with 3,094 regions
+[04:08:46] [MERGE] Found 3078 tiny regions (< 5000 pixels)
+[04:08:46] [MERGE] Tiny regions contain: 160,445 pixels (4.9% of image)
+[04:09:05] [MERGE] Merged 3078 tiny regions
+[04:09:05] [MERGE] Final regions: 36
+[04:09:05] 
+[GREEDY MERGE] Starting with 36 regions
+[04:11:34] [GREEDY MERGE] Iter 1: Merged regions (0, 4), saved 13156 bytes
+[04:13:57] [GREEDY MERGE] Iter 2: Merged regions (12, 18), saved 11662 bytes
+[04:16:01] [GREEDY MERGE] Iter 3: Merged regions (0, 12), saved 13614 bytes
+[04:17:46] [GREEDY MERGE] Iter 4: Merged regions (0, 28), saved 15819 bytes
+[04:19:17] [GREEDY MERGE] Iter 5: Merged regions (0, 27), saved 11471 bytes
+[04:20:44] [GREEDY MERGE] Iter 6: Merged regions (0, 7), saved 10583 bytes
+[04:22:05] [GREEDY MERGE] Iter 7: Merged regions (0, 9), saved 10063 bytes
+[04:23:21] [GREEDY MERGE] Iter 8: Merged regions (0, 15), saved 7609 bytes
+[04:24:33] [GREEDY MERGE] Iter 9: Merged regions (0, 9), saved 5656 bytes
+[04:25:42] [GREEDY MERGE] Iter 10: Merged regions (0, 10), saved 5273 bytes
+[04:26:49] [GREEDY MERGE] Iter 11: Merged regions (0, 13), saved 3998 bytes
+[04:27:52] [GREEDY MERGE] Iter 12: Merged regions (0, 23), saved 3520 bytes
+[04:28:53] [GREEDY MERGE] Iter 13: Merged regions (0, 9), saved 3062 bytes
+[04:29:51] [GREEDY MERGE] Iter 14: Merged regions (0, 13), saved 2871 bytes
+[04:30:46] [GREEDY MERGE] Iter 15: Merged regions (0, 15), saved 1240 bytes
+[04:31:39] [GREEDY MERGE] Iter 16: Merged regions (0, 17), saved 713 bytes
+[04:32:28] [GREEDY MERGE] Iter 17: Merged regions (0, 19), saved 544 bytes
+[04:33:16] [GREEDY MERGE] Iter 18: Merged regions (1, 2), saved 286 bytes
+[04:34:00] [GREEDY MERGE] Iter 19: Merged regions (0, 11), saved 253 bytes
+[04:34:42] [GREEDY MERGE] Iter 20: Merged regions (0, 16), saved 209 bytes
+[04:34:42] [GREEDY MERGE] Final: 16 regions
+
+[04:34:42] 
+[04:34:44] [INFERENCE] Final result: 16 regions, 5,867,368 bytes
+
+[04:34:46] [VAL] Compressed=5,867,368 bytes, PNG=5,943,950 bytes, Ratio=0.987, Gain=+1.3%
+
+[04:34:46] Saved: segmentation_ep39.png
+[04:34:47] Saved: reconstruction_ep39.png
+[04:34:47]   PSNR: Lossless
+[04:34:47]   MAE: 0.000000
+[04:34:47] Ep40 B0/180 Loss=0.3789
+[04:34:59] Ep40 B50/180 Loss=0.3970
+[04:35:11] Ep40 B100/180 Loss=0.3955
+[04:35:22] Ep40 B150/180 Loss=0.3895
+[04:35:29] Ep40 DONE - Loss: 0.3819
+[04:35:29] Ep41 B0/180 Loss=0.3998
+[04:35:41] Ep41 B50/180 Loss=0.3839
+[04:35:52] Ep41 B100/180 Loss=0.3710
+[04:36:04] Ep41 B150/180 Loss=0.3823
+[04:36:11] Ep41 DONE - Loss: 0.3821
+[04:36:11] Ep42 B0/180 Loss=0.3721
+[04:36:22] Ep42 B50/180 Loss=0.3980
+[04:36:34] Ep42 B100/180 Loss=0.3642
+[04:36:46] Ep42 B150/180 Loss=0.3588
+[04:36:53] Ep42 DONE - Loss: 0.3829
+[04:36:53] Ep43 B0/180 Loss=0.3835
+[04:37:04] Ep43 B50/180 Loss=0.3846
+[04:37:16] Ep43 B100/180 Loss=0.3851
+[04:37:28] Ep43 B150/180 Loss=0.3829
+[04:37:34] Ep43 DONE - Loss: 0.3824
+[04:37:35] Ep44 B0/180 Loss=0.3683
+[04:37:46] Ep44 B50/180 Loss=0.3840
+[04:37:58] Ep44 B100/180 Loss=0.3782
+[04:38:10] Ep44 B150/180 Loss=0.3873
+[04:38:16] Ep44 DONE - Loss: 0.3822
+[04:38:16] 
+[VALIDATION Ep44 on image 4]
+[04:38:17] [INFERENCE] Image: 2040×1608, Edges: 6,556,992
+[04:38:17] [INFERENCE] Costs: Mean=0.911, Std=0.295, Min=-1.000, Max=1.000
+[04:38:17] [INFERENCE] Target regions: 200
+[04:38:17] [THRESHOLD] DIRECT AGGRESSIVE ASSIGNMENT:
+[04:38:17]   Cost distribution: min=-1.0000, mean=0.9110, median=1.0000, max=1.0000
+[04:38:17]   Network strong (max=1.0000) → standard aggressive threshold=-0.3
+[04:38:17]   FINAL THRESHOLD: -0.3000
+[04:38:17]   Edges to MERGE (cost > -0.3000): 6,527,306 (99.5%)
+[04:38:17]   Edges to KEEP (cost <= -0.3000): 29,686 (0.5%)
+[04:40:30] [GAEC] Edges in heap: 6,527,306
+[04:40:30] [GAEC] Merges executed: 3,276,817
+[04:40:30] [GAEC] Final regions: 3,503
+[04:40:31] 
+[POST-PROCESS] Starting with 3,503 regions
+[04:40:31] [MERGE] Found 3485 tiny regions (< 5000 pixels)
+[04:40:31] [MERGE] Tiny regions contain: 165,496 pixels (5.0% of image)
+[04:40:52] [MERGE] Merged 3485 tiny regions
+[04:40:52] [MERGE] Final regions: 36
+[04:40:52] 
+[GREEDY MERGE] Starting with 36 regions
+[04:43:24] [GREEDY MERGE] Iter 1: Merged regions (0, 8), saved 9760 bytes
+[04:45:49] [GREEDY MERGE] Iter 2: Merged regions (10, 18), saved 8618 bytes
+[04:48:03] [GREEDY MERGE] Iter 3: Merged regions (10, 23), saved 13110 bytes
+[04:50:05] [GREEDY MERGE] Iter 4: Merged regions (10, 11), saved 13228 bytes
+[04:51:54] [GREEDY MERGE] Iter 5: Merged regions (0, 10), saved 16329 bytes
+[04:53:35] [GREEDY MERGE] Iter 6: Merged regions (0, 1), saved 18162 bytes
+[04:55:07] [GREEDY MERGE] Iter 7: Merged regions (0, 26), saved 7120 bytes
+[04:56:31] [GREEDY MERGE] Iter 8: Merged regions (0, 27), saved 7808 bytes
+[04:57:49] [GREEDY MERGE] Iter 9: Merged regions (0, 22), saved 5875 bytes
+[04:59:02] [GREEDY MERGE] Iter 10: Merged regions (0, 23), saved 5843 bytes
+[05:00:11] [GREEDY MERGE] Iter 11: Merged regions (0, 23), saved 5373 bytes
+[05:01:17] [GREEDY MERGE] Iter 12: Merged regions (0, 17), saved 5328 bytes
+[05:02:21] [GREEDY MERGE] Iter 13: Merged regions (0, 12), saved 4902 bytes
+[05:03:21] [GREEDY MERGE] Iter 14: Merged regions (0, 6), saved 3251 bytes
+[05:04:19] [GREEDY MERGE] Iter 15: Merged regions (0, 10), saved 3155 bytes
+[05:05:12] [GREEDY MERGE] Iter 16: Merged regions (0, 8), saved 3039 bytes
+[05:06:02] [GREEDY MERGE] Iter 17: Merged regions (0, 15), saved 526 bytes
+[05:06:49] [GREEDY MERGE] Iter 18: Merged regions (0, 13), saved 407 bytes
+[05:07:34] [GREEDY MERGE] Iter 19: Merged regions (0, 12), saved 362 bytes
+[05:08:16] [GREEDY MERGE] Iter 20: Merged regions (0, 9), saved 303 bytes
+[05:08:16] [GREEDY MERGE] Final: 16 regions
+
+[05:08:16] 
+[05:08:18] [INFERENCE] Final result: 16 regions, 5,864,993 bytes
+
+[05:08:19] [VAL] Compressed=5,864,993 bytes, PNG=5,943,950 bytes, Ratio=0.987, Gain=+1.3%
+
+[05:08:19] Saved: segmentation_ep44.png
+[05:08:20] Saved: reconstruction_ep44.png
+[05:08:20]   PSNR: Lossless
+[05:08:20]   MAE: 0.000000
+[05:08:20] [BEST] New best ratio: 0.987
+
+[05:08:21] Ep45 B0/180 Loss=0.3918
+[05:08:32] Ep45 B50/180 Loss=0.3952
+[05:08:44] Ep45 B100/180 Loss=0.3965
+[05:08:56] Ep45 B150/180 Loss=0.3887
+[05:09:02] Ep45 DONE - Loss: 0.3823
+[05:09:03] Ep46 B0/180 Loss=0.3636
+[05:09:14] Ep46 B50/180 Loss=0.3775
+[05:09:26] Ep46 B100/180 Loss=0.3657
+[05:09:37] Ep46 B150/180 Loss=0.3814
+[05:09:44] Ep46 DONE - Loss: 0.3826
+[05:09:44] Ep47 B0/180 Loss=0.3821
+[05:09:56] Ep47 B50/180 Loss=0.3643
+[05:10:08] Ep47 B100/180 Loss=0.3904
+[05:10:19] Ep47 B150/180 Loss=0.3810
+[05:10:26] Ep47 DONE - Loss: 0.3831
+[05:10:26] Ep48 B0/180 Loss=0.3879
+[05:10:38] Ep48 B50/180 Loss=0.3889
+[05:10:49] Ep48 B100/180 Loss=0.3611
+[05:11:01] Ep48 B150/180 Loss=0.3800
+[05:11:08] Ep48 DONE - Loss: 0.3830
+[05:11:08] Ep49 B0/180 Loss=0.3855
+[05:11:20] Ep49 B50/180 Loss=0.3937
+[05:11:32] Ep49 B100/180 Loss=0.3946
+[05:11:43] Ep49 B150/180 Loss=0.3686
+[05:11:50] Ep49 DONE - Loss: 0.3823
+[05:11:50] 
+[VALIDATION Ep49 on image 4]
+[05:11:50] [INFERENCE] Image: 2040×1608, Edges: 6,556,992
+[05:11:50] [INFERENCE] Costs: Mean=0.909, Std=0.299, Min=-1.000, Max=1.000
+[05:11:50] [INFERENCE] Target regions: 200
+[05:11:50] [THRESHOLD] DIRECT AGGRESSIVE ASSIGNMENT:
+[05:11:50]   Cost distribution: min=-1.0000, mean=0.9092, median=1.0000, max=1.0000
+[05:11:50]   Network strong (max=1.0000) → standard aggressive threshold=-0.3
+[05:11:50]   FINAL THRESHOLD: -0.3000
+[05:11:50]   Edges to MERGE (cost > -0.3000): 6,525,456 (99.5%)
+[05:11:50]   Edges to KEEP (cost <= -0.3000): 31,536 (0.5%)
+[05:15:03] [GAEC] Edges in heap: 6,525,456
+[05:15:03] [GAEC] Merges executed: 3,276,788
+[05:15:03] [GAEC] Final regions: 3,532
+[05:15:03] 
+[POST-PROCESS] Starting with 3,532 regions
+[05:15:04] [MERGE] Found 3506 tiny regions (< 5000 pixels)
+[05:15:04] [MERGE] Tiny regions contain: 216,636 pixels (6.6% of image)
+[05:15:25] [MERGE] Merged 3506 tiny regions
+[05:15:25] [MERGE] Final regions: 50
+[05:15:25] 
+[GREEDY MERGE] Starting with 50 regions
+[05:19:31] [GREEDY MERGE] Iter 1: Merged regions (0, 6), saved 26199 bytes
+[05:23:22] [GREEDY MERGE] Iter 2: Merged regions (0, 2), saved 8341 bytes
+[05:27:08] [GREEDY MERGE] Iter 3: Merged regions (19, 20), saved 7105 bytes
+[05:30:40] [GREEDY MERGE] Iter 4: Merged regions (19, 44), saved 9111 bytes
+[05:34:00] [GREEDY MERGE] Iter 5: Merged regions (19, 44), saved 7616 bytes
+[05:37:17] [GREEDY MERGE] Iter 6: Merged regions (19, 36), saved 7246 bytes
+[05:40:27] [GREEDY MERGE] Iter 7: Merged regions (15, 19), saved 6385 bytes
+[05:43:19] [GREEDY MERGE] Iter 8: Merged regions (15, 23), saved 7192 bytes
+[05:45:59] [GREEDY MERGE] Iter 9: Merged regions (15, 25), saved 9634 bytes
+[05:48:31] [GREEDY MERGE] Iter 10: Merged regions (15, 20), saved 6623 bytes
+[05:51:00] [GREEDY MERGE] Iter 11: Merged regions (15, 30), saved 6309 bytes
+[05:53:26] [GREEDY MERGE] Iter 12: Merged regions (0, 15), saved 6163 bytes
+[05:55:33] [GREEDY MERGE] Iter 13: Merged regions (0, 6), saved 8117 bytes
+[05:57:34] [GREEDY MERGE] Iter 14: Merged regions (0, 24), saved 6238 bytes
+[05:59:27] [GREEDY MERGE] Iter 15: Merged regions (0, 5), saved 6239 bytes
+[06:01:16] [GREEDY MERGE] Iter 16: Merged regions (0, 14), saved 5764 bytes
+[06:02:58] [GREEDY MERGE] Iter 17: Merged regions (0, 13), saved 5701 bytes
+[06:04:35] [GREEDY MERGE] Iter 18: Merged regions (0, 26), saved 5158 bytes
+[06:06:08] [GREEDY MERGE] Iter 19: Merged regions (0, 12), saved 4840 bytes
+[06:07:39] [GREEDY MERGE] Iter 20: Merged regions (0, 10), saved 4243 bytes
+[06:07:39] [GREEDY MERGE] Final: 30 regions
+
+[06:07:39] 
+[06:07:41] [INFERENCE] Final result: 30 regions, 5,894,507 bytes
+
+[06:07:42] [VAL] Compressed=5,894,507 bytes, PNG=5,943,950 bytes, Ratio=0.992, Gain=+0.8%
+
+[06:07:43] Saved: segmentation_ep49.png
+[06:07:44] Saved: reconstruction_ep49.png
+[06:07:44]   PSNR: Lossless
+[06:07:44]   MAE: 0.000000
+[06:07:44] Ep50 B0/180 Loss=0.3883
+[06:07:55] Ep50 B50/180 Loss=0.3824
+[06:08:07] Ep50 B100/180 Loss=0.3752
+[06:08:19] Ep50 B150/180 Loss=0.3770
+[06:08:25] Ep50 DONE - Loss: 0.3827
+[06:08:26] Ep51 B0/180 Loss=0.3888
+[06:08:37] Ep51 B50/180 Loss=0.3958
+[06:08:49] Ep51 B100/180 Loss=0.3964
+[06:09:01] Ep51 B150/180 Loss=0.3998
+[06:09:07] Ep51 DONE - Loss: 0.3814
+[06:09:07] Ep52 B0/180 Loss=0.3845
+[06:09:19] Ep52 B50/180 Loss=0.3863
+[06:09:31] Ep52 B100/180 Loss=0.3909
+[06:09:42] Ep52 B150/180 Loss=0.3928
+[06:09:49] Ep52 DONE - Loss: 0.3836
+[06:09:49] Ep53 B0/180 Loss=0.3742
+[06:10:01] Ep53 B50/180 Loss=0.3845
+[06:10:12] Ep53 B100/180 Loss=0.3625
+[06:10:24] Ep53 B150/180 Loss=0.3873
+[06:10:31] Ep53 DONE - Loss: 0.3820
+[06:10:31] Ep54 B0/180 Loss=0.3954
+[06:10:42] Ep54 B50/180 Loss=0.3956
+[06:10:54] Ep54 B100/180 Loss=0.3781
+[06:11:06] Ep54 B150/180 Loss=0.3823
+[06:11:13] Ep54 DONE - Loss: 0.3825
+[06:11:13] 
+[VALIDATION Ep54 on image 4]
+[06:11:13] [INFERENCE] Image: 2040×1608, Edges: 6,556,992
+[06:11:13] [INFERENCE] Costs: Mean=0.911, Std=0.295, Min=-1.000, Max=1.000
+[06:11:13] [INFERENCE] Target regions: 200
+[06:11:13] [THRESHOLD] DIRECT AGGRESSIVE ASSIGNMENT:
+[06:11:13]   Cost distribution: min=-1.0000, mean=0.9114, median=1.0000, max=1.0000
+[06:11:13]   Network strong (max=1.0000) → standard aggressive threshold=-0.3
+[06:11:13]   FINAL THRESHOLD: -0.3000
+[06:11:13]   Edges to MERGE (cost > -0.3000): 6,527,948 (99.6%)
+[06:11:13]   Edges to KEEP (cost <= -0.3000): 29,044 (0.4%)
+[06:14:24] [GAEC] Edges in heap: 6,527,948
+[06:14:24] [GAEC] Merges executed: 3,277,051
+[06:14:24] [GAEC] Final regions: 3,269
+[06:14:25] 
+[POST-PROCESS] Starting with 3,269 regions
+[06:14:25] [MERGE] Found 3239 tiny regions (< 5000 pixels)
+[06:14:25] [MERGE] Tiny regions contain: 133,738 pixels (4.1% of image)
+[06:14:45] [MERGE] Merged 3239 tiny regions
+[06:14:45] [MERGE] Final regions: 42
+[06:14:45] 
+[GREEDY MERGE] Starting with 42 regions
+[06:18:27] [GREEDY MERGE] Iter 1: Merged regions (0, 3), saved 31067 bytes
+[06:21:51] [GREEDY MERGE] Iter 2: Merged regions (8, 23), saved 15287 bytes
+[06:24:55] [GREEDY MERGE] Iter 3: Merged regions (0, 8), saved 10493 bytes
+[06:27:39] [GREEDY MERGE] Iter 4: Merged regions (0, 2), saved 16380 bytes
